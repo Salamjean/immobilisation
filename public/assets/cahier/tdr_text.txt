@@ -1,0 +1,1111 @@
+
+UCP-FM
+TERMES DE RÉFÉRENCE
+RECRUTEMENT D’UNE STRUCTURE SPÉCIALISÉE POUR L’AMÉLIORATION DE LA GESTION DES IMMOBILISATIONS, L’APPUI À L’INVENTAIRE PHYSIQUE ET LE DÉPLOIEMENT D’UNE SOLUTION INFORMATIQUE DE GESTION ET DE GÉOLOCALISATION DES ACTIFS
+Avec cahier des charges fonctionnel et technique en annexe
+Version du 28 septembre 2026
+
+TABLE DES MATIÈRES
+
+ TOC \o "1-3" \h \z \u TABLE DES MATIÈRES PAGEREF _Toc241491165 \h 2
+1. CONTEXTE ET JUSTIFICATION PAGEREF _Toc241491166 \h 4
+2. OBJET DE LA MISSION PAGEREF _Toc241491167 \h 5
+3. OBJECTIF GÉNÉRAL PAGEREF _Toc241491168 \h 5
+4. OBJECTIFS SPÉCIFIQUES PAGEREF _Toc241491169 \h 5
+4.1. Diagnostiquer le dispositif existant PAGEREF _Toc241491170 \h 5
+4.2. Fiabiliser le référentiel patrimonial PAGEREF _Toc241491171 \h 6
+4.3. Améliorer l’organisation des inventaires PAGEREF _Toc241491172 \h 6
+4.4. Déployer une solution informatique de gestion des actifs PAGEREF _Toc241491173 \h 6
+4.5. Géolocaliser les actifs à risque PAGEREF _Toc241491174 \h 6
+4.6. Renforcer le contrôle interne PAGEREF _Toc241491175 \h 6
+4.7. Assurer le transfert de compétences PAGEREF _Toc241491176 \h 6
+5. PÉRIMÈTRE DE LA MISSION PAGEREF _Toc241491177 \h 6
+6. PRINCIPALES PRESTATIONS ATTENDUES PAGEREF _Toc241491178 \h 6
+6.1. Phase 1 – Diagnostic PAGEREF _Toc241491179 \h 6
+6.2. Phase 2 – Élaboration du référentiel de gestion des actifs PAGEREF _Toc241491180 \h 7
+7. APPUI À LA FIABILISATION DE L’INVENTAIRE PAGEREF _Toc241491181 \h 7
+8. CLASSIFICATION DES ACTIFS PAR NIVEAU DE RISQUE PAGEREF _Toc241491182 \h 8
+9. GÉOLOCALISATION ET GÉORÉFÉRENCEMENT PAGEREF _Toc241491183 \h 8
+9.1. Géoréférencement PAGEREF _Toc241491184 \h 8
+9.2. Cartographie PAGEREF _Toc241491185 \h 9
+9.3. Contrôle de localisation PAGEREF _Toc241491186 \h 9
+9.4. Geofencing PAGEREF _Toc241491187 \h 9
+9.5. Suivi temps réel PAGEREF _Toc241491188 \h 9
+10. ÉTIQUETAGE ET IDENTIFICATION PAGEREF _Toc241491189 \h 9
+11. GESTION DES MOUVEMENTS PAGEREF _Toc241491190 \h 9
+12. DOCUMENTS ET PIÈCES JUSTIFICATIVES PAGEREF _Toc241491191 \h 10
+13. GESTION DES MAINTENANCES PAGEREF _Toc241491192 \h 10
+14. ALERTES PAGEREF _Toc241491193 \h 10
+15. TABLEAUX DE BORD PAGEREF _Toc241491194 \h 11
+16. ANALYSE ET CARTOGRAPHIE DES RISQUES PAGEREF _Toc241491195 \h 11
+17. REPRISE ET MIGRATION DES DONNÉES PAGEREF _Toc241491196 \h 11
+18. INTEROPÉRABILITÉ PAGEREF _Toc241491197 \h 11
+19. APPLICATION MOBILE D’INVENTAIRE PAGEREF _Toc241491198 \h 12
+20. GESTION DES UTILISATEURS PAGEREF _Toc241491199 \h 12
+21. TRAÇABILITÉ PAGEREF _Toc241491200 \h 13
+22. RAPPORTS PAGEREF _Toc241491201 \h 13
+23. PROPRIÉTÉ ET RÉVERSIBILITÉ DES DONNÉES PAGEREF _Toc241491202 \h 13
+24. MODE DE DÉPLOIEMENT PAGEREF _Toc241491203 \h 13
+25. EXIGENCE MAJEURE RELATIVE À LA MATURITÉ DE LA SOLUTION PAGEREF _Toc241491204 \h 14
+26. LIVRABLES PAGEREF _Toc241491205 \h 14
+27. APPROCHE DE MISE EN ŒUVRE PROPOSÉE PAGEREF _Toc241491206 \h 14
+28. SITE PILOTE PAGEREF _Toc241491207 \h 15
+29. DURÉE INDICATIVE PAGEREF _Toc241491208 \h 15
+30. PROFIL DU PRESTATAIRE PAGEREF _Toc241491209 \h 15
+31. ÉQUIPE CLÉ MINIMALE PAGEREF _Toc241491210 \h 15
+32. FORMATION ET TRANSFERT DE COMPÉTENCES PAGEREF _Toc241491211 \h 16
+33. SUPPORT ET MAINTENANCE PAGEREF _Toc241491212 \h 16
+34. DOCUMENTS À FOURNIR DANS L’OFFRE TECHNIQUE PAGEREF _Toc241491213 \h 16
+35. DÉMONSTRATION DE LA SOLUTION PAGEREF _Toc241491214 \h 17
+36. PRINCIPES D’ÉVALUATION TECHNIQUE PROPOSÉS PAGEREF _Toc241491215 \h 17
+37. CONFIDENTIALITÉ ET SÉCURITÉ PAGEREF _Toc241491216 \h 17
+38. GOUVERNANCE DE LA MISSION PAGEREF _Toc241491217 \h 18
+39. EXEMPLES INDICATIFS DE SOLUTIONS EXISTANTES PAGEREF _Toc241491218 \h 18
+40. BUDGET PRÉVISIONNEL INDICATIF PAGEREF _Toc241491219 \h 19
+40.1. Scénarios budgétaires PAGEREF _Toc241491220 \h 19
+40.2. Tranche optionnelle de géolocalisation GPS/IoT PAGEREF _Toc241491221 \h 19
+40.3. Décomposition financière obligatoire des offres PAGEREF _Toc241491222 \h 20
+ANNEXE 1 – CAHIER DES CHARGES FONCTIONNEL ET TECHNIQUE DE LA SOLUTION PAGEREF _Toc241491223 \h 21
+A. EXIGENCES FONCTIONNELLES PAGEREF _Toc241491224 \h 21
+B. DONNÉES MINIMALES D’UN ACTIF PAGEREF _Toc241491225 \h 22
+C. EXIGENCES DE GÉOLOCALISATION PAGEREF _Toc241491226 \h 23
+D. EXIGENCES TECHNIQUES PAGEREF _Toc241491227 \h 23
+E. SÉCURITÉ PAGEREF _Toc241491228 \h 24
+F. DISPONIBILITÉ ET CONTINUITÉ PAGEREF _Toc241491229 \h 24
+G. DIMENSIONNEMENT PAGEREF _Toc241491230 \h 24
+H. MODE HORS CONNEXION PAGEREF _Toc241491231 \h 25
+I. WORKFLOW D’INVENTAIRE PAGEREF _Toc241491232 \h 25
+J. WORKFLOW DE TRANSFERT PAGEREF _Toc241491233 \h 25
+K. MAINTENANCE DES ACTIFS PAGEREF _Toc241491234 \h 25
+L. INTEROPÉRABILITÉ PAGEREF _Toc241491235 \h 25
+M. EXIGENCES DE LICENCE PAGEREF _Toc241491236 \h 26
+N. RÉVERSIBILITÉ PAGEREF _Toc241491237 \h 26
+O. RECETTE PAGEREF _Toc241491238 \h 26
+P. INDICATEURS DE PERFORMANCE DU DISPOSITIF PAGEREF _Toc241491239 \h 26
+Q. EXIGENCES SPÉCIFIQUES POUR LES ACTIFS CRITIQUES PAGEREF _Toc241491240 \h 27
+R. PRINCIPE CIBLE PAGEREF _Toc241491241 \h 27
+ANNEXE 2 – MATRICE DE CONFORMITÉ À RENSEIGNER PAR LE SOUMISSIONNAIRE PAGEREF _Toc241491242 \h 27
+
+
+1. CONTEXTE ET JUSTIFICATION
+L’Unité de Coordination des Projets subventionnés par le Fonds mondial de lutte contre le Sida, la Tuberculose et le Paludisme en Côte d’Ivoire (UCP-FM) assure notamment la gestion administrative, financière, logistique et patrimoniale d’un important volume d’équipements et d’immobilisations acquis dans le cadre de la mise en œuvre des subventions du Fonds mondial.
+Au cours des dernières années, les investissements réalisés ont conduit à l’acquisition et au déploiement de plusieurs milliers de biens de différentes catégories, notamment :
+matériels informatiques et bureautiques ;
+équipements médicaux et biomédicaux ;
+équipements de laboratoire ;
+équipements de radiologie et de diagnostic ;
+équipements de chaîne du froid ;
+équipements techniques ;
+groupes électrogènes ;
+véhicules et moyens roulants ;
+mobiliers et équipements de bureau ;
+équipements de communication et de télécommunication ;
+matériels installés dans les établissements sanitaires ;
+équipements déployés auprès des programmes nationaux et structures partenaires ;
+autres biens acquis sur financement du Fonds mondial.
+Ces immobilisations sont géographiquement dispersées sur l’ensemble du territoire national et sont utilisées par plusieurs structures bénéficiaires.
+Cette situation rend particulièrement complexe :
+l’identification fiable des biens ;
+leur rattachement à leur financement et à leur programme ;
+leur localisation physique ;
+le rapprochement entre les données comptables, logistiques et physiques ;
+la connaissance de leur état ;
+le suivi des transferts ;
+le suivi des changements de détenteurs ;
+la gestion des réparations et maintenances ;
+le suivi de la garantie ;
+la gestion des biens non fonctionnels ;
+le suivi des immobilisations non retrouvées ;
+la préparation des mises au rebut ;
+la disponibilité d’une information patrimoniale fiable en temps réel.
+Les inventaires physiques successifs ont également mis en évidence des difficultés liées notamment à l’hétérogénéité des bases de données, à l’absence de mise à jour systématique des mouvements des biens, à la dispersion géographique des équipements et à l’insuffisance des outils permettant une traçabilité continue des immobilisations.
+Par ailleurs, certains biens présentent un niveau de criticité élevé en raison notamment :
+de leur valeur d’acquisition ;
+de leur caractère stratégique ;
+de leur importance programmatique ;
+de leur sensibilité ;
+de leur forte mobilité ;
+de leur implantation dans des zones présentant des risques particuliers ;
+de leur exposition au vol, à la substitution, à l’usurpation ou au déplacement non autorisé.
+Dans le cadre de l’amélioration de son dispositif de contrôle interne et de gestion patrimoniale, l’UCP-FM souhaite donc recruter une structure spécialisée en gestion des immobilisations afin :
+d’effectuer un diagnostic approfondi de son dispositif actuel ;
+d’appuyer la fiabilisation de son inventaire ;
+de proposer et mettre en œuvre un dispositif pérenne de gestion des immobilisations ;
+de déployer une solution informatique professionnelle de gestion des actifs ;
+de mettre en place le géoréférencement des actifs considérés comme sensibles ou stratégiques ;
+de permettre une mise à jour continue du patrimoine après l’inventaire annuel.
+La solution proposée ne devra pas être une application développée spécifiquement et uniquement pour les besoins de la présente consultation.
+Elle devra être une solution existante, stable, éprouvée, déjà déployée et effectivement utilisée en production par au moins une organisation présentant des caractéristiques comparables à celles de l’UCP-FM, notamment en termes de volume d’actifs, de dispersion géographique, de multiplicité des utilisateurs et de besoins de contrôle et de traçabilité.
+2. OBJET DE LA MISSION
+La présente mission a pour objet le recrutement d’un prestataire spécialisé chargé d’accompagner l’UCP-FM dans la modernisation et la sécurisation de la gestion de ses immobilisations à travers :
+l’analyse et l’amélioration du dispositif actuel ;
+la fiabilisation de la base des immobilisations ;
+l’appui à l’organisation des inventaires ;
+la définition de procédures et mécanismes permanents de suivi ;
+le déploiement d’un système d’information de gestion des actifs ;
+le géoréférencement des biens à criticité élevée ;
+la migration des données existantes ;
+la formation et le transfert de compétences ;
+l’accompagnement au démarrage et la maintenance de la solution.
+3. OBJECTIF GÉNÉRAL
+Mettre en place au sein de l’UCP-FM un dispositif intégré, fiable, sécurisé et durable de gestion des immobilisations permettant de disposer, à tout moment, d’une information exacte sur :
+quel bien, financé par qui, se trouve où, sous la responsabilité de qui, depuis quand, dans quel état, pour quelle utilisation et avec quel historique.
+4. OBJECTIFS SPÉCIFIQUES
+4.1. Diagnostiquer le dispositif existant
+Analyser :
+les procédures actuelles ;
+les fichiers et bases d’immobilisations ;
+les méthodes d’inventaire ;
+le dispositif d’étiquetage ;
+les systèmes de codification ;
+les circuits de transfert ;
+les mécanismes de réforme et de mise au rebut ;
+les outils actuellement utilisés ;
+l’organisation des responsabilités.
+4.2. Fiabiliser le référentiel patrimonial
+Mettre en place un référentiel unique et structuré des immobilisations permettant notamment :
+la suppression des doublons ;
+la normalisation des désignations ;
+l’unicité des identifiants ;
+la correction des incohérences ;
+la complétude des informations ;
+le rapprochement avec les données existantes.
+4.3. Améliorer l’organisation des inventaires
+Définir une méthodologie permettant :
+les inventaires annuels ;
+les inventaires tournants ;
+les contrôles ciblés ;
+les inventaires par programme ;
+les inventaires par région ;
+les inventaires par détenteur ;
+les inventaires par niveau de risque.
+4.4. Déployer une solution informatique de gestion des actifs
+Installer, paramétrer et mettre en production une solution couvrant l’ensemble du cycle de vie des immobilisations.
+4.5. Géolocaliser les actifs à risque
+Permettre le géoréférencement et la représentation cartographique des immobilisations prioritaires.
+4.6. Renforcer le contrôle interne
+Mettre en place des workflows, alertes, contrôles automatiques, pistes d’audit et tableaux de bord permettant une meilleure supervision des immobilisations.
+4.7. Assurer le transfert de compétences
+Former les administrateurs, gestionnaires d’actifs, responsables logistiques, équipes informatiques, utilisateurs des programmes et autres personnes désignées par l’UCP-FM.
+5. PÉRIMÈTRE DE LA MISSION
+Le prestataire interviendra sur l’ensemble du dispositif de gestion des immobilisations de l’UCP-FM.
+Le périmètre pourra couvrir les immobilisations de l’UCP-FM ainsi que les équipements financés par le Fonds mondial et confiés aux programmes, structures sanitaires, services centraux, structures déconcentrées et autres bénéficiaires.
+6. PRINCIPALES PRESTATIONS ATTENDUES
+6.1. Phase 1 – Diagnostic
+Le prestataire devra réaliser un état des lieux complet comprenant notamment :
+analyse documentaire ;
+entretiens avec les principales parties prenantes ;
+analyse des bases existantes ;
+analyse des procédures ;
+analyse du dispositif d’étiquetage ;
+analyse des données historiques d’inventaire ;
+analyse des écarts constatés lors des précédents inventaires ;
+identification des risques ;
+analyse de l’organisation et des responsabilités ;
+analyse de l’architecture informatique disponible.
+Un rapport de diagnostic devra présenter les constats, risques, écarts et recommandations.
+6.2. Phase 2 – Élaboration du référentiel de gestion des actifs
+Le prestataire proposera un modèle de données unique comprenant au minimum :
+numéro d’immobilisation ;
+code bailleur ;
+programme ;
+financement ;
+numéro de série ;
+catégorie ;
+sous-catégorie ;
+marque ;
+modèle ;
+description ;
+date d’acquisition ;
+valeur d’acquisition ;
+fournisseur ;
+référence du marché ;
+date de réception ;
+garantie ;
+statut ;
+état ;
+localisation administrative ;
+localisation géographique ;
+établissement ;
+service ;
+détenteur ;
+bénéficiaire ;
+photos ;
+documents associés ;
+historique des mouvements.
+7. APPUI À LA FIABILISATION DE L’INVENTAIRE
+Le prestataire devra proposer les mécanismes permettant de confronter :
+base théorique / inventaire physique / données comptables / données logistiques / localisation réelle.
+Il devra notamment permettre d’identifier :
+les biens physiquement présents et enregistrés ;
+les biens présents mais non enregistrés ;
+les biens enregistrés mais non retrouvés ;
+les doublons ;
+les biens transférés ;
+les biens en panne ;
+les biens hors service ;
+les biens volés ;
+les biens proposés à la réforme ;
+les biens dépourvus d’étiquette ;
+les équipements dont le détenteur ou le site a changé.
+8. CLASSIFICATION DES ACTIFS PAR NIVEAU DE RISQUE
+Un mécanisme de classification automatique ou semi-automatique des immobilisations devra être proposé.
+Les critères pourront notamment comprendre :
+valeur d’acquisition ;
+valeur de remplacement ;
+importance stratégique ;
+importance programmatique ;
+mobilité ;
+sensibilité ;
+risque de vol ;
+risque de substitution ;
+risque d’usurpation ;
+zone géographique ;
+fréquence des mouvements ;
+criticité opérationnelle ;
+délai de remplacement.
+Les biens pourront être classés, par exemple, selon quatre niveaux :
+Critique ;
+Élevé ;
+Modéré ;
+Faible.
+La pondération définitive devra être validée avec l’UCP-FM.
+9. GÉOLOCALISATION ET GÉORÉFÉRENCEMENT
+Une attention particulière devra être accordée aux immobilisations présentant un risque élevé.
+9.1. Géoréférencement
+Lors de l’inventaire ou du contrôle d’un actif, l’application mobile devra pouvoir enregistrer automatiquement :
+latitude ;
+longitude ;
+date ;
+heure ;
+utilisateur ;
+niveau de précision GPS ;
+photographie du bien ;
+photographie de son environnement si nécessaire.
+9.2. Cartographie
+Les biens devront pouvoir être visualisés sur une carte avec des filtres par :
+programme ;
+région ;
+district ;
+établissement ;
+type d’équipement ;
+valeur ;
+statut ;
+état ;
+niveau de risque.
+9.3. Contrôle de localisation
+La solution devra pouvoir détecter les différences entre :
+localisation théorique ;
+localisation déclarée ;
+dernière localisation vérifiée.
+9.4. Geofencing
+Pour certaines catégories, il devra être possible de définir une zone géographique autorisée et de signaler une incohérence de localisation lors d’un contrôle.
+9.5. Suivi temps réel
+Lorsque certains équipements disposent d’un dispositif GPS ou IoT, la solution devra pouvoir recevoir ou intégrer leurs positions.
+Pour les véhicules, une interconnexion avec les solutions de géolocalisation existantes de l’UCP-FM devra pouvoir être étudiée.
+10. ÉTIQUETAGE ET IDENTIFICATION
+La solution devra être compatible avec les mécanismes d’identification retenus par l’UCP-FM, notamment :
+numéro unique d’immobilisation ;
+QR Code ;
+code-barres ;
+éventuellement RFID ou NFC.
+La codification numérique devra pouvoir être intégrée aux étiquettes physiques sécurisées utilisées par l’UCP-FM.
+Le scan d’une étiquette devra permettre d’afficher immédiatement la fiche du bien.
+11. GESTION DES MOUVEMENTS
+La solution devra couvrir :
+affectation ;
+réaffectation ;
+transfert ;
+prêt ;
+retour ;
+sortie temporaire ;
+remplacement ;
+changement de détenteur ;
+changement de site ;
+mise à disposition ;
+réforme ;
+cession ;
+mise au rebut.
+Chaque mouvement devra être historisé.
+12. DOCUMENTS ET PIÈCES JUSTIFICATIVES
+La fiche d’un actif devra permettre de joindre notamment :
+facture ;
+bon de commande ;
+contrat ;
+procès-verbal de réception ;
+bordereau de livraison ;
+fiche technique ;
+certificat de garantie ;
+photo ;
+fiche de transfert ;
+fiche d’affectation ;
+rapport de panne ;
+document de réforme ;
+procès-verbal de mise au rebut.
+13. GESTION DES MAINTENANCES
+La solution devra permettre de suivre :
+maintenance préventive ;
+maintenance corrective ;
+panne ;
+intervention ;
+prestataire ;
+coût ;
+durée d’immobilisation ;
+pièces remplacées ;
+prochaine maintenance ;
+historique complet.
+14. ALERTES
+Le système devra générer des alertes relatives notamment :
+aux garanties arrivant à échéance ;
+aux maintenances prévues ;
+aux équipements non inventoriés ;
+aux actifs non vérifiés depuis une période définie ;
+aux changements de localisation ;
+aux transferts en attente de validation ;
+aux incohérences de données ;
+aux actifs critiques ;
+aux actifs hors service ;
+aux biens proposés à la réforme.
+15. TABLEAUX DE BORD
+Le logiciel devra fournir des tableaux de bord permettant notamment de suivre :
+nombre total d’immobilisations ;
+valeur totale ;
+répartition par financement ;
+répartition par programme ;
+répartition par catégorie ;
+répartition géographique ;
+répartition par état ;
+actifs fonctionnels ;
+actifs en panne ;
+actifs hors service ;
+actifs volés ;
+actifs non vus ;
+actifs transférés ;
+taux d’inventaire ;
+taux de rapprochement ;
+taux d’étiquetage ;
+immobilisations critiques ;
+immobilisations à réformer ;
+valeur des actifs par localisation.
+16. ANALYSE ET CARTOGRAPHIE DES RISQUES
+Le prestataire devra proposer un tableau de bord spécifique permettant d’identifier les zones, catégories ou structures présentant les plus forts risques patrimoniaux.
+17. REPRISE ET MIGRATION DES DONNÉES
+Le prestataire devra réaliser :
+l’analyse des fichiers existants ;
+le mapping des champs ;
+la détection des doublons ;
+le nettoyage ;
+la normalisation ;
+les contrôles de cohérence ;
+la migration ;
+les tests ;
+la validation avec l’UCP-FM.
+Aucune donnée ne devra être supprimée sans validation préalable.
+18. INTEROPÉRABILITÉ
+La solution devra être capable d’échanger des données avec les systèmes de l’UCP-FM.
+Elle devra au minimum supporter :
+Excel ;
+CSV ;
+PDF ;
+API REST ou mécanisme équivalent documenté.
+Elle devra pouvoir être interfacée, si nécessaire, avec les outils comptables, financiers, logistiques et de gestion des immobilisations utilisés ou envisagés par l’UCP-FM, notamment les modules de gestion patrimoniale existants.
+19. APPLICATION MOBILE D’INVENTAIRE
+Une application mobile ou une interface Web mobile devra être fournie.
+Elle devra permettre :
+scan QR Code ;
+identification d’un actif ;
+recherche d’un actif ;
+modification contrôlée ;
+prise de photo ;
+acquisition GPS ;
+saisie de l’état ;
+saisie d’observations ;
+identification du détenteur ;
+validation d’un actif ;
+création contrôlée d’un actif non identifié ;
+synchronisation des données.
+Compte tenu des conditions de connectivité de certaines zones, un mode hors connexion devra obligatoirement être disponible.
+Les informations devront pouvoir être synchronisées ultérieurement lorsque la connexion Internet redevient disponible.
+20. GESTION DES UTILISATEURS
+La solution devra disposer d’une gestion fine des habilitations.
+Les profils pourront notamment comprendre :
+administrateur ;
+gestionnaire des immobilisations ;
+responsable logistique ;
+utilisateur programme ;
+agent inventaire ;
+contrôleur ;
+auditeur ;
+consultant ;
+lecteur.
+Les droits devront être configurables selon :
+module ;
+programme ;
+zone géographique ;
+établissement ;
+opération ;
+type d’actif.
+21. TRAÇABILITÉ
+Toute opération devra être enregistrée dans une piste d’audit non modifiable indiquant :
+utilisateur ;
+date ;
+heure ;
+donnée précédente ;
+nouvelle donnée ;
+opération réalisée.
+22. RAPPORTS
+Le système devra notamment produire :
+registre des immobilisations ;
+situation par programme ;
+situation par financement ;
+situation par détenteur ;
+situation par établissement ;
+rapport d’inventaire ;
+rapport des écarts ;
+rapport des biens non vus ;
+rapport des biens en panne ;
+rapport des biens hors service ;
+rapport des biens volés ;
+rapport des transferts ;
+rapport de maintenance ;
+rapport des biens à réformer ;
+rapport des actifs critiques.
+23. PROPRIÉTÉ ET RÉVERSIBILITÉ DES DONNÉES
+L’ensemble des données enregistrées dans la solution demeurera la propriété exclusive de l’UCP-FM.
+Le système devra permettre l’export exhaustif des données et documents dans des formats ouverts et exploitables.
+Le prestataire devra fournir une procédure de réversibilité garantissant qu’en cas de changement de prestataire, l’UCP-FM puisse récupérer ses données sans perte d’information.
+24. MODE DE DÉPLOIEMENT
+Le soumissionnaire devra préciser clairement le mode proposé :
+installation locale ;
+Cloud ;
+hybride.
+Il devra présenter :
+architecture ;
+hébergement ;
+sécurité ;
+disponibilité ;
+sauvegarde ;
+reprise après sinistre ;
+politique de mise à jour ;
+exigences de connectivité ;
+prérequis techniques.
+25. EXIGENCE MAJEURE RELATIVE À LA MATURITÉ DE LA SOLUTION
+La solution proposée devra obligatoirement être une solution existante et opérationnelle.
+Le soumissionnaire devra fournir au minimum :
+nom et version du logiciel ;
+date de première mise en production ;
+architecture fonctionnelle ;
+documentation commerciale et technique ;
+liste de références pertinentes ;
+coordonnées d’au moins un client de référence ;
+attestation de bonne exécution ou attestation de déploiement ;
+description du périmètre déployé ;
+nombre approximatif d’actifs gérés ;
+nombre d’utilisateurs ;
+durée d’exploitation.
+L’UCP-FM pourra procéder à la vérification des références.
+Une démonstration de la solution sera obligatoire dans le cadre de l’évaluation.
+Une simple maquette, un prototype ou un développement non encore utilisé en production ne sera pas considéré comme une solution répondant à cette exigence.
+26. LIVRABLES
+Livrable 1 – Rapport de démarrage et méthodologie détaillée.
+Livrable 2 – Rapport de diagnostic du dispositif existant.
+Livrable 3 – Référentiel cible de gestion des immobilisations.
+Livrable 4 – Plan de fiabilisation de la base existante.
+Livrable 5 – Base consolidée, nettoyée et normalisée.
+Livrable 6 – Procédures actualisées de gestion des immobilisations.
+Livrable 7 – Solution informatique installée et paramétrée.
+Livrable 8 – Application mobile d’inventaire opérationnelle.
+Livrable 9 – Données historiques migrées.
+Livrable 10 – Module cartographique et géoréférencement opérationnel.
+Livrable 11 – Rapport des tests et recette fonctionnelle.
+Livrable 12 – Manuel administrateur.
+Livrable 13 – Manuel utilisateur.
+Livrable 14 – Plan de sauvegarde et de continuité.
+Livrable 15 – Sessions de formation et supports pédagogiques.
+Livrable 16 – Rapport de mise en production.
+Livrable 17 – Rapport final de mission.
+27. APPROCHE DE MISE EN ŒUVRE PROPOSÉE
+La mission pourra être organisée en six phases :
+Phase 1 – Cadrage et diagnostic
+Phase 2 – Fiabilisation des référentiels et préparation des données
+Phase 3 – Paramétrage et adaptation de la solution
+Phase 4 – Migration et inventaire pilote
+Phase 5 – Déploiement généralisé et formation
+Phase 6 – Stabilisation, assistance et transfert de compétences
+28. SITE PILOTE
+Avant le déploiement généralisé, la solution devra être testée sur un échantillon représentatif comprenant de préférence :
+le siège de l’UCP-FM ;
+un programme national ;
+une structure sanitaire d’Abidjan ;
+une structure située à l’intérieur du pays ;
+des actifs présentant des niveaux de criticité différents.
+Les résultats du pilote devront être validés avant généralisation.
+29. DURÉE INDICATIVE
+Il est proposé une durée de cinq (5) mois pour le diagnostic, le paramétrage, la migration, les inventaires pilotes et la mise en production, suivis d’une période minimale de douze (12) mois de garantie, assistance technique et maintenance.
+Le soumissionnaire pourra proposer un calendrier optimisé sous réserve du respect des résultats attendus.
+30. PROFIL DU PRESTATAIRE
+Le soumissionnaire devra :
+être une société légalement constituée ;
+être spécialisé dans la gestion d’actifs, la gestion des immobilisations ou les systèmes d’information patrimoniaux ;
+justifier d’une expérience significative dans ce domaine ;
+disposer d’une solution logicielle déjà opérationnelle ;
+avoir réalisé au moins une mission comparable ;
+être en mesure d’assurer le support et la maintenance de la solution.
+Une expérience auprès :
+d’organisations publiques ;
+d’organisations internationales ;
+de projets financés par des bailleurs ;
+d’organisations sanitaires ;
+de structures disposant d’un patrimoine géographiquement dispersé
+constituera un élément particulièrement pertinent.
+31. ÉQUIPE CLÉ MINIMALE
+Chef de mission / Expert senior en gestion des immobilisations – Expérience recommandée : au moins dix ans.
+Expert fonctionnel en gestion d’actifs – Expérience recommandée : au moins sept ans.
+Architecte / Expert solution – Expérience recommandée : au moins sept ans.
+Expert bases de données et migration – Expérience recommandée : au moins cinq ans.
+Expert SIG / géolocalisation – Expérience recommandée : au moins cinq ans.
+Expert inventaire physique – Expérience recommandée : au moins cinq ans.
+Expert formation et conduite du changement – Expérience recommandée : au moins cinq ans.
+32. FORMATION ET TRANSFERT DE COMPÉTENCES
+Le prestataire devra organiser plusieurs niveaux de formation :
+administrateurs techniques ;
+administrateurs fonctionnels ;
+gestionnaires d’immobilisations ;
+équipes IT et Logistique ;
+équipes d’inventaire ;
+utilisateurs des programmes ;
+auditeurs/contrôleurs.
+Une formation des formateurs devra être prévue.
+33. SUPPORT ET MAINTENANCE
+Le soumissionnaire précisera :
+horaires de support ;
+canaux de support ;
+niveaux de criticité ;
+délais de prise en charge ;
+délais de résolution ;
+procédure d’escalade ;
+mises à jour ;
+maintenance corrective ;
+maintenance évolutive ;
+modalités de renouvellement.
+Un SLA devra être proposé.
+34. DOCUMENTS À FOURNIR DANS L’OFFRE TECHNIQUE
+Le soumissionnaire devra fournir :
+présentation de la société ;
+compréhension de la mission ;
+méthodologie ;
+chronogramme ;
+organisation de l’équipe ;
+CV des experts ;
+références ;
+attestations de bonne exécution ;
+présentation détaillée du logiciel ;
+architecture de la solution ;
+matrice de conformité au cahier des charges ;
+politique de sécurité ;
+politique de sauvegarde ;
+modalités de support ;
+modèle de licence ;
+coûts récurrents éventuels ;
+prérequis techniques.
+35. DÉMONSTRATION DE LA SOLUTION
+Les soumissionnaires techniquement admissibles pourront être invités à effectuer une démonstration.
+La démonstration devra notamment couvrir un scénario complet :
+Acquisition → réception → codification → affectation → localisation → inventaire → transfert → maintenance → réforme.
+Elle devra également montrer :
+application mobile ;
+QR Code ;
+géolocalisation ;
+cartographie ;
+fonctionnement hors connexion ;
+synchronisation ;
+workflow ;
+piste d’audit ;
+tableaux de bord ;
+reporting.
+36. PRINCIPES D’ÉVALUATION TECHNIQUE PROPOSÉS
+L’évaluation pourra notamment porter sur :
+Critère
+	Pondération indicative
+	
+Expérience générale et spécifique du prestataire
+	10 points
+	
+Références en gestion d’immobilisations
+	10 points
+	
+Qualité et maturité de la solution existante
+	15 points
+	
+Conformité fonctionnelle au cahier des charges
+	20 points
+	
+Architecture, sécurité et interopérabilité
+	10 points
+	
+Méthodologie de mise en œuvre
+	10 points
+	
+Qualification de l’équipe
+	10 points
+	
+Géolocalisation, mobilité et fonctionnement hors ligne
+	5 points
+	
+Démonstration de la solution
+	10 points
+	
+TOTAL
+	100 points
+	
+La preuve d’un déploiement réel de la solution dans une structure comparable devra constituer une condition essentielle de recevabilité technique.
+37. CONFIDENTIALITÉ ET SÉCURITÉ
+Le prestataire sera soumis à une obligation stricte de confidentialité concernant les informations et données auxquelles il aura accès.
+Il devra mettre en œuvre les mesures nécessaires pour empêcher :
+accès non autorisés ;
+fuite de données ;
+suppression accidentelle ;
+altération ;
+perte ;
+exfiltration.
+38. GOUVERNANCE DE LA MISSION
+La mission sera placée sous la supervision de l’UCP-FM.
+Un comité de suivi pourra être constitué avec notamment des représentants :
+de la Coordination ;
+des Finances ;
+du Service IT et Logistique ;
+de la Gestion des immobilisations ;
+du Contrôle de Gestion ;
+de la Passation des Marchés ;
+des programmes bénéficiaires ;
+et de toute autre structure jugée nécessaire.
+39. EXEMPLES INDICATIFS DE SOLUTIONS EXISTANTES
+Les solutions ci-dessous sont citées à titre purement indicatif afin d’illustrer le niveau de maturité attendu. Cette liste n’est ni exhaustive ni prescriptive et ne constitue aucune préférence de marque. Toute solution équivalente ou supérieure répondant au cahier des charges, déjà déployée et utilisée en production, demeure recevable.
+Solution
+	Positionnement
+	Fonctions pertinentes pour l’UCP-FM
+	Points d’attention
+	
+IBM Maximo Application Suite
+	EAM / gestion d’actifs d’entreprise
+	Cycle de vie des actifs, maintenance, workflows, mobilité, codes-barres/RFID, travail en ligne/hors ligne, intégrations et cartographie.
+	Solution robuste pour patrimoines importants et multisites ; projet d’intégration généralement plus structurant.
+	
+HxGN EAM (Hexagon)
+	EAM / maintenance / SIG
+	Gestion des actifs et de la maintenance, mobilité terrain, workflows et intégration SIG/ESRI pour la recherche et la cartographie des actifs.
+	Pertinent lorsque la dimension cartographique et la dispersion géographique sont fortes.
+	
+EZO Asset Management / EZOfficeInventory
+	Asset Management / EAM
+	QR Code, code-barres, RFID, multi-sites, maintenance, historique, applications mobiles, GPS à la lecture et intégration de données GPS/télématiques.
+	Déploiement agile ; à évaluer sur les volumes, le hors connexion et les exigences de gouvernance.
+	
+Asset Panda
+	Asset Tracking / gestion d’immobilisations
+	QR Code et code-barres, affectations, audits, maintenance, workflows, application mobile, hors connexion et capture GPS lors des scans.
+	Très adapté aux campagnes d’inventaire ; distinguer la capture GPS ponctuelle du suivi temps réel.
+	
+SAP S/4HANA Asset Management + SAP Service and Asset Manager
+	EAM intégré à un ERP
+	Gestion des actifs et de la maintenance, application mobile, en ligne/hors ligne, intégration SAP, services de localisation et SIG.
+	Pertinent dans un environnement SAP ou une stratégie SI intégrée ; architecture potentiellement plus lourde.
+	
+Exigence de vérification des références. Le soumissionnaire devra démontrer que la solution proposée est effectivement en production chez au moins un client comparable. L’UCP-FM pourra contacter les références, demander une démonstration d’un environnement opérationnel et imposer des scénarios de démonstration fondés sur ses propres processus.
+Principe de neutralité technologique. Les spécifications du présent document sont formulées en termes de résultats fonctionnels, de sécurité, d’interopérabilité et de niveau de service. Aucune marque citée dans cette section ne devra être considérée comme obligatoire.
+
+ANNEXE 1 – CAHIER DES CHARGES FONCTIONNEL ET TECHNIQUE DE LA SOLUTION
+A. EXIGENCES FONCTIONNELLES
+N°
+	Fonctionnalité
+	Exigence
+	
+F01
+	Référentiel des actifs
+	Obligatoire
+	
+F02
+	Identifiant unique
+	Obligatoire
+	
+F03
+	QR Code / Code-barres
+	Obligatoire
+	
+F04
+	Gestion des catégories
+	Obligatoire
+	
+F05
+	Numéros de série
+	Obligatoire
+	
+F06
+	Gestion des bénéficiaires
+	Obligatoire
+	
+F07
+	Affectation des actifs
+	Obligatoire
+	
+F08
+	Transfert
+	Obligatoire
+	
+F09
+	Historique des mouvements
+	Obligatoire
+	
+F10
+	Gestion des sites
+	Obligatoire
+	
+F11
+	Localisation GPS
+	Obligatoire
+	
+F12
+	Cartographie
+	Obligatoire
+	
+F13
+	Photos géotaguées
+	Obligatoire
+	
+F14
+	Inventaire mobile
+	Obligatoire
+	
+F15
+	Fonctionnement hors ligne
+	Obligatoire
+	
+F16
+	Synchronisation
+	Obligatoire
+	
+F17
+	Maintenance
+	Obligatoire
+	
+F18
+	Garantie
+	Obligatoire
+	
+F19
+	Réforme / mise au rebut
+	Obligatoire
+	
+F20
+	Gestion documentaire
+	Obligatoire
+	
+F21
+	Alertes
+	Obligatoire
+	
+F22
+	Tableaux de bord
+	Obligatoire
+	
+F23
+	Reporting
+	Obligatoire
+	
+F24
+	Import Excel/CSV
+	Obligatoire
+	
+F25
+	Export Excel/CSV/PDF
+	Obligatoire
+	
+F26
+	API d’interopérabilité
+	Obligatoire
+	
+F27
+	Workflow de validation
+	Obligatoire
+	
+F28
+	Piste d’audit
+	Obligatoire
+	
+F29
+	Gestion des rôles
+	Obligatoire
+	
+F30
+	Recherche multicritère
+	Obligatoire
+	
+F31
+	Classification du risque
+	Obligatoire
+	
+F32
+	Inventaires tournants
+	Obligatoire
+	
+F33
+	Rapprochement inventaire/base
+	Obligatoire
+	
+F34
+	Tableau des écarts
+	Obligatoire
+	
+F35
+	Carte des actifs critiques
+	Obligatoire
+	
+B. DONNÉES MINIMALES D’UN ACTIF
+Chaque fiche d’immobilisation devra pouvoir contenir au minimum :
+Identification
+identifiant unique ;
+code bailleur ;
+référence étiquette ;
+désignation ;
+catégorie ;
+sous-catégorie ;
+marque ;
+modèle ;
+numéro de série.
+Acquisition
+fournisseur ;
+marché ;
+bon de commande ;
+date d’acquisition ;
+date de réception ;
+valeur ;
+devise ;
+source de financement ;
+subvention ;
+programme.
+Affectation
+structure bénéficiaire ;
+site ;
+service ;
+utilisateur/détenteur ;
+date d’affectation.
+Géographie
+pays ;
+région ;
+district ;
+département ;
+ville ;
+établissement ;
+latitude ;
+longitude ;
+précision GPS.
+État
+bon état ;
+panne ;
+hors service ;
+non vu ;
+transféré ;
+volé ;
+en maintenance ;
+à réformer ;
+mis au rebut.
+Risque
+niveau de criticité ;
+niveau de risque ;
+justification du classement.
+Documents
+photos ;
+PV ;
+factures ;
+garantie ;
+fiches techniques ;
+documents de transfert.
+C. EXIGENCES DE GÉOLOCALISATION
+Le système devra permettre :
+l’acquisition automatique des coordonnées GPS depuis un terminal mobile ;
+l’enregistrement de la précision GPS ;
+l’horodatage ;
+l’identification de l’agent ;
+la visualisation cartographique ;
+la comparaison position théorique/position contrôlée ;
+la conservation de l’historique ;
+la cartographie des risques ;
+l’utilisation hors connexion ;
+la synchronisation ultérieure.
+Les cartes devront pouvoir être filtrées par programme, catégorie, statut, valeur et niveau de risque.
+D. EXIGENCES TECHNIQUES
+La solution devra :
+être accessible via navigateur Web moderne ;
+disposer d’une interface responsive ;
+proposer une application ou interface mobile ;
+être compatible Android ;
+disposer d’une architecture sécurisée ;
+prendre en charge HTTPS ;
+disposer d’un mécanisme d’authentification robuste ;
+permettre l’intégration à un annuaire ou SSO si disponible ;
+gérer les rôles et autorisations ;
+assurer le chiffrement des échanges ;
+assurer la sauvegarde des données ;
+offrir un mécanisme de restauration ;
+disposer d’une journalisation ;
+permettre l’export complet des données ;
+fournir des API documentées ;
+supporter la montée en charge.
+E. SÉCURITÉ
+La solution devra notamment prévoir :
+politiques de mots de passe ;
+gestion des sessions ;
+limitation des tentatives ;
+journalisation ;
+audit des connexions ;
+séparation des privilèges ;
+chiffrement des flux ;
+sauvegardes ;
+gestion des vulnérabilités ;
+mises à jour de sécurité ;
+authentification multifacteur lorsque possible.
+F. DISPONIBILITÉ ET CONTINUITÉ
+Le prestataire devra indiquer :
+disponibilité cible ;
+fréquence des sauvegardes ;
+rétention des sauvegardes ;
+RPO ;
+RTO ;
+mécanismes de reprise ;
+procédure de restauration ;
+mécanisme de haute disponibilité proposé.
+G. DIMENSIONNEMENT
+La solution devra pouvoir supporter sans dégradation significative :
+plusieurs dizaines de milliers d’immobilisations ;
+plusieurs centaines d’utilisateurs ;
+plusieurs centaines de sites ;
+plusieurs années d’historique ;
+photographies et documents associés.
+L’architecture devra pouvoir évoluer au-delà de ces volumes.
+H. MODE HORS CONNEXION
+Cette exigence est obligatoire pour les inventaires terrain.
+L’agent devra pouvoir télécharger préalablement une mission d’inventaire contenant les biens d’une zone donnée.
+Sur le terrain, il devra pouvoir, sans connexion :
+scanner ;
+rechercher ;
+photographier ;
+enregistrer les coordonnées GPS ;
+modifier l’état ;
+saisir des observations ;
+confirmer la présence ;
+déclarer un bien non retrouvé ;
+enregistrer un nouveau bien sous contrôle.
+La synchronisation devra être automatique ou déclenchée au retour de la connexion.
+I. WORKFLOW D’INVENTAIRE
+Le système devra permettre la séquence suivante :
+Préparation → affectation des équipes → collecte → synchronisation → contrôle → traitement des écarts → validation → clôture → reporting.
+Une campagne clôturée ne devra pas pouvoir être modifiée sans habilitation spécifique et sans traçabilité.
+J. WORKFLOW DE TRANSFERT
+Un transfert devra pouvoir comprendre :
+Demande → validation → remise → réception par nouveau détenteur → mise à jour automatique de la localisation → archivage.
+K. MAINTENANCE DES ACTIFS
+Le système devra permettre la création d’une fiche d’intervention comportant :
+équipement ;
+panne ;
+date ;
+prestataire ;
+diagnostic ;
+coût ;
+pièces ;
+durée ;
+résultat ;
+prochain entretien.
+L. INTEROPÉRABILITÉ
+La solution devra pouvoir échanger des données avec les autres systèmes de l’UCP-FM au moyen d’API ou de fichiers structurés.
+Le prestataire devra fournir la documentation nécessaire pour permettre ultérieurement une interconnexion avec les applications financières, comptables, logistiques et de gestion patrimoniale de l’UCP-FM.
+M. EXIGENCES DE LICENCE
+Le soumissionnaire devra clairement distinguer :
+licence initiale ;
+abonnement éventuel ;
+utilisateurs inclus ;
+coût par utilisateur supplémentaire ;
+maintenance ;
+hébergement ;
+support ;
+mises à jour ;
+modules supplémentaires ;
+frais de stockage ;
+API ;
+application mobile.
+Aucun coût récurrent ne devra être dissimulé dans l’offre initiale.
+N. RÉVERSIBILITÉ
+En cas de fin de contrat, l’UCP-FM devra pouvoir récupérer :
+base complète des actifs ;
+historiques ;
+utilisateurs ;
+mouvements ;
+coordonnées GPS ;
+documents ;
+photos ;
+journaux utiles ;
+paramétrages exportables.
+O. RECETTE
+La recette comprendra :
+tests fonctionnels ;
+tests techniques ;
+tests de sécurité ;
+tests de performance ;
+tests mobiles ;
+tests hors ligne ;
+tests de migration ;
+tests de géolocalisation ;
+tests de sauvegarde/restauration ;
+tests utilisateurs.
+La mise en production ne pourra intervenir qu’après validation de la recette par l’UCP-FM.
+P. INDICATEURS DE PERFORMANCE DU DISPOSITIF
+Après déploiement, le système devra permettre de suivre notamment :
+taux de biens disposant d’un identifiant unique ;
+taux de biens étiquetés ;
+taux de biens géolocalisés ;
+taux de biens inventoriés ;
+taux de rapprochement réussi ;
+taux de biens non retrouvés ;
+taux de biens avec détenteur identifié ;
+taux de biens avec localisation complète ;
+taux de résolution des écarts ;
+valeur totale des biens à risque ;
+délai moyen de traitement d’un transfert ;
+délai moyen de mise à jour après mouvement.
+Q. EXIGENCES SPÉCIFIQUES POUR LES ACTIFS CRITIQUES
+Pour les actifs identifiés comme critiques, les données suivantes devront être obligatoires :
+photo ;
+numéro de série ;
+QR Code ;
+coordonnées GPS ;
+site ;
+détenteur ;
+date de dernière vérification ;
+valeur ;
+niveau de risque ;
+historique des déplacements.
+Le système devra pouvoir produire automatiquement une liste de surveillance des actifs critiques.
+R. PRINCIPE CIBLE
+À terme, le dispositif devra permettre à l’UCP-FM de passer d’un système principalement fondé sur des inventaires périodiques à un système de gestion permanente du patrimoine, dans lequel tout événement affectant un bien est enregistré au fil de l’eau.
+Le principe recherché est :
+Acquisition → Réception → Identification → Affectation → Localisation → Utilisation → Maintenance → Inventaire → Transfert éventuel → Réforme → Sortie du patrimoine.
+L’inventaire annuel devient ainsi un mécanisme de vérification et de contrôle du patrimoine et non le principal moyen de reconstituer la situation des immobilisations.
+ANNEXE 2 – MATRICE DE CONFORMITÉ À RENSEIGNER PAR LE SOUMISSIONNAIRE
+Pour chaque exigence du cahier des charges, le soumissionnaire devra indiquer la situation de sa solution à la date de soumission. Cette matrice permettra de distinguer les fonctionnalités natives et déjà disponibles des développements futurs.
+Statut
+	Définition
+	
+Conforme
+	Fonctionnalité disponible nativement et démontrable dans la version proposée.
+	
+Partiellement conforme
+	Fonctionnalité disponible mais ne couvrant pas l’intégralité du besoin.
+	
+Disponible par paramétrage
+	Fonctionnalité réalisable par configuration sans développement spécifique.
+	
+Nécessite développement
+	Fonctionnalité non disponible dans la version actuelle et nécessitant un développement.
+	
+Non conforme
+	Fonctionnalité non couverte.
+	
