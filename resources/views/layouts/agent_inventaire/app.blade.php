@@ -49,17 +49,55 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-        /* Styles pour Sidebar Réduite */
-        .sidebar-collapsed {
-            width: 5rem !important; /* w-20 */
+        /* Styles pour Sidebar Réduite (Desktop) */
+        @media (min-width: 768px) {
+            .sidebar-collapsed {
+                width: 5rem !important; /* w-20 */
+            }
+            .sidebar-collapsed .sidebar-text-element {
+                display: none !important;
+            }
+            .sidebar-collapsed nav a, .sidebar-collapsed nav button {
+                justify-content: center !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
         }
-        .sidebar-collapsed .sidebar-text-element {
-            display: none !important;
-        }
-        .sidebar-collapsed nav a, .sidebar-collapsed nav button {
-            justify-content: center !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+
+        /* Styles Responsive Sidebar pour Mobile (< 768px) */
+        @media (max-width: 767.98px) {
+            #mainSidebar {
+                position: fixed !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                height: 100vh !important;
+                height: 100dvh !important;
+                width: 17rem !important;
+                max-width: 85vw !important;
+                z-index: 50 !important;
+                margin: 0 !important;
+                border-radius: 0 1.25rem 1.25rem 0 !important;
+                transform: translateX(-105%) !important;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35) !important;
+            }
+
+            #mainSidebar.sidebar-mobile-open {
+                transform: translateX(0) !important;
+            }
+
+            #mainSidebar.sidebar-collapsed {
+                width: 17rem !important;
+            }
+            #mainSidebar.sidebar-collapsed .sidebar-text-element {
+                display: inline !important;
+            }
+            #mainSidebar.sidebar-collapsed nav a, #mainSidebar.sidebar-collapsed nav button {
+                justify-content: flex-start !important;
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
         }
 
         /* TomSelect Theme Customization */
@@ -129,7 +167,10 @@
 </head>
 <body class="h-full app-bg-pattern text-slate-800 antialiased overflow-hidden">
 
-    <div class="h-full flex flex-col md:flex-row overflow-hidden">
+    <div class="h-full flex flex-col md:flex-row overflow-hidden relative">
+        <!-- Backdrop mobile pour Sidebar Drawer -->
+        <div id="sidebarMobileBackdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-40 hidden md:hidden transition-opacity duration-300"></div>
+
         <!-- Sidebar Agent Inventaire Flottante -->
         @include('layouts.agent_inventaire.sidebar')
 
@@ -146,21 +187,73 @@
     <!-- Toggle Collapse / Expand & Handlers -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Toggle de la Sidebar
+            // Toggle de la Sidebar (Desktop: collapse / Mobile: drawer)
             const sidebarToggleBtn = document.getElementById('navbarSidebarToggle');
             const mainSidebar = document.getElementById('mainSidebar');
+            const mobileBackdrop = document.getElementById('sidebarMobileBackdrop');
+
+            function isMobileScreen() {
+                return window.innerWidth < 768;
+            }
+
+            function openMobileSidebar() {
+                if (mainSidebar) mainSidebar.classList.add('sidebar-mobile-open');
+                if (mobileBackdrop) mobileBackdrop.classList.remove('hidden');
+            }
+
+            function closeMobileSidebar() {
+                if (mainSidebar) mainSidebar.classList.remove('sidebar-mobile-open');
+                if (mobileBackdrop) mobileBackdrop.classList.add('hidden');
+            }
+
+            window.openMobileSidebar = openMobileSidebar;
+            window.closeMobileSidebar = closeMobileSidebar;
 
             if (sidebarToggleBtn && mainSidebar) {
-                const isCollapsed = localStorage.getItem('sidebar_collapsed') === 'true';
-                if (isCollapsed) {
-                    mainSidebar.classList.add('sidebar-collapsed');
+                if (!isMobileScreen()) {
+                    const isCollapsed = localStorage.getItem('sidebar_collapsed') === 'true';
+                    if (isCollapsed) {
+                        mainSidebar.classList.add('sidebar-collapsed');
+                    }
                 }
 
-                sidebarToggleBtn.addEventListener('click', function() {
-                    mainSidebar.classList.toggle('sidebar-collapsed');
-                    localStorage.setItem('sidebar_collapsed', mainSidebar.classList.contains('sidebar-collapsed'));
+                sidebarToggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (isMobileScreen()) {
+                        if (mainSidebar.classList.contains('sidebar-mobile-open')) {
+                            closeMobileSidebar();
+                        } else {
+                            openMobileSidebar();
+                        }
+                    } else {
+                        mainSidebar.classList.toggle('sidebar-collapsed');
+                        localStorage.setItem('sidebar_collapsed', mainSidebar.classList.contains('sidebar-collapsed'));
+                    }
                 });
             }
+
+            if (mobileBackdrop) {
+                mobileBackdrop.addEventListener('click', closeMobileSidebar);
+            }
+
+            if (mainSidebar) {
+                mainSidebar.querySelectorAll('nav a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobileScreen()) {
+                            closeMobileSidebar();
+                        }
+                    });
+                });
+            }
+
+            window.addEventListener('resize', function() {
+                if (!isMobileScreen()) {
+                    closeMobileSidebar();
+                    if (localStorage.getItem('sidebar_collapsed') === 'true' && mainSidebar) {
+                        mainSidebar.classList.add('sidebar-collapsed');
+                    }
+                }
+            });
 
             // Dropdown Utilisateur Navbar
             const userDropdownBtn = document.getElementById('navbarUserDropdownBtn');

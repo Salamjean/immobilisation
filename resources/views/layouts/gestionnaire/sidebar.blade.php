@@ -5,9 +5,14 @@
         <div class="flex items-center space-x-2.5 overflow-hidden">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GEMMA" class="h-9 w-auto max-w-[140px] object-contain flex-shrink-0">
         </div>
-        <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
-            Gestion
-        </span>
+        <div class="flex items-center space-x-2">
+            <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+                Gestion
+            </span>
+            <button type="button" onclick="window.closeMobileSidebar && window.closeMobileSidebar()" class="md:hidden w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center cursor-pointer transition-colors" title="Fermer le menu">
+                <i class="fa-solid fa-xmark text-xs"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Navigation Gestionnaire -->

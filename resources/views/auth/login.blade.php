@@ -22,17 +22,26 @@
     
     <style>
         html, body {
-            height: 100%;
-            overflow: hidden !important;
-            padding-right: 0 !important;
+            min-height: 100%;
             margin: 0;
+            padding: 0;
             font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Empêcher SweetAlert d'ajouter un padding asymétrique */
+        body.swal2-shown {
+            padding-right: 0 !important;
         }
 
         /* Styles Compacts & Fins pour SweetAlert2 */
         .swal2-popup.swal-compact {
             width: 320px !important;
-            max-width: 90vw !important;
+            max-width: calc(100vw - 2rem) !important;
             padding: 1.25rem 1rem !important;
             border-radius: 1.25rem !important;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2) !important;
@@ -66,7 +75,7 @@
         }
     </style>
 </head>
-<body class="h-full relative flex items-center justify-center p-4 antialiased bg-slate-900 overflow-hidden">
+<body class="min-h-screen min-h-[100dvh] w-full relative flex flex-col items-center justify-center p-4 sm:p-6 antialiased bg-slate-900">
 
     <!-- Image d'arrière-plan fixe -->
     <div class="fixed inset-0 z-0 pointer-events-none select-none">
@@ -74,22 +83,22 @@
         <div class="absolute inset-0 bg-slate-950/60"></div>
     </div>
 
-    <!-- Conteneur Carte Fixe -->
-    <div class="relative z-10 w-full max-w-sm m-auto">
+    <!-- Conteneur Carte Centré Parfaitement -->
+    <div class="relative z-10 w-full max-w-[380px] mx-auto my-auto flex flex-col items-center justify-center">
         
         <!-- Carte de Connexion Épurée -->
-        <div class="bg-white rounded-2xl p-7 sm:p-8 shadow-2xl border border-slate-200/90">
+        <div class="w-full bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200/90 transition-all">
             
             <!-- En-tête simplifié avec Logo GEMMA -->
-            <div class="mb-6 text-center">
-                <div class="flex justify-center mb-3">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GEMMA" class="h-12 w-auto object-contain">
+            <div class="mb-5 sm:mb-6 text-center w-full">
+                <div class="flex justify-center mb-2.5 sm:mb-3">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GEMMA" class="h-10 sm:h-12 w-auto object-contain mx-auto max-w-[180px]">
                 </div>
-                <h1 class="text-lg font-bold text-slate-900">GESTION DES IMMOBILISATIONS</h1>
+                <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-snug tracking-tight text-center">GESTION DES IMMOBILISATIONS</h1>
             </div>
 
             <!-- Formulaire -->
-            <form action="{{ route('login.post') }}" method="POST" class="space-y-4">
+            <form action="{{ route('login.post') }}" method="POST" class="w-full space-y-4">
                 @csrf
                 
                 <!-- Email -->
@@ -111,26 +120,26 @@
                             <i class="fa-solid fa-lock"></i>
                         </div>
                         <input type="password" id="passwordInput" name="password" required placeholder="••••••••" class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
-                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#155E3B] text-xs transition-colors focus:outline-none" title="Afficher/Masquer le mot de passe">
+                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#155E3B] text-xs transition-colors focus:outline-none cursor-pointer" title="Afficher/Masquer le mot de passe">
                             <i id="passwordToggleIcon" class="fa-solid fa-eye"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Case Se souvenir de moi & Mot de passe oublié sur la même ligne -->
-                <div class="flex items-center justify-between pt-0.5">
-                    <label class="flex items-center space-x-2 cursor-pointer">
+                <!-- Case Se souvenir de moi & Mot de passe oublié sur la même ligne ou adaptée -->
+                <div class="flex flex-wrap items-center justify-between gap-y-2 gap-x-1 pt-0.5">
+                    <label class="inline-flex items-center space-x-2 cursor-pointer select-none">
                         <input type="checkbox" name="remember" class="w-4 h-4 rounded border-slate-300 text-[#155E3B] focus:ring-[#155E3B]">
                         <span class="text-xs text-slate-600 font-medium">Se souvenir de moi</span>
                     </label>
-                    <a href="javascript:void(0)" onclick="showForgotModal()" class="text-xs text-slate-500 hover:text-[#155E3B] font-medium transition-colors">
+                    <a href="javascript:void(0)" onclick="showForgotModal()" class="text-xs text-slate-500 hover:text-[#155E3B] font-medium transition-colors whitespace-nowrap">
                         Mot de passe oublié ?
                     </a>
                 </div>
 
                 <!-- Bouton Connexion avec couleur #155E3B -->
-                <div class="pt-2">
-                    <button type="submit" style="background-color: #155E3B;" class="w-full py-2.5 px-4 rounded-xl text-white font-bold text-xs tracking-wide shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                <div class="pt-1.5 sm:pt-2">
+                    <button type="submit" style="background-color: #155E3B;" class="w-full py-2.5 px-4 rounded-xl text-white font-bold text-xs tracking-wide shadow-md shadow-[#155E3B]/25 hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer">
                         Se connecter
                     </button>
                 </div>
@@ -139,7 +148,7 @@
         </div>
 
         <!-- Copyright discret -->
-        <div class="text-center mt-5 text-slate-300 text-[11px]">
+        <div class="text-center mt-4 sm:mt-5 text-slate-300 text-[11px] w-full px-2">
             &copy; {{ date('Y') }} GEMMA &bull; UCP-FM Côte d'Ivoire
         </div>
 

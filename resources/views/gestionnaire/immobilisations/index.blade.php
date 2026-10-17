@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <!-- Compteurs sur la même ligne -->
-            <div class="flex items-center space-x-2.5 sm:border-l sm:border-slate-200 sm:pl-4">
+            <!-- Compteurs sur la même ligne (flex-wrap sur mobile) -->
+            <div class="flex flex-wrap items-center gap-2 sm:border-l sm:border-slate-200 sm:pl-4">
                 <div class="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200">
                     <i class="fa-solid fa-cubes text-slate-400 text-xs"></i>
                     <div class="text-xs font-semibold text-slate-700">
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="flex items-center space-x-2.5 flex-shrink-0">
+        <div class="flex flex-wrap items-center gap-2.5 flex-shrink-0">
             <a href="{{ route('gestionnaire.immobilisations.export.csv') }}"
                class="inline-flex items-center space-x-2 px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all">
                 <i class="fa-solid fa-file-csv text-xs text-emerald-600"></i>
