@@ -13,7 +13,7 @@
             </a>
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                    <i class="fa-solid fa-sack-dollar text-[#155E3B]"></i>
+                    <i class="fa-solid fa-sack-dollar text-[#0048FA]"></i>
                     <span>Ajouter une nouvelle Subvention</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Enregistrement d'un accord financier lié à un bailleur et un programme</p>
@@ -44,7 +44,7 @@
 
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-sack-dollar"></i>
                 </div>
                 <div>
@@ -66,7 +66,7 @@
                            required
                            autofocus
                            placeholder="Ex: Subvention Paludisme NFM3 - Phase Consolidation 2024-2026"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Code Subvention (Grisé / Auto-généré) -->
@@ -106,7 +106,7 @@
                     <select id="programme_id"
                             name="programme_id"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">-- Sélectionner un programme --</option>
                         @foreach($programmes as $p)
                             <option value="{{ $p->id }}" data-code="{{ $p->code }}" {{ old('programme_id') == $p->id ? 'selected' : '' }}>
@@ -124,7 +124,7 @@
                     <select id="bailleur_id"
                             name="bailleur_id"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">-- Sélectionner un bailleur --</option>
                         @foreach($bailleurs as $b)
                             <option value="{{ $b->id }}" data-code="{{ $b->code }}" {{ old('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -146,7 +146,7 @@
                            id="date_debut"
                            name="date_debut"
                            value="{{ old('date_debut') }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Date Fin -->
@@ -158,7 +158,7 @@
                            id="date_fin"
                            name="date_fin"
                            value="{{ old('date_fin') }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Montant Alloué -->
@@ -173,7 +173,7 @@
                            name="montant_alloue"
                            value="{{ old('montant_alloue', 0) }}"
                            placeholder="0.00"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Devise -->
@@ -184,7 +184,7 @@
                     <select id="devise"
                             name="devise"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="FCFA" {{ old('devise', 'FCFA') === 'FCFA' ? 'selected' : '' }}>FCFA (XOF)</option>
                         <option value="EUR" {{ old('devise') === 'EUR' ? 'selected' : '' }}>Euro (€ / EUR)</option>
                         <option value="USD" {{ old('devise') === 'USD' ? 'selected' : '' }}>Dollar US ($ / USD)</option>
@@ -200,7 +200,7 @@
                 <select id="statut"
                         name="statut"
                         required
-                        class="w-full sm:w-64 px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        class="w-full sm:w-64 px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     @foreach($statuts as $stKey => $stVal)
                         <option value="{{ $stKey }}" {{ old('statut', 'en_cours') === $stKey ? 'selected' : '' }}>{{ $stVal }}</option>
                     @endforeach
@@ -215,8 +215,8 @@
                 Annuler
             </a>
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all flex items-center space-x-2">
+                    style="background-color: #0048FA;"
+                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all flex items-center space-x-2">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer la subvention</span>
             </button>

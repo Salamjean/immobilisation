@@ -9,15 +9,15 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-wrench text-[#155E3B]"></i>
+                <i class="fa-solid fa-wrench text-[#0048FA]"></i>
                 <span>Maintenance & Service Après-Vente (SAV)</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Suivi curatif, préventif, réparations biomédicales et gestion des coûts de remise en état</p>
         </div>
 
         <a href="{{ route('gestionnaire.maintenances.create') }}"
-           style="background-color: #155E3B;"
-           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all self-start sm:self-auto">
+           style="background-color: #0048FA;"
+           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all self-start sm:self-auto">
             <i class="fa-solid fa-plus text-xs"></i>
             <span>Déclarer une Panne / SAV</span>
         </a>
@@ -38,7 +38,7 @@
 
         <!-- Coût Total Réparations -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-coins"></i>
             </div>
             <div>
@@ -97,12 +97,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher par n° fiche, équipement, prestataire..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Statut (3 cols) -->
             <div class="sm:col-span-3">
-                <select name="statut" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="statut" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Statuts</option>
                     <option value="signalee" {{ request('statut') === 'signalee' ? 'selected' : '' }}>Signalée</option>
                     <option value="en_cours" {{ request('statut') === 'en_cours' ? 'selected' : '' }}>En cours de diagnostic</option>
@@ -113,7 +113,7 @@
 
             <!-- Filtre Type (2 cols) -->
             <div class="sm:col-span-2">
-                <select name="type_maintenance" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="type_maintenance" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous Types</option>
                     <option value="corrective" {{ request('type_maintenance') === 'corrective' ? 'selected' : '' }}>Corrective</option>
                     <option value="preventive" {{ request('type_maintenance') === 'preventive' ? 'selected' : '' }}>Préventive</option>
@@ -125,7 +125,7 @@
             <!-- Boutons d'Action (2 cols) -->
             <div class="sm:col-span-2 flex items-center space-x-2">
                 <button type="submit"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-[11px]"></i>
                     <span>Filtrer</span>
@@ -216,7 +216,7 @@
                             <td class="py-3.5 px-4 text-right">
                                 <a href="{{ route('gestionnaire.maintenances.show', $m->id) }}"
                                    class="inline-flex items-center px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 text-xs font-semibold transition-all">
-                                    <i class="fa-solid fa-eye text-[#155E3B] mr-1.5"></i>
+                                    <i class="fa-solid fa-eye text-[#0048FA] mr-1.5"></i>
                                     <span>Consulter</span>
                                 </a>
                             </td>

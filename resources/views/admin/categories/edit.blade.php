@@ -31,7 +31,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Identité & Code</h2>
@@ -50,7 +50,7 @@
                                    name="nom"
                                    value="{{ old('nom', $categorie->nom) }}"
                                    required
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                     <!-- Icône FontAwesome -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Icône d'affichage</label>
-                        <select name="icone" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="icone" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="fa-hospital" {{ old('icone', $categorie->icone) == 'fa-hospital' ? 'selected' : '' }}>Hôpital / Médical (fa-hospital)</option>
                             <option value="fa-laptop" {{ old('icone', $categorie->icone) == 'fa-laptop' ? 'selected' : '' }}>Informatique & IT (fa-laptop)</option>
                             <option value="fa-truck-medical" {{ old('icone', $categorie->icone) == 'fa-truck-medical' ? 'selected' : '' }}>Véhicules & Ambulances (fa-truck-medical)</option>
@@ -99,7 +99,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-clock-rotate-left"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Paramètres Comptables</h2>
@@ -120,7 +120,7 @@
                                    min="1"
                                    max="600"
                                    required
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -129,7 +129,7 @@
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Description & Précisions</label>
                         <textarea name="description"
                                   rows="4"
-                                  class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">{{ old('description', $categorie->description) }}</textarea>
+                                  class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">{{ old('description', $categorie->description) }}</textarea>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                 <div class="space-y-4">
                     <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                         <div class="flex items-center space-x-2.5">
-                            <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                            <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                                 <i class="fa-solid fa-tags"></i>
                             </div>
                             <h2 class="text-sm font-bold text-slate-900">3. Sous-Catégories</h2>
@@ -147,7 +147,7 @@
                         <!-- Bouton + -->
                         <button type="button"
                                 id="btn_add_sous_cat"
-                                style="background-color: #155E3B;"
+                                style="background-color: #0048FA;"
                                 class="inline-flex items-center space-x-1 px-2.5 py-1 rounded-lg text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all">
                             <i class="fa-solid fa-plus text-[10px]"></i>
                             <span>Ajouter</span>
@@ -166,7 +166,7 @@
                                                name="sous_categories[]"
                                                value="{{ $scVal }}"
                                                placeholder="Sous-catégorie..."
-                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                                     </div>
                                     <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                                         <i class="fa-solid fa-trash text-[11px]"></i>
@@ -181,7 +181,7 @@
                                                name="sous_categories[]"
                                                value="{{ $sc->nom }}"
                                                placeholder="Sous-catégorie..."
-                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                                     </div>
                                     <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                                         <i class="fa-solid fa-trash text-[11px]"></i>
@@ -194,7 +194,7 @@
                                     <input type="text"
                                            name="sous_categories[]"
                                            placeholder="Sous-catégorie 1..."
-                                           class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                           class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                                 </div>
                                 <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                                     <i class="fa-solid fa-trash text-[11px]"></i>
@@ -220,8 +220,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer les modifications</span>
             </button>
@@ -235,7 +235,7 @@
                 <input type="text"
                        name="sous_categories[]"
                        placeholder="Sous-catégorie..."
-                       class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                       class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
             </div>
             <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                 <i class="fa-solid fa-trash text-[11px]"></i>

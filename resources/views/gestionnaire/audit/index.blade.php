@@ -8,7 +8,7 @@
     <!-- En-tête -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex items-center space-x-3">
-            <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+            <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                 <i class="fa-solid fa-clock-rotate-left"></i>
             </div>
             <div>
@@ -49,7 +49,7 @@
                             </div>
                         </td>
                         <td class="py-3.5 px-4">
-                            <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-sky-50 text-[#155E3B] border border-sky-100 font-mono">
+                            <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-sky-50 text-[#0048FA] border border-sky-100 font-mono">
                                 {{ $l->action }}
                             </span>
                         </td>

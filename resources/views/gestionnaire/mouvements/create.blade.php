@@ -13,7 +13,7 @@
             </a>
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                    <i class="fa-solid fa-arrow-right-arrow-left text-[#155E3B]"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left text-[#0048FA]"></i>
                     <span>Demande de Transfert / Mouvement d'Actif</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Transfert inter-sites, réaffectation interne, prêt ou proposition de réforme</p>
@@ -45,7 +45,7 @@
         <!-- Section 1 : Opération & Référence -->
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-file-signature"></i>
                 </div>
                 <div>
@@ -71,7 +71,7 @@
                            name="reference_mouvement"
                            value="{{ old('reference_mouvement', $refSuggeree) }}"
                            required
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-amber-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-amber-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Type Mouvement -->
@@ -82,7 +82,7 @@
                     <select id="type_mouvement"
                             name="type_mouvement"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="transfert" {{ old('type_mouvement') === 'transfert' ? 'selected' : '' }}>Transfert inter-établissements sanitaires</option>
                         <option value="reaffectation" {{ old('type_mouvement') === 'reaffectation' ? 'selected' : '' }}>Réaffectation interne de service / bureau</option>
                         <option value="pret" {{ old('type_mouvement') === 'pret' ? 'selected' : '' }}>Prêt temporaire d'équipement</option>
@@ -101,7 +101,7 @@
                            name="date_mouvement"
                            value="{{ old('date_mouvement', date('Y-m-d')) }}"
                            required
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
                     <select id="immobilisation_id"
                             name="immobilisation_id"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">-- Choisir un équipement actif --</option>
                         @foreach($actifs as $a)
                             <option value="{{ $a->id }}" {{ (old('immobilisation_id') == $a->id || ($actifSelectionne && $actifSelectionne->id == $a->id)) ? 'selected' : '' }}>
@@ -145,7 +145,7 @@
                     <select id="structure_destination_id"
                             name="structure_destination_id"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">-- Sélectionner le site récepteur --</option>
                         @foreach($structures as $st)
                             <option value="{{ $st->id }}" {{ old('structure_destination_id') == $st->id ? 'selected' : '' }}>
@@ -178,7 +178,7 @@
                           rows="3"
                           required
                           placeholder="Préciser les raisons du mouvement (redéploiement d'équipements, renforcement de plateau technique, panne locale, décision de direction...)"
-                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('motif') }}</textarea>
+                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('motif') }}</textarea>
             </div>
 
             <div>
@@ -189,7 +189,7 @@
                           name="commentaires"
                           rows="3"
                           placeholder="Transporteur mandaté, précautions particulières de manutention pour matériel médical fragile..."
-                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('commentaires') }}</textarea>
+                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('commentaires') }}</textarea>
             </div>
         </div>
 
@@ -200,8 +200,8 @@
                 Annuler
             </a>
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all flex items-center space-x-2">
+                    style="background-color: #0048FA;"
+                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all flex items-center space-x-2">
                 <i class="fa-solid fa-paper-plane"></i>
                 <span>Soumettre la demande de transfert</span>
             </button>

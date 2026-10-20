@@ -89,7 +89,7 @@
     <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-white">
             <div class="flex items-center space-x-2.5">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-users"></i>
                 </div>
                 <div>
@@ -165,7 +165,7 @@
                                 @endif
                             </td>
                             <td class="py-3 px-4 text-center">
-                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold font-mono {{ $relevesAgentCount > 0 ? 'bg-emerald-50 text-[#155E3B] border border-emerald-200' : 'bg-slate-100 text-slate-500' }}">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold font-mono {{ $relevesAgentCount > 0 ? 'bg-emerald-50 text-[#0048FA] border border-emerald-200' : 'bg-slate-100 text-slate-500' }}">
                                     <i class="fa-solid fa-barcode text-[10px] mr-1.5"></i>
                                     {{ $relevesAgentCount }} relevé(s)
                                 </span>

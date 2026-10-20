@@ -19,16 +19,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#155E3B',
-                            700: '#0f442a',
-                            800: '#064e3b',
-                            900: '#022c22',
+                            50: '#eff4ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#0048FA',
+                            700: '#003ad1',
+                            800: '#002eb3',
+                            900: '#002080',
                         }
                     },
                     fontFamily: {
@@ -99,7 +99,7 @@
     <header class="bg-white border-b border-slate-200/90 p-3.5 sticky top-0 z-30 flex items-center justify-between shadow-xs">
         <div class="flex items-center space-x-2.5">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo UCP-FM" class="h-8 w-auto max-w-[120px] object-contain flex-shrink-0">
-            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #0048FA;">
                 SIG Mobile
             </span>
         </div>
@@ -134,7 +134,7 @@
                        oninput="applyLiveFilters()"
                        onkeyup="applyLiveFilters()"
                        placeholder="Rechercher code, bien, structure..."
-                       class="w-full pl-9 pr-8 py-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#155E3B] shadow-sm">
+                       class="w-full pl-9 pr-8 py-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0048FA] shadow-sm">
                 <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-xs"></i>
                 <button type="button" onclick="clearMobileSearch()" id="btn_clear_search" class="hidden absolute right-3 top-2.5 text-slate-400 hover:text-slate-700 text-xs p-1">
                     <i class="fa-solid fa-xmark"></i>
@@ -143,7 +143,7 @@
 
             <!-- Chips / Filtres Horizontaux Déroulants -->
             <div class="flex items-center space-x-1.5 overflow-x-auto pb-1 no-scrollbar pointer-events-auto">
-                <button type="button" onclick="setQuickFilter('all')" id="chip_all" class="filter-chip px-3.5 py-1.5 rounded-xl text-[11px] font-bold bg-[#155E3B] text-white shadow-md transition-all whitespace-nowrap">
+                <button type="button" onclick="setQuickFilter('all')" id="chip_all" class="filter-chip px-3.5 py-1.5 rounded-xl text-[11px] font-bold bg-[#0048FA] text-white shadow-md transition-all whitespace-nowrap">
                     Tous ({{ count($mapFeatures) }})
                 </button>
                 <button type="button" onclick="setQuickFilter('panne')" id="chip_panne" class="filter-chip px-3.5 py-1.5 rounded-xl text-[11px] font-bold bg-white/95 backdrop-blur-md border border-slate-200 text-amber-700 shadow-sm transition-all whitespace-nowrap">
@@ -168,7 +168,7 @@
             </button>
 
             <!-- Bouton Alterner Tiroir Liste -->
-            <button type="button" onclick="toggleDrawer()" id="btn_toggle_drawer" title="Afficher la liste" class="w-10 h-10 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#155E3B] shadow-lg flex items-center justify-center hover:bg-emerald-50 transition-all">
+            <button type="button" onclick="toggleDrawer()" id="btn_toggle_drawer" title="Afficher la liste" class="w-10 h-10 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#0048FA] shadow-lg flex items-center justify-center hover:bg-emerald-50 transition-all">
                 <i class="fa-solid fa-list-ul text-sm"></i>
             </button>
         </div>
@@ -182,7 +182,7 @@
             <!-- Poignée du tiroir -->
             <div class="p-3 border-b border-slate-100 flex items-center justify-between cursor-pointer" onclick="toggleDrawer()">
                 <div class="flex items-center space-x-2">
-                    <span class="w-2 h-2 rounded-full bg-[#155E3B]"></span>
+                    <span class="w-2 h-2 rounded-full bg-[#0048FA]"></span>
                     <span class="text-xs font-bold text-slate-900 uppercase">Actifs à proximité (<span id="drawer_count">{{ count($mapFeatures) }}</span>)</span>
                 </div>
                 <div class="w-8 h-1 bg-slate-300 rounded-full mx-auto"></div>
@@ -196,7 +196,7 @@
                 @forelse($mapFeatures as $item)
                 <div id="card_asset_{{ $item['id'] }}"
                      onclick="focusAssetMarker({{ $item['id'] }}, {{ $item['latitude'] }}, {{ $item['longitude'] }})"
-                     class="mobile-asset-card p-3 rounded-2xl border border-slate-200 hover:border-[#155E3B] bg-slate-50/70 cursor-pointer transition-all text-xs"
+                     class="mobile-asset-card p-3 rounded-2xl border border-slate-200 hover:border-[#0048FA] bg-slate-50/70 cursor-pointer transition-all text-xs"
                      data-id="{{ $item['id'] }}"
                      data-code="{{ strtolower($item['code']) }}"
                      data-designation="{{ strtolower($item['designation']) }}"
@@ -205,7 +205,7 @@
                      data-etat="{{ strtolower($item['etat'] ?? '') }}">
                     
                     <div class="flex items-center justify-between">
-                        <span class="font-mono font-bold text-[#155E3B]">{{ $item['code'] }}</span>
+                        <span class="font-mono font-bold text-[#0048FA]">{{ $item['code'] }}</span>
                         @if($item['etat'] === 'panne')
                             <span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-100 text-amber-800">Panne</span>
                         @elseif($item['etat'] === 'hors_service')
@@ -241,19 +241,19 @@
 
     <!-- 4. Bottom Navigation Bar Mobile & Tablette Pleine Largeur -->
     <nav class="bg-white/95 backdrop-blur-md border-t border-slate-200/90 fixed bottom-0 left-0 right-0 p-2 z-30 flex items-center justify-around text-[10px] sm:text-xs font-bold text-slate-500 shadow-xl w-full">
-        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-qrcode text-base sm:text-lg mb-0.5"></i>
             <span>Scanner</span>
         </a>
-        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#155E3B]">
+        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#0048FA]">
             <i class="fa-solid fa-map-location-dot text-base sm:text-lg mb-0.5"></i>
             <span>Carte SIG</span>
         </a>
-        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-clipboard-check text-base sm:text-lg mb-0.5"></i>
             <span>Campagnes</span>
         </a>
-        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-cloud-arrow-down text-base sm:text-lg mb-0.5"></i>
             <span>Pack Offline</span>
         </button>
@@ -323,7 +323,7 @@
                     if (!isNaN(lat) && !isNaN(lng) && lat !== 0) {
                         latLngs.push([lat, lng]);
 
-                        let pinColor = '#155E3B';
+                        let pinColor = '#0048FA';
                         if (actif.geofence_alerte || actif.niveau_criticite === 'critique') pinColor = '#dc2626';
                         else if (actif.etat === 'panne') pinColor = '#d97706';
                         else if (actif.etat === 'hors_service') pinColor = '#64748b';
@@ -338,7 +338,7 @@
                         const marker = L.marker([lat, lng], { icon: icon }).addTo(window.lMap);
                         marker.bindPopup(`
                             <div style="font-family:'Plus Jakarta Sans',sans-serif; min-width:210px; font-size:11px; line-height:1.4;">
-                                <div style="font-size:9px; font-weight:800; color:#155E3B; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</div>
+                                <div style="font-size:9px; font-weight:800; color:#0048FA; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</div>
                                 <div style="font-weight:800; font-size:12px; color:#0f172a; margin-top:1px;">${actif.code}</div>
                                 <div style="font-weight:600; color:#334155; margin-bottom:4px;">${actif.designation}</div>
                                 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:5px; font-size:10px; color:#475569;">
@@ -419,7 +419,7 @@
 
             const activeBtn = document.getElementById('chip_' + type);
             if (activeBtn) {
-                activeBtn.className = 'filter-chip px-3 py-1.5 rounded-xl text-[11px] font-bold bg-[#155E3B] text-white shadow-md transition-all whitespace-nowrap';
+                activeBtn.className = 'filter-chip px-3 py-1.5 rounded-xl text-[11px] font-bold bg-[#0048FA] text-white shadow-md transition-all whitespace-nowrap';
             }
 
             applyLiveFilters();

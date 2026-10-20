@@ -19,16 +19,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#155E3B',
-                            700: '#0f442a',
-                            800: '#064e3b',
-                            900: '#022c22',
+                            50: '#eff4ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#0048FA',
+                            700: '#003ad1',
+                            800: '#002eb3',
+                            900: '#002080',
                         }
                     },
                     fontFamily: {
@@ -61,7 +61,7 @@
     <header class="bg-white border-b border-slate-200/90 px-4 py-3.5 sm:px-6 sticky top-0 z-30 flex items-center justify-between shadow-xs w-full">
         <div class="flex items-center space-x-2.5">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo UCP-FM" class="h-8 sm:h-9 w-auto max-w-[140px] object-contain flex-shrink-0">
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #0048FA;">
                 Campagnes
             </span>
         </div>
@@ -91,7 +91,7 @@
             <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs">
                 <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider block">Campagnes Actives</span>
                 <div class="flex items-center justify-between mt-1">
-                    <span class="text-xl sm:text-2xl font-black text-[#155E3B] font-mono">{{ $campagnesActivesCount }}</span>
+                    <span class="text-xl sm:text-2xl font-black text-[#0048FA] font-mono">{{ $campagnesActivesCount }}</span>
                     <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
                         <i class="fa-solid fa-clipboard-check text-lg"></i>
                     </div>
@@ -122,7 +122,7 @@
         <!-- Titre de la section -->
         <div class="flex items-center justify-between pt-1">
             <h2 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
-                <i class="fa-solid fa-layer-group text-[#155E3B]"></i>
+                <i class="fa-solid fa-layer-group text-[#0048FA]"></i>
                 <span>Liste des Campagnes de Recensement</span>
             </h2>
             <span class="text-[11px] sm:text-xs text-slate-500 font-semibold font-mono">{{ $campagnes->total() }} campagne(s)</span>
@@ -131,13 +131,13 @@
         <!-- Grille Responsive des Cartes Campagnes (1 col sur Phone, 2-3 cols sur Tablette) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             @forelse($campagnes as $campagne)
-            <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-3 hover:border-[#155E3B] transition-all flex flex-col justify-between">
+            <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-3 hover:border-[#0048FA] transition-all flex flex-col justify-between">
                 
                 <div class="space-y-3">
                     <!-- En-tête de la carte -->
                     <div class="flex items-start justify-between gap-2">
                         <div>
-                            <span class="text-[10px] font-bold text-[#155E3B] uppercase tracking-wider block">
+                            <span class="text-[10px] font-bold text-[#0048FA] uppercase tracking-wider block">
                                 {{ $campagne->programme->sigle ?? $campagne->programme->code ?? 'Global' }}
                                 @if($campagne->region) &bull; {{ $campagne->region->nom }} @endif
                             </span>
@@ -197,7 +197,7 @@
                             <span class="font-bold text-slate-900 font-mono">{{ $campagne->releves_count }} relevé(s)</span>
                         </div>
                         <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                            <div class="bg-[#155E3B] h-full rounded-full transition-all duration-500" style="width: {{ $progression }}%;"></div>
+                            <div class="bg-[#0048FA] h-full rounded-full transition-all duration-500" style="width: {{ $progression }}%;"></div>
                         </div>
                     </div>
                 </div>
@@ -205,8 +205,8 @@
                 <!-- Actions Mobiles & Tablettes -->
                 <div class="pt-2 flex items-center space-x-2 border-t border-slate-100">
                     <a href="{{ route('agent.mobile.index') }}?campagne_id={{ $campagne->id }}"
-                       style="background-color: #155E3B;"
-                       class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold text-center shadow-md shadow-[#155E3B]/20 hover:opacity-95 transition flex items-center justify-center space-x-1.5">
+                       style="background-color: #0048FA;"
+                       class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold text-center shadow-md shadow-[#0048FA]/20 hover:opacity-95 transition flex items-center justify-center space-x-1.5">
                         <i class="fa-solid fa-qrcode text-xs"></i>
                         <span>Scanner pour cette campagne</span>
                     </a>
@@ -235,19 +235,19 @@
 
     <!-- 3. Bottom Navigation Bar Mobile & Tablette Pleine Largeur -->
     <nav class="bg-white/95 backdrop-blur-md border-t border-slate-200/90 fixed bottom-0 left-0 right-0 p-2 z-30 flex items-center justify-around text-[10px] sm:text-xs font-bold text-slate-500 shadow-xl w-full">
-        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-qrcode text-base sm:text-lg mb-0.5"></i>
             <span>Scanner</span>
         </a>
-        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-map-location-dot text-base sm:text-lg mb-0.5"></i>
             <span>Carte SIG</span>
         </a>
-        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#155E3B]">
+        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#0048FA]">
             <i class="fa-solid fa-clipboard-check text-base sm:text-lg mb-0.5"></i>
             <span>Campagnes</span>
         </a>
-        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-cloud-arrow-down text-base sm:text-lg mb-0.5"></i>
             <span>Pack Offline</span>
         </button>

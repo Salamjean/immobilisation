@@ -34,7 +34,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-hospital"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Identité & Typologie</h2>
@@ -55,7 +55,7 @@
                                    value="{{ old('nom') }}"
                                    required
                                    placeholder="Ex: Hôpital Général d'Aboisso"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@
                         <select id="type_structure_select"
                                 name="type_structure"
                                 required
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="" disabled selected>-- Sélectionnez un type --</option>
                             @foreach($typesStructure as $codeType => $libelleType)
                                 <option value="{{ $codeType }}" {{ old('type_structure') == $codeType ? 'selected' : '' }}>
@@ -107,7 +107,7 @@
                 <!-- Activation Immédiate -->
                 <div class="pt-3 border-t border-slate-100">
                     <label class="flex items-center space-x-2.5 cursor-pointer">
-                        <input type="checkbox" name="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#155E3B] focus:ring-[#155E3B]">
+                        <input type="checkbox" name="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#0048FA] focus:ring-[#0048FA]">
                         <span class="text-xs font-semibold text-slate-700">Structure active et opérationnelle</span>
                     </label>
                 </div>
@@ -117,7 +117,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-map-location-dot"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Rattachement Géographique</h2>
@@ -129,7 +129,7 @@
                             Région Sanitaire
                         </label>
                         <select name="region_id"
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucune / Région non spécifiée --</option>
                             @foreach($regions as $reg)
                                 <option value="{{ $reg->id }}" {{ old('region_id') == $reg->id ? 'selected' : '' }}>
@@ -145,7 +145,7 @@
                             District Sanitaire
                         </label>
                         <select name="district_sanitaire_id"
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucun / District non spécifié --</option>
                             @foreach($districts as $dist)
                                 <option value="{{ $dist->id }}" {{ old('district_sanitaire_id') == $dist->id ? 'selected' : '' }}>
@@ -163,7 +163,7 @@
                                    name="ville"
                                    value="{{ old('ville') }}"
                                    placeholder="Ex: Aboisso"
-                                   class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
 
                         <div>
@@ -172,7 +172,7 @@
                                    name="commune"
                                    value="{{ old('commune') }}"
                                    placeholder="Ex: Centre-ville"
-                                   class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                            name="adresse"
                            value="{{ old('adresse') }}"
                            placeholder="Ex: Boulevard Principal, Face Préfecture"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -192,7 +192,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">3. Responsable & Coordonnées</h2>
@@ -211,7 +211,7 @@
                                    name="responsable_nom"
                                    value="{{ old('responsable_nom') }}"
                                    placeholder="Ex: Dr. KOFFI Emmanuel"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -228,7 +228,7 @@
                                    name="responsable_contact"
                                    value="{{ old('responsable_contact') }}"
                                    placeholder="+225 07 00 00 00 00"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -245,7 +245,7 @@
                                    name="responsable_email"
                                    value="{{ old('responsable_email') }}"
                                    placeholder="direction@structure.ci"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -258,7 +258,7 @@
                                    name="latitude"
                                    value="{{ old('latitude') }}"
                                    placeholder="Ex: 5.4667"
-                                   class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                   class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         </div>
                         <div>
                             <label class="block text-[11px] font-semibold text-slate-600 mb-1">Longitude</label>
@@ -267,13 +267,13 @@
                                    name="longitude"
                                    value="{{ old('longitude') }}"
                                    placeholder="Ex: -3.2000"
-                                   class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                   class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         </div>
                     </div>
                 </div>
 
                 <div class="text-[11px] text-slate-400 italic pt-2">
-                    <i class="fa-solid fa-location-crosshairs text-[#155E3B] mr-1"></i> Utilisé pour la cartographie SIG des immobilisations
+                    <i class="fa-solid fa-location-crosshairs text-[#0048FA] mr-1"></i> Utilisé pour la cartographie SIG des immobilisations
                 </div>
             </div>
 
@@ -287,8 +287,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Enregistrer la structure</span>
             </button>

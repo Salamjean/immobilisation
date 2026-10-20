@@ -8,7 +8,7 @@
     <!-- En-tête -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex items-center space-x-3">
-            <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+            <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                 <i class="fa-solid fa-chart-pie"></i>
             </div>
             <div>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="flex items-center space-x-2.5">
-            <a href="{{ route('admin.reporting.registre') }}" style="background-color: #155E3B;" class="px-4 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md shadow-[#155E3B]/25 hover:opacity-95 flex items-center space-x-1.5">
+            <a href="{{ route('admin.reporting.registre') }}" style="background-color: #0048FA;" class="px-4 py-2.5 rounded-xl text-white text-xs font-bold transition-all shadow-md shadow-[#0048FA]/25 hover:opacity-95 flex items-center space-x-1.5">
                 <i class="fa-solid fa-file-invoice"></i>
                 <span>Accéder au Registre Officiel</span>
             </a>
@@ -58,7 +58,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6">
             <h3 class="text-sm font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center space-x-2">
-                <i class="fa-solid fa-layer-group text-[#155E3B]"></i>
+                <i class="fa-solid fa-layer-group text-[#0048FA]"></i>
                 <span>Répartition par Catégorie d'Actif</span>
             </h3>
 
@@ -66,7 +66,7 @@
                 @foreach($parCategorie as $cat)
                 <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100 text-xs">
                     <div class="flex items-center space-x-2.5">
-                        <i class="fa-solid {{ $cat->icone ?? 'fa-cube' }} text-[#155E3B]"></i>
+                        <i class="fa-solid {{ $cat->icone ?? 'fa-cube' }} text-[#0048FA]"></i>
                         <span class="font-bold text-slate-800">{{ $cat->nom }}</span>
                     </div>
                     <span class="font-bold font-mono text-slate-900 px-2 py-0.5 bg-white rounded-lg border border-slate-200">
@@ -79,7 +79,7 @@
 
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6">
             <h3 class="text-sm font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center space-x-2">
-                <i class="fa-solid fa-map-location-dot text-[#155E3B]"></i>
+                <i class="fa-solid fa-map-location-dot text-[#0048FA]"></i>
                 <span>Couverture des Régions Sanitaires</span>
             </h3>
 

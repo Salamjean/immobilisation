@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-hospital"></i>
                 </div>
                 <div>
@@ -56,12 +56,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher nom, code, ville, responsable..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Type -->
             <div class="sm:col-span-3">
-                <select name="type_structure" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="type_structure" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Types</option>
                     @foreach($typesStructure as $codeType => $libelleType)
                         <option value="{{ $codeType }}" {{ request('type_structure') == $codeType ? 'selected' : '' }}>
@@ -73,7 +73,7 @@
 
             <!-- Filtre Région -->
             <div class="sm:col-span-3">
-                <select name="region_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="region_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Toutes les Régions</option>
                     @foreach($regions as $reg)
                         <option value="{{ $reg->id }}" {{ request('region_id') == $reg->id ? 'selected' : '' }}>
@@ -85,7 +85,7 @@
 
             <!-- Boutons Filtrer & Reset -->
             <div class="sm:col-span-2 flex items-center space-x-2">
-                <button type="submit" style="background-color: #155E3B;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
+                <button type="submit" style="background-color: #0048FA;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
                     Filtrer
                 </button>
                 @if(request()->hasAny(['search', 'type_structure', 'region_id', 'actif']))
@@ -118,7 +118,7 @@
                             <!-- Identité (Aligné à gauche) -->
                             <td class="py-3.5 px-4 text-left">
                                 <div class="flex items-center space-x-3">
-                                    <div style="background-color: #155E3B;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
+                                    <div style="background-color: #0048FA;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
                                         <i class="fa-solid fa-hospital text-xs"></i>
                                     </div>
                                     <div class="min-w-0">
@@ -130,7 +130,7 @@
 
                             <!-- Type -->
                             <td class="py-3.5 px-4 text-center">
-                                <span class="inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[11px] font-bold bg-sky-50 text-[#155E3B] border border-sky-200">
+                                <span class="inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[11px] font-bold bg-sky-50 text-[#0048FA] border border-sky-200">
                                     {{ $struct->type_structure }}
                                 </span>
                             </td>
@@ -179,7 +179,7 @@
                                     <!-- Modifier -->
                                     <a href="{{ route('gestionnaire.structures.edit', $struct->id) }}"
                                        title="Modifier la structure"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-pen text-xs"></i>
                                     </a>
 
@@ -231,7 +231,7 @@
         event.preventDefault();
         const actionText = isCurrentlyActive ? 'désactiver' : 'activer';
         const iconType = isCurrentlyActive ? 'warning' : 'question';
-        const confirmBtnColor = isCurrentlyActive ? '#ef4444' : '#155E3B';
+        const confirmBtnColor = isCurrentlyActive ? '#ef4444' : '#0048FA';
 
         Swal.fire({
             title: `Confirmer l'opération`,

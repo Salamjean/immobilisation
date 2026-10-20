@@ -25,7 +25,7 @@
             </div>
             
             <div class="flex items-center space-x-2">
-                <a href="{{ route('gestionnaire.mouvements.decharge', $mouvement->id) }}" target="_blank" class="px-3 py-1.5 rounded-lg bg-[#155E3B] hover:bg-[#0f442a] text-white text-xs font-bold transition-all shadow-xs flex items-center space-x-1.5">
+                <a href="{{ route('gestionnaire.mouvements.decharge', $mouvement->id) }}" target="_blank" class="px-3 py-1.5 rounded-lg bg-[#0048FA] hover:bg-[#003ad1] text-white text-xs font-bold transition-all shadow-xs flex items-center space-x-1.5">
                     <i class="fa-solid fa-print"></i>
                     <span>Bordereau / Décharge</span>
                 </a>

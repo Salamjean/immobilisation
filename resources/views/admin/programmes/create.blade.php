@@ -13,7 +13,7 @@
             </a>
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                    <i class="fa-solid fa-diagram-project text-[#155E3B]"></i>
+                    <i class="fa-solid fa-diagram-project text-[#0048FA]"></i>
                     <span>Ajouter un nouveau Programme / Projet</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Enregistrement d'un programme de santé et de ses rattachements institutionnels</p>
@@ -44,7 +44,7 @@
 
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-diagram-project"></i>
                 </div>
                 <div>
@@ -66,7 +66,7 @@
                            required
                            autofocus
                            placeholder="Ex: Programme National de Lutte contre le Paludisme (PNLP)"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <span class="text-[10px] text-slate-400 mt-1 block">Le nom complet permet d'auto-générer un code unique s'il n'est pas saisi manuellement</span>
                 </div>
 
@@ -106,7 +106,7 @@
                     </label>
                     <select id="bailleur_id"
                             name="bailleur_id"
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">-- Aucun bailleur principal assigné --</option>
                         @foreach($bailleurs as $b)
                             <option value="{{ $b->id }}" {{ old('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -128,7 +128,7 @@
                                name="coordonnateur"
                                value="{{ old('coordonnateur') }}"
                                placeholder="Ex: Dr. KOUASSI Jean-Luc"
-                               class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all pl-9">
+                               class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all pl-9">
                         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">
                             <i class="fa-solid fa-user-tie"></i>
                         </span>
@@ -145,7 +145,7 @@
                           name="description"
                           rows="3"
                           placeholder="Présentation des objectifs généraux, périmètre d'intervention..."
-                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('description') }}</textarea>
+                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('description') }}</textarea>
             </div>
 
             <!-- Statut Actif -->
@@ -155,7 +155,7 @@
                            name="actif"
                            value="1"
                            {{ old('actif', '1') === '1' ? 'checked' : '' }}
-                           class="w-4 h-4 rounded text-[#155E3B] focus:ring-[#155E3B] border-slate-300">
+                           class="w-4 h-4 rounded text-[#0048FA] focus:ring-[#0048FA] border-slate-300">
                     <span class="text-xs font-bold text-slate-700">Programme actif dans le système</span>
                 </label>
             </div>
@@ -168,8 +168,8 @@
                 Annuler
             </a>
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all flex items-center space-x-2">
+                    style="background-color: #0048FA;"
+                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all flex items-center space-x-2">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer le programme</span>
             </button>

@@ -32,14 +32,14 @@
                 </div>
                 <h1 class="text-xl font-extrabold text-slate-900 mt-1">{{ $maintenance->numero_fiche }}</h1>
                 <div class="text-xs text-slate-500 mt-0.5">
-                    Actif : <strong class="text-slate-800">{{ $maintenance->immobilisation?->designation }}</strong> (<span class="font-mono text-[#155E3B] font-bold">{{ $maintenance->immobilisation?->code_immobilisation }}</span>)
+                    Actif : <strong class="text-slate-800">{{ $maintenance->immobilisation?->designation }}</strong> (<span class="font-mono text-[#0048FA] font-bold">{{ $maintenance->immobilisation?->code_immobilisation }}</span>)
                 </div>
             </div>
         </div>
 
         <div class="flex items-center gap-2">
             @if($maintenance->statut !== 'terminee')
-            <button type="button" onclick="document.getElementById('clotureModal').classList.remove('hidden')" class="px-4 py-2 rounded-xl bg-[#155E3B] hover:bg-[#0f442a] text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-1.5">
+            <button type="button" onclick="document.getElementById('clotureModal').classList.remove('hidden')" class="px-4 py-2 rounded-xl bg-[#0048FA] hover:bg-[#003ad1] text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-1.5">
                 <i class="fa-solid fa-check-double"></i>
                 <span>Clôturer l'intervention</span>
             </button>
@@ -101,7 +101,7 @@
             @if($maintenance->travaux_effectues)
             <div>
                 <span class="text-slate-400 font-bold block mb-1">Travaux Réalisés :</span>
-                <div class="p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl text-emerald-900 font-medium">{{ $maintenance->travaux_effectues }}</div>
+                <div class="p-3 bg-blue-50/70 border border-emerald-100 rounded-xl text-emerald-900 font-medium">{{ $maintenance->travaux_effectues }}</div>
             </div>
             @endif
         </div>
@@ -128,7 +128,7 @@
                 </div>
                 <div class="flex items-center justify-end space-x-2 pt-2">
                     <button type="button" onclick="document.getElementById('clotureModal').classList.add('hidden')" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold">Annuler</button>
-                    <button type="submit" class="px-4 py-2 rounded-xl bg-[#155E3B] text-white font-bold">Confirmer et Remettre en Service</button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-[#0048FA] text-white font-bold">Confirmer et Remettre en Service</button>
                 </div>
             </form>
         </div>

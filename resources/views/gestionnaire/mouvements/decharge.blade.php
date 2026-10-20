@@ -25,7 +25,7 @@
         <a href="{{ route('gestionnaire.mouvements.show', $mouvement->id) }}" class="inline-flex items-center px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 font-bold text-xs hover:bg-slate-50 transition-all shadow-xs">
             <i class="fa-solid fa-arrow-left mr-2"></i> Retour au Mouvement
         </a>
-        <button onclick="window.print()" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-[#155E3B] hover:bg-[#0f442a] text-white font-bold text-xs shadow-md shadow-emerald-900/20 transition-all cursor-pointer">
+        <button onclick="window.print()" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-[#0048FA] hover:bg-[#003ad1] text-white font-bold text-xs shadow-md shadow-emerald-900/20 transition-all cursor-pointer">
             <i class="fa-solid fa-print mr-2"></i> Imprimer le Bordereau / Décharge
         </button>
     </div>
@@ -34,7 +34,7 @@
     <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-md border border-slate-200">
         
         <!-- En-tête officiel République / Ministère / UCP-FM -->
-        <div class="grid grid-cols-3 items-center pb-6 border-b-2 border-[#155E3B]">
+        <div class="grid grid-cols-3 items-center pb-6 border-b-2 border-[#0048FA]">
             <div class="text-left text-xs leading-tight">
                 <p class="font-extrabold uppercase text-slate-900">RÉPUBLIQUE DE CÔTE D'IVOIRE</p>
                 <p class="text-[10px] text-slate-500 italic mt-0.5">Union – Discipline – Travail</p>
@@ -44,10 +44,10 @@
             </div>
 
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 border-2 border-[#155E3B] text-[#155E3B] font-extrabold text-lg shadow-xs">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 border-2 border-[#0048FA] text-[#0048FA] font-extrabold text-lg shadow-xs">
                     <i class="fa-solid fa-building-columns"></i>
                 </div>
-                <div class="font-extrabold text-sm text-[#155E3B] tracking-wider mt-1">UCP-FM</div>
+                <div class="font-extrabold text-sm text-[#0048FA] tracking-wider mt-1">UCP-FM</div>
                 <div class="text-[9px] text-slate-500 uppercase tracking-tight">Gestion des Immobilisations</div>
             </div>
 
@@ -66,13 +66,13 @@
                 BORDEREAU DE MOUVEMENT & FICHE DE DÉCHARGE
             </h1>
             <p class="text-xs text-slate-500 mt-1 uppercase font-semibold">
-                Type d'opération : <span class="text-[#155E3B] font-bold">{{ $mouvement->type_libelle }}</span>
+                Type d'opération : <span class="text-[#0048FA] font-bold">{{ $mouvement->type_libelle }}</span>
             </p>
         </div>
 
         <!-- Informations Immobilisation -->
         <div class="mb-6 rounded-xl border border-slate-200 p-4 bg-slate-50/50">
-            <h2 class="text-xs font-bold uppercase text-[#155E3B] tracking-wider mb-3 flex items-center">
+            <h2 class="text-xs font-bold uppercase text-[#0048FA] tracking-wider mb-3 flex items-center">
                 <i class="fa-solid fa-cube mr-2"></i> Identification de l'Immobilisation
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
@@ -123,7 +123,7 @@
 
             <!-- Destination -->
             <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/30">
-                <div class="font-bold text-[#155E3B] uppercase text-[10px] mb-2 flex items-center space-x-1.5">
+                <div class="font-bold text-[#0048FA] uppercase text-[10px] mb-2 flex items-center space-x-1.5">
                     <i class="fa-solid fa-arrow-down-to-bracket"></i>
                     <span>Structure Destinataire (Récepteur)</span>
                 </div>
@@ -161,7 +161,7 @@
                 </div>
 
                 <div class="border border-slate-200 rounded-xl p-3 h-32 flex flex-col justify-between">
-                    <span class="font-bold text-[#155E3B] uppercase text-[10px]">Le Gestionnaire de Patrimoine</span>
+                    <span class="font-bold text-[#0048FA] uppercase text-[10px]">Le Gestionnaire de Patrimoine</span>
                     <div class="text-[10px] text-slate-400">Cachet & Signature</div>
                 </div>
 

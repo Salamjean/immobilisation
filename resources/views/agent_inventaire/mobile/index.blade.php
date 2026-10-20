@@ -19,16 +19,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#155E3B',
-                            700: '#0f442a',
-                            800: '#064e3b',
-                            900: '#022c22',
+                            50: '#eff4ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#0048FA',
+                            700: '#003ad1',
+                            800: '#002eb3',
+                            900: '#002080',
                         }
                     },
                     fontFamily: {
@@ -69,7 +69,7 @@
             left: 5%;
             right: 5%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #10b981, #155E3B, #10b981, transparent);
+            background: linear-gradient(90deg, transparent, #10b981, #0048FA, #10b981, transparent);
             box-shadow: 0 0 8px #10b981;
             animation: scanLaser 2s infinite ease-in-out;
         }
@@ -81,7 +81,7 @@
     <header class="bg-white border-b border-slate-200/90 p-3.5 sticky top-0 z-30 flex items-center justify-between shadow-xs">
         <div class="flex items-center space-x-2.5">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo UCP-FM" class="h-8 w-auto max-w-[120px] object-contain flex-shrink-0">
-            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #0048FA;">
                 Terrain
             </span>
         </div>
@@ -111,7 +111,7 @@
             <!-- En-tête avec Statut -->
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <div class="w-7 h-7 rounded-lg bg-emerald-50 text-[#155E3B] flex items-center justify-center text-xs font-bold border border-emerald-200">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-50 text-[#0048FA] flex items-center justify-center text-xs font-bold border border-emerald-200">
                         <i class="fa-solid fa-clipboard-check"></i>
                     </div>
                     <div>
@@ -132,7 +132,7 @@
                     <input type="hidden" id="selectCampagne" name="campagne_id" value="{{ $activeCampagne?->id }}">
 
                     <div class="relative flex items-center">
-                        <div class="absolute left-3.5 pointer-events-none text-[#155E3B]">
+                        <div class="absolute left-3.5 pointer-events-none text-[#0048FA]">
                             <i class="fa-solid fa-magnifying-glass text-xs"></i>
                         </div>
                         <input type="text" 
@@ -143,7 +143,7 @@
                                onclick="ouvrirDropdownCampagne()"
                                oninput="filtrerCampagnesCombobox(this.value)"
                                onfocus="this.select(); ouvrirDropdownCampagne();"
-                               class="w-full pl-9 pr-10 py-3 bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all cursor-pointer">
+                               class="w-full pl-9 pr-10 py-3 bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all cursor-pointer">
                         <div class="absolute right-3.5 pointer-events-none text-slate-400 transition-transform duration-200" id="chevronCombobox">
                             <i class="fa-solid fa-chevron-down text-xs"></i>
                         </div>
@@ -181,7 +181,7 @@
                                         <span>{{ $c->releves->count() }} scans</span>
                                     </div>
                                 </div>
-                                <i class="fa-solid fa-check text-[#155E3B] text-xs check-icon {{ ($activeCampagne && $activeCampagne->id == $c->id) ? '' : 'hidden' }}"></i>
+                                <i class="fa-solid fa-check text-[#0048FA] text-xs check-icon {{ ($activeCampagne && $activeCampagne->id == $c->id) ? '' : 'hidden' }}"></i>
                             </div>
                         @endforeach
                         <div id="noMatchCampagne" class="p-4 text-center text-xs text-slate-400 italic hidden">
@@ -195,7 +195,7 @@
                     <div class="flex items-start justify-between gap-2">
                         <div class="space-y-1 flex-1 min-w-0">
                             <div class="flex items-center space-x-2 flex-wrap gap-y-1">
-                                <span id="badgeCampagneCode" class="font-mono text-[11px] font-extrabold text-[#155E3B] bg-emerald-100/80 px-2 py-0.5 rounded-md border border-emerald-200">
+                                <span id="badgeCampagneCode" class="font-mono text-[11px] font-extrabold text-[#0048FA] bg-emerald-100/80 px-2 py-0.5 rounded-md border border-emerald-200">
                                     {{ $activeCampagne?->code_campagne ?? 'CODE' }}
                                 </span>
                                 <span id="badgeCampagneProg" class="text-[10px] font-semibold text-slate-600 bg-white px-2 py-0.5 rounded-md border border-slate-200">
@@ -210,8 +210,8 @@
                         <a id="linkCampagneDetail" 
                            href="{{ $activeCampagne ? route('agent.campagnes.show', $activeCampagne->id) : '#' }}" 
                            title="Voir statistiques et relevés"
-                           class="flex-shrink-0 px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-[#155E3B] hover:border-emerald-300 text-[11px] font-bold shadow-2xs flex items-center space-x-1.5 transition">
-                            <i class="fa-solid fa-chart-pie text-[#155E3B]"></i>
+                           class="flex-shrink-0 px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-[#0048FA] hover:border-emerald-300 text-[11px] font-bold shadow-2xs flex items-center space-x-1.5 transition">
+                            <i class="fa-solid fa-chart-pie text-[#0048FA]"></i>
                             <span class="hidden sm:inline">Détails</span>
                         </a>
                     </div>
@@ -252,8 +252,8 @@
             <button type="button"
                     id="btnToggleScanner"
                     onclick="toggleCameraScanner()"
-                    style="background-color: #155E3B;"
-                    class="w-full py-3.5 px-4 rounded-xl text-white font-bold text-xs shadow-md shadow-[#155E3B]/25 hover:opacity-95 flex items-center justify-center space-x-2 transition-all">
+                    style="background-color: #0048FA;"
+                    class="w-full py-3.5 px-4 rounded-xl text-white font-bold text-xs shadow-md shadow-[#0048FA]/25 hover:opacity-95 flex items-center justify-center space-x-2 transition-all">
                 <i class="fa-solid fa-camera text-sm"></i>
                 <span id="scannerBtnText">Activer Caméra / Scan QR Code</span>
             </button>
@@ -263,11 +263,11 @@
                 <input type="text"
                        id="inputManualCode"
                        placeholder="Saisir tag / n° série (ex: TAG-MED-001)"
-                       class="w-full pl-9 pr-14 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-14 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 <i class="fa-solid fa-barcode absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
                 <button type="button"
                         onclick="rechercherCodeManuel()"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="absolute right-1.5 top-1.5 px-3 py-1.5 rounded-lg text-white text-xs font-bold shadow-xs hover:opacity-95">
                     OK
                 </button>
@@ -275,10 +275,10 @@
         </div>
 
         <!-- 3. Fiche Actif Détecté (Scanned Card) -->
-        <div id="assetScannedCard" class="bg-white rounded-2xl p-5 border-2 border-[#155E3B] space-y-4 hidden shadow-lg animate-fade-in">
+        <div id="assetScannedCard" class="bg-white rounded-2xl p-5 border-2 border-[#0048FA] space-y-4 hidden shadow-lg animate-fade-in">
             <div class="flex items-start justify-between gap-2 pb-3 border-b border-slate-100">
                 <div>
-                    <span id="scannedCode" class="font-mono font-extrabold text-sm text-[#155E3B] bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200 inline-block">
+                    <span id="scannedCode" class="font-mono font-extrabold text-sm text-[#0048FA] bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200 inline-block">
                         UCPFM-2026-MED-0001
                     </span>
                     <h3 id="scannedDesignation" class="font-bold text-slate-900 text-sm mt-1.5">Désignation du Matériel</h3>
@@ -319,8 +319,8 @@
                         Présence Physique Constatée <span class="text-rose-500">*</span>
                     </label>
                     <div class="grid grid-cols-2 gap-2.5">
-                        <label class="p-3 rounded-xl border-2 border-slate-200 bg-slate-50 flex items-center space-x-2.5 cursor-pointer has-[:checked]:border-[#155E3B] has-[:checked]:bg-emerald-50/70 transition-all">
-                            <input type="radio" name="presence_constatee" value="1" checked class="text-[#155E3B] focus:ring-[#155E3B]">
+                        <label class="p-3 rounded-xl border-2 border-slate-200 bg-slate-50 flex items-center space-x-2.5 cursor-pointer has-[:checked]:border-[#0048FA] has-[:checked]:bg-emerald-50/70 transition-all">
+                            <input type="radio" name="presence_constatee" value="1" checked class="text-[#0048FA] focus:ring-[#0048FA]">
                             <span class="font-bold text-emerald-800">Bien Retrouvé</span>
                         </label>
                         <label class="p-3 rounded-xl border-2 border-slate-200 bg-slate-50 flex items-center space-x-2.5 cursor-pointer has-[:checked]:border-rose-500 has-[:checked]:bg-rose-50/70 transition-all">
@@ -335,7 +335,7 @@
                     <label for="fieldEtatConstate" class="block font-bold text-slate-700 mb-1.5">
                         État Physique sur le Terrain <span class="text-rose-500">*</span>
                     </label>
-                    <select id="fieldEtatConstate" name="etat_constate" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select id="fieldEtatConstate" name="etat_constate" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="bon_etat">Bon état / Fonctionnel</option>
                         <option value="panne">En panne / Défaillant</option>
                         <option value="hors_service">Hors service / Déclassé</option>
@@ -354,13 +354,13 @@
                               name="observations"
                               rows="2"
                               placeholder="Remarques (nouveau bureau, usure constatée, détérioration de l'étiquette...)"
-                              class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all"></textarea>
+                              class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all"></textarea>
                 </div>
 
                 <!-- Bouton de synchronisation -->
                 <button type="submit"
-                        style="background-color: #155E3B;"
-                        class="w-full py-3.5 rounded-xl text-white font-extrabold text-xs shadow-md shadow-[#155E3B]/25 hover:opacity-95 flex items-center justify-center space-x-2 transition-all">
+                        style="background-color: #0048FA;"
+                        class="w-full py-3.5 rounded-xl text-white font-extrabold text-xs shadow-md shadow-[#0048FA]/25 hover:opacity-95 flex items-center justify-center space-x-2 transition-all">
                     <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
                     <span>Valider & Synchroniser le Relevé</span>
                 </button>
@@ -370,7 +370,7 @@
         <!-- 4. Historique Récent des Scans de la Session -->
         <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-2.5">
             <h4 class="text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center space-x-1.5">
-                <i class="fa-solid fa-clock-rotate-left text-[#155E3B]"></i>
+                <i class="fa-solid fa-clock-rotate-left text-[#0048FA]"></i>
                 <span>Scans récents (Session active)</span>
             </h4>
             <div id="localScansList" class="space-y-2 text-xs">
@@ -382,19 +382,19 @@
 
     <!-- Bottom Navigation Bar Mobile & Tablette Pleine Largeur -->
     <nav class="bg-white/95 backdrop-blur-md border-t border-slate-200/90 fixed bottom-0 left-0 right-0 p-2 z-30 flex items-center justify-around text-[10px] sm:text-xs font-bold text-slate-500 shadow-xl w-full">
-        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#155E3B]">
+        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#0048FA]">
             <i class="fa-solid fa-qrcode text-base sm:text-lg mb-0.5"></i>
             <span>Scanner</span>
         </a>
-        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-map-location-dot text-base sm:text-lg mb-0.5"></i>
             <span>Carte SIG</span>
         </a>
-        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-clipboard-check text-base sm:text-lg mb-0.5"></i>
             <span>Campagnes</span>
         </a>
-        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-cloud-arrow-down text-base sm:text-lg mb-0.5"></i>
             <span>Pack Offline</span>
         </button>
@@ -678,7 +678,7 @@
                     item.className = 'p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between shadow-2xs';
                     item.innerHTML = `
                         <div>
-                            <span class="font-mono font-bold text-[#155E3B] text-xs">${formData.get('code_scanne')}</span>
+                            <span class="font-mono font-bold text-[#0048FA] text-xs">${formData.get('code_scanne')}</span>
                             <div class="text-[10px] text-slate-400 mt-0.5">${new Date().toLocaleTimeString()}</div>
                         </div>
                         <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">

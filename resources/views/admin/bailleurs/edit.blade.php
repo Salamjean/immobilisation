@@ -14,7 +14,7 @@
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
                     <span>Modifier le Bailleur :</span>
-                    <span class="font-mono text-[#155E3B]">{{ $bailleur->nom }}</span>
+                    <span class="font-mono text-[#0048FA]">{{ $bailleur->nom }}</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Mise à jour des informations et contacts du partenaire financier</p>
             </div>
@@ -45,7 +45,7 @@
 
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </div>
                 <div>
@@ -65,7 +65,7 @@
                            name="nom"
                            value="{{ old('nom', $bailleur->nom) }}"
                            required
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Code Bailleur -->
@@ -98,7 +98,7 @@
             <!-- Description -->
             <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1.5">Description</label>
-                <textarea name="description" rows="3" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('description', $bailleur->description) }}</textarea>
+                <textarea name="description" rows="3" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('description', $bailleur->description) }}</textarea>
             </div>
 
             <!-- Contacts -->
@@ -108,7 +108,7 @@
                     <input type="text"
                            name="contact_nom"
                            value="{{ old('contact_nom', $bailleur->contact_nom) }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <div>
@@ -116,13 +116,13 @@
                     <input type="email"
                            name="contact_email"
                            value="{{ old('contact_email', $bailleur->contact_email) }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
             <!-- Statut Actif -->
             <div class="flex items-center space-x-3 pt-2">
-                <input type="checkbox" name="actif" id="actif" value="1" {{ old('actif', $bailleur->actif) ? 'checked' : '' }} class="w-4 h-4 rounded text-[#155E3B] focus:ring-[#155E3B] border-slate-300">
+                <input type="checkbox" name="actif" id="actif" value="1" {{ old('actif', $bailleur->actif) ? 'checked' : '' }} class="w-4 h-4 rounded text-[#0048FA] focus:ring-[#0048FA] border-slate-300">
                 <label for="actif" class="text-xs font-semibold text-slate-700">Actif</label>
             </div>
         </div>
@@ -135,8 +135,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer les Modifications</span>
             </button>
@@ -205,9 +205,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const generated = generateBailleurCode(nomInput.value);
             if (generated) {
                 codeInput.value = generated;
-                codeInput.classList.add('ring-2', 'ring-[#155E3B]');
+                codeInput.classList.add('ring-2', 'ring-[#0048FA]');
                 setTimeout(() => {
-                    codeInput.classList.remove('ring-2', 'ring-[#155E3B]');
+                    codeInput.classList.remove('ring-2', 'ring-[#0048FA]');
                 }, 400);
             }
         });

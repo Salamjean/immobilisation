@@ -32,7 +32,7 @@
                 </div>
                 <h1 class="text-xl font-extrabold text-slate-900 mt-1">{{ $mouvement->reference_mouvement }}</h1>
                 <div class="text-xs text-slate-500 mt-0.5">
-                    Actif rattaché: <strong class="text-slate-800">{{ $mouvement->immobilisation?->designation }}</strong> (<span class="font-mono text-[#155E3B] font-bold">{{ $mouvement->immobilisation?->code_immobilisation }}</span>)
+                    Actif rattaché: <strong class="text-slate-800">{{ $mouvement->immobilisation?->designation }}</strong> (<span class="font-mono text-[#0048FA] font-bold">{{ $mouvement->immobilisation?->code_immobilisation }}</span>)
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             @if($mouvement->statut_workflow === 'soumis')
             <form method="POST" action="{{ route('logistique.mouvements.valider', $mouvement->id) }}">
                 @csrf
-                <button type="submit" onclick="return confirm('Confirmez-vous la validation et le transfert effectif de cet actif ?')" class="px-4 py-2 rounded-xl bg-[#155E3B] hover:bg-[#0f442a] text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-1.5">
+                <button type="submit" onclick="return confirm('Confirmez-vous la validation et le transfert effectif de cet actif ?')" class="px-4 py-2 rounded-xl bg-[#0048FA] hover:bg-[#003ad1] text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-1.5">
                     <i class="fa-solid fa-check"></i>
                     <span>Valider le mouvement</span>
                 </button>
@@ -86,7 +86,7 @@
                 <i class="fa-solid fa-flag-checkered text-emerald-500"></i>
                 <span>Site & Emplacement Destination</span>
             </div>
-            <div class="text-base font-extrabold text-[#155E3B]">{{ $mouvement->structureDestination?->nom ?? 'Même site / Réforme' }}</div>
+            <div class="text-base font-extrabold text-[#0048FA]">{{ $mouvement->structureDestination?->nom ?? 'Même site / Réforme' }}</div>
             <div class="text-xs text-slate-500">Bureau/Service: <strong class="text-slate-700">{{ $mouvement->emplacement_destination ?? 'Non spécifié' }}</strong></div>
             <div class="text-xs text-slate-500">Nouveau détenteur: <strong class="text-slate-700">{{ $mouvement->detenteurDestination?->nom_complet ?? 'Non assigné' }}</strong></div>
         </div>

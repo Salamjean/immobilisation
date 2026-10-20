@@ -4,7 +4,7 @@
 @section('header_title', "Fiche Patrimoniale Programme")
 
 @section('header_badge')
-    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-100 text-[#155E3B] border border-emerald-300">
+    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold font-mono bg-blue-100 text-[#0048FA] border border-blue-300">
         {{ $actif->code_immobilisation }}
     </span>
 @endsection
@@ -15,7 +15,7 @@
     <!-- En-tête Fiche Actif -->
     <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div class="flex items-start space-x-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#155E3B] to-emerald-500 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-emerald-600/20 flex-shrink-0">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#0048FA] to-blue-500 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-blue-600/20 flex-shrink-0">
                 <i class="{{ $actif->categorie?->icone ?? 'fa-solid fa-cube' }}"></i>
             </div>
             <div>
@@ -26,7 +26,7 @@
                     <span class="px-2.5 py-0.5 rounded text-[10px] font-bold {{ $actif->etat_badge_class }}">
                         {{ $actif->etat_libelle }}
                     </span>
-                    <span class="px-2.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-[#155E3B] border border-emerald-200">
+                    <span class="px-2.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-[#0048FA] border border-blue-200">
                         {{ $actif->programme?->nom ?? $actif->programme?->code ?? 'Programme Santé' }}
                     </span>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-x-4 gap-y-1">
                     <span><strong class="text-slate-700">Marque / Modèle:</strong> {{ $actif->marque }} {{ $actif->modele }}</span>
                     <span><strong class="text-slate-700">N° Série:</strong> <span class="font-mono text-slate-800">{{ $actif->numero_serie ?? 'N/A' }}</span></span>
-                    <span><strong class="text-slate-700">Tag / QR:</strong> <span class="font-mono text-[#155E3B] font-bold">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
+                    <span><strong class="text-slate-700">Tag / QR:</strong> <span class="font-mono text-[#0048FA] font-bold">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <!-- Données Techniques & Financement -->
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center space-x-2">
-                    <i class="fa-solid fa-file-contract text-[#155E3B]"></i>
+                    <i class="fa-solid fa-file-contract text-[#0048FA]"></i>
                     <span>Financement & Attribution Programme</span>
                 </h3>
 
@@ -67,7 +67,7 @@
                     </div>
                     <div>
                         <span class="text-slate-400 block mb-0.5">Subvention Rattachée</span>
-                        <div class="font-bold text-[#155E3B]">{{ $actif->subvention?->code_subvention ?? 'N/A' }} - {{ $actif->subvention?->titre ?? '' }}</div>
+                        <div class="font-bold text-[#0048FA]">{{ $actif->subvention?->code_subvention ?? 'N/A' }} - {{ $actif->subvention?->titre ?? '' }}</div>
                     </div>
                     <div>
                         <span class="text-slate-400 block mb-0.5">Valeur d'Acquisition Initiale</span>
@@ -92,7 +92,7 @@
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center justify-between">
                     <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-timeline text-[#155E3B]"></i>
+                        <i class="fa-solid fa-timeline text-[#0048FA]"></i>
                         <span>Traçabilité & Historique des Transferts ({{ $actif->mouvements->count() }})</span>
                     </span>
                 </h3>
@@ -113,7 +113,7 @@
                                 </div>
                                 <p class="text-xs text-slate-600 mt-1">
                                     De : <strong class="text-slate-800">{{ $mvt->structureOrigine?->nom ?? 'Origine' }}</strong> 
-                                    &rarr; Vers : <strong class="text-[#155E3B]">{{ $mvt->structureDestination?->nom ?? 'Destination' }}</strong>
+                                    &rarr; Vers : <strong class="text-[#0048FA]">{{ $mvt->structureDestination?->nom ?? 'Destination' }}</strong>
                                 </p>
                                 @if($mvt->motif)
                                     <p class="text-[11px] text-slate-500 italic mt-0.5">Motif : {{ $mvt->motif }}</p>
@@ -128,7 +128,7 @@
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center justify-between">
                     <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-screwdriver-wrench text-[#155E3B]"></i>
+                        <i class="fa-solid fa-screwdriver-wrench text-[#0048FA]"></i>
                         <span>Interventions SAV & Maintenance ({{ $actif->maintenances->count() }})</span>
                     </span>
                 </h3>
@@ -166,7 +166,7 @@
             <!-- Affectation & Détenteur Actuel -->
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center space-x-2">
-                    <i class="fa-solid fa-location-dot text-[#155E3B]"></i>
+                    <i class="fa-solid fa-location-dot text-[#0048FA]"></i>
                     <span>Affectation Actuelle</span>
                 </h3>
 
@@ -181,7 +181,7 @@
                     </div>
                     <div>
                         <span class="text-slate-400 block text-[11px]">Structure Bénéficiaire / Site</span>
-                        <div class="font-bold text-[#155E3B]">{{ $actif->structure?->nom ?? 'N/A' }}</div>
+                        <div class="font-bold text-[#0048FA]">{{ $actif->structure?->nom ?? 'N/A' }}</div>
                         <span class="text-[10px] text-slate-500">{{ $actif->structure?->type_structure }}</span>
                     </div>
                     <div>
@@ -202,7 +202,7 @@
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center justify-between">
                     <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-map-location-dot text-[#155E3B]"></i>
+                        <i class="fa-solid fa-map-location-dot text-[#0048FA]"></i>
                         <span>Point GPS / SIG</span>
                     </span>
                     @if($actif->gps_valide)

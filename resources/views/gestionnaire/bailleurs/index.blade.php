@@ -9,7 +9,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-hand-holding-dollar text-[#155E3B]"></i>
+                <i class="fa-solid fa-hand-holding-dollar text-[#0048FA]"></i>
                 <span>Bailleurs de Fonds & Partenaires Financiers</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Consultation des bailleurs et partenaires financiers pour le rattachement des équipements</p>
@@ -23,7 +23,7 @@
     <!-- Statistiques rapides -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
             </div>
             <div>
@@ -62,7 +62,7 @@
                            name="search"
                            value="{{ request('search') }}"
                            placeholder="Rechercher nom, code, email..."
-                           class="w-full pl-9 pr-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full pl-9 pr-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
@@ -90,7 +90,7 @@
                     @forelse($bailleurs as $b)
                         <tr class="hover:bg-slate-50/70 transition-colors">
                             <td class="py-3.5 px-4 text-center">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-cyan-50 text-[#155E3B] border border-cyan-100">
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-cyan-50 text-[#0048FA] border border-cyan-100">
                                     {{ $b->code }}
                                 </span>
                             </td>

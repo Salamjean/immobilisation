@@ -20,7 +20,7 @@
             <p class="text-xs text-slate-500 mt-0.5">Visualisation spatiale du parc de santé et des matériels sur toute la Côte d'Ivoire.</p>
         </div>
         <div class="flex items-center space-x-3">
-            <span class="inline-flex items-center px-3 py-1.5 rounded-xl bg-emerald-50 text-[#155E3B] font-bold text-xs border border-emerald-200">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-xl bg-emerald-50 text-[#0048FA] font-bold text-xs border border-emerald-200">
                 <i class="fa-solid fa-satellite-dish mr-1.5"></i>
                 {{ $totalGeolocalises }} Actifs Géolocalisés
             </span>
@@ -53,12 +53,12 @@
         points.forEach(p => {
             const popupContent = `
                 <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; line-height: 1.4; padding: 2px;">
-                    <div style="font-weight: 800; color: #155E3B; font-family: monospace;">${p.code}</div>
+                    <div style="font-weight: 800; color: #0048FA; font-family: monospace;">${p.code}</div>
                     <div style="font-weight: 700; color: #0f172a; margin-top: 2px;">${p.designation}</div>
                     <div style="color: #64748b; font-size: 11px;">${p.structure}</div>
                     <div style="margin-top: 6px; display: flex; align-items: center; justify-content: space-between;">
                         <span style="font-weight: 700; color: #0f172a;">${p.valeur}</span>
-                        <a href="${p.url}" style="color: #155E3B; font-weight: 700; text-decoration: underline;">Voir fiche &rarr;</a>
+                        <a href="${p.url}" style="color: #0048FA; font-weight: 700; text-decoration: underline;">Voir fiche &rarr;</a>
                     </div>
                 </div>
             `;

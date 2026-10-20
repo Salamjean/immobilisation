@@ -14,21 +14,21 @@
 <div class="space-y-6">
 
     <!-- Bannière Logistique -->
-    <div class="bg-gradient-to-r from-[#155E3B] to-emerald-800 rounded-2xl p-6 text-white shadow-sm border border-emerald-700/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="bg-gradient-to-r from-[#0048FA] to-blue-900 rounded-2xl p-6 text-white shadow-sm border border-blue-700/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
-            <div class="flex items-center space-x-2 text-emerald-200 text-xs font-bold uppercase tracking-wider">
+            <div class="flex items-center space-x-2 text-blue-200 text-xs font-bold uppercase tracking-wider">
                 <i class="fa-solid fa-truck-ramp-box"></i>
                 <span>Supervision Opérationnelle & Flotte</span>
             </div>
             <h2 class="text-xl font-black mt-1">Espace Logistique & Transferts</h2>
-            <p class="text-emerald-100 text-xs mt-1">Pilotage des flux d'actifs, affectations de sites, décharges et maintenance SAV.</p>
+            <p class="text-blue-100 text-xs mt-1">Pilotage des flux d'actifs, affectations de sites, décharges et maintenance SAV.</p>
         </div>
         <div class="flex items-center space-x-3">
-            <a href="{{ route('logistique.mouvements.create') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white text-[#155E3B] hover:bg-emerald-50 text-xs font-bold shadow-sm transition-all">
+            <a href="{{ route('logistique.mouvements.create') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white text-[#0048FA] hover:bg-blue-50 text-xs font-bold shadow-sm transition-all">
                 <i class="fa-solid fa-plus"></i>
                 <span>Nouveau mouvement</span>
             </a>
-            <a href="{{ route('logistique.maintenances.create') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-emerald-700/60 hover:bg-emerald-700 text-white text-xs font-bold border border-emerald-600 transition-all">
+            <a href="{{ route('logistique.maintenances.create') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-blue-800/60 hover:bg-blue-800 text-white text-xs font-bold border border-blue-600 transition-all">
                 <i class="fa-solid fa-wrench"></i>
                 <span>Demande SAV</span>
             </a>
@@ -42,9 +42,9 @@
             <div>
                 <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Mouvements Enregistrés</div>
                 <div class="text-2xl font-black text-slate-900 mt-1 font-mono">{{ $totalMouvements }}</div>
-                <div class="text-xs text-[#155E3B] font-semibold mt-0.5">{{ $mouvementsValides }} validés / exécutés</div>
+                <div class="text-xs text-[#0048FA] font-semibold mt-0.5">{{ $mouvementsValides }} validés / exécutés</div>
             </div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-[#155E3B] flex items-center justify-center text-xl font-bold shadow-xs">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-[#0048FA] flex items-center justify-center text-xl font-bold shadow-xs">
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
         </div>
@@ -94,12 +94,12 @@
             <div class="p-5 border-b border-slate-100 flex items-center justify-between">
                 <div>
                     <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                        <i class="fa-solid fa-arrow-right-arrow-left text-[#155E3B]"></i>
+                        <i class="fa-solid fa-arrow-right-arrow-left text-[#0048FA]"></i>
                         <span>Derniers Mouvements de Matériel & Véhicules</span>
                     </h3>
                     <div class="text-xs text-slate-500 mt-0.5">Transferts inter-sites, affectations et décharges</div>
                 </div>
-                <a href="{{ route('logistique.mouvements.index') }}" class="px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#155E3B] rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5">
+                <a href="{{ route('logistique.mouvements.index') }}" class="px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#0048FA] rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5">
                     <span>Tout voir</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -119,7 +119,7 @@
                     <tbody class="divide-y divide-slate-100">
                         @forelse($derniersMouvements as $m)
                         <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="py-3.5 px-4 font-mono font-bold text-[#155E3B]">
+                            <td class="py-3.5 px-4 font-mono font-bold text-[#0048FA]">
                                 <div>{{ $m->reference_mouvement }}</div>
                                 <div class="text-[10px] text-slate-400 font-sans font-normal">{{ $m->date_mouvement?->format('d/m/Y') }}</div>
                             </td>
@@ -161,7 +161,7 @@
                     <i class="fa-solid fa-wrench text-rose-500"></i>
                     <span>Derniers Suivis SAV</span>
                 </h3>
-                <a href="{{ route('logistique.maintenances.index') }}" class="text-xs font-bold text-[#155E3B] hover:underline">Voir tout</a>
+                <a href="{{ route('logistique.maintenances.index') }}" class="text-xs font-bold text-[#0048FA] hover:underline">Voir tout</a>
             </div>
 
             <div class="space-y-3 text-xs">

@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-boxes-stacked"></i>
                 </div>
                 <div>
@@ -53,8 +53,8 @@
             </a>
 
             <a href="{{ route('gestionnaire.immobilisations.create') }}"
-               style="background-color: #155E3B;"
-               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+               style="background-color: #0048FA;"
+               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-plus text-xs"></i>
                 <span>Ajouter une immobilisation</span>
             </a>
@@ -73,12 +73,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Code, désignation, série, marque, tag..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Programme -->
             <div>
-                <select name="programme_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="programme_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les programmes</option>
                     @foreach($programmes as $prog)
                         <option value="{{ $prog->id }}" {{ request('programme_id') == $prog->id ? 'selected' : '' }}>
@@ -90,7 +90,7 @@
 
             <!-- Catégorie -->
             <div>
-                <select name="categorie_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="categorie_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Toutes les catégories</option>
                     @foreach($categories as $cat)
                         <option value="{{ $cat->id }}" {{ request('categorie_id') == $cat->id ? 'selected' : '' }}>
@@ -102,7 +102,7 @@
 
             <!-- Structure -->
             <div>
-                <select name="structure_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="structure_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Toutes les structures</option>
                     @foreach($structures as $st)
                         <option value="{{ $st->id }}" {{ request('structure_id') == $st->id ? 'selected' : '' }}>
@@ -114,7 +114,7 @@
 
             <!-- État Physique -->
             <div>
-                <select name="etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les états</option>
                     <option value="bon_etat" {{ request('etat') == 'bon_etat' ? 'selected' : '' }}>Bon état / Fonctionnel</option>
                     <option value="panne" {{ request('etat') == 'panne' ? 'selected' : '' }}>En panne</option>
@@ -128,7 +128,7 @@
 
             <!-- Boutons Filtrer & Reset -->
             <div class="flex items-center space-x-2 sm:col-span-2 md:col-span-3 lg:col-span-6 lg:justify-end">
-                <button type="submit" style="background-color: #155E3B;" class="px-5 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center space-x-1.5 cursor-pointer">
+                <button type="submit" style="background-color: #0048FA;" class="px-5 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center space-x-1.5 cursor-pointer">
                     <i class="fa-solid fa-filter text-xs"></i>
                     <span>Appliquer les filtres</span>
                 </button>
@@ -162,11 +162,11 @@
                             <!-- Désignation & Marque (Aligné à gauche) -->
                             <td class="py-3.5 px-4 text-left">
                                 <div class="flex items-center space-x-3">
-                                    <div style="background-color: #155E3B;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
+                                    <div style="background-color: #0048FA;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
                                         <i class="fa-solid {{ $item->categorie?->icone ?? 'fa-cube' }}"></i>
                                     </div>
                                     <div class="min-w-0 max-w-xs">
-                                        <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-slate-900 hover:text-[#155E3B] hover:underline truncate block">
+                                        <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-slate-900 hover:text-[#0048FA] hover:underline truncate block">
                                             {{ $item->designation }}
                                         </a>
                                         <div class="text-[11px] text-slate-400 truncate">
@@ -181,7 +181,7 @@
 
                             <!-- Code & Tag -->
                             <td class="py-3.5 px-4 text-center font-mono">
-                                <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-[#155E3B] hover:underline block text-xs">
+                                <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-[#0048FA] hover:underline block text-xs">
                                     {{ $item->code_immobilisation }}
                                 </a>
                                 <span class="text-[10px] text-slate-400 font-medium">{{ $item->reference_etiquette ?? 'SANS-TAG' }}</span>
@@ -236,21 +236,21 @@
                                     <button type="button"
                                             onclick="ouvrirPopinChangementEtat({{ $item->id }}, '{{ addslashes($item->code_immobilisation) }}', '{{ addslashes($item->designation) }}', '{{ $item->etat }}')"
                                             title="Changer l'état rapidement"
-                                            class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-50 hover:bg-[#155E3B] text-[#155E3B] hover:text-white transition-colors cursor-pointer">
+                                            class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-50 hover:bg-[#0048FA] text-[#0048FA] hover:text-white transition-colors cursor-pointer">
                                         <i class="fa-solid fa-arrows-rotate text-xs"></i>
                                     </button>
 
                                     <!-- Fiche 360° -->
                                     <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}"
                                        title="Consulter la fiche 360°"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-eye text-xs"></i>
                                     </a>
 
                                     <!-- Modifier -->
                                     <a href="{{ route('gestionnaire.immobilisations.edit', $item->id) }}"
                                        title="Modifier la fiche complète"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-pen text-xs"></i>
                                     </a>
 
@@ -317,30 +317,30 @@ function ouvrirPopinChangementEtat(id, code, designation, etatActuel) {
             <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
                 <div class="text-xs text-slate-400 uppercase font-semibold">Immobilisation :</div>
                 <div class="font-bold text-slate-900 text-sm mt-0.5">${designation}</div>
-                <div class="font-mono text-xs text-[#155E3B] font-bold">${code}</div>
+                <div class="font-mono text-xs text-[#0048FA] font-bold">${code}</div>
             </div>
 
             <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Nouvel État Physique <span class="text-red-500">*</span></label>
-                <select id="swal-select-etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B]">
+                <select id="swal-select-etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA]">
                     ${optionsHtml}
                 </select>
             </div>
 
             <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Motif / Observation (Optionnel)</label>
-                <textarea id="swal-textarea-motif" rows="2" placeholder="Précisez la raison (ex: constat visuel lors de la visite, panne signalée par le service...)" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B]"></textarea>
+                <textarea id="swal-textarea-motif" rows="2" placeholder="Précisez la raison (ex: constat visuel lors de la visite, panne signalée par le service...)" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA]"></textarea>
             </div>
         </div>
     `;
 
     Swal.fire({
-        title: '<div class="flex items-center space-x-2 text-base font-bold text-slate-900"><i class="fa-solid fa-arrows-rotate text-[#155E3B]"></i><span>Modifier l\'état du bien</span></div>',
+        title: '<div class="flex items-center space-x-2 text-base font-bold text-slate-900"><i class="fa-solid fa-arrows-rotate text-[#0048FA]"></i><span>Modifier l\'état du bien</span></div>',
         html: htmlContent,
         showCancelButton: true,
         confirmButtonText: '<i class="fa-solid fa-check mr-1.5"></i> Enregistrer la modification',
         cancelButtonText: 'Annuler',
-        confirmButtonColor: '#155E3B',
+        confirmButtonColor: '#0048FA',
         cancelButtonColor: '#94a3b8',
         customClass: {
             popup: 'rounded-3xl border border-slate-200 shadow-2xl p-6',

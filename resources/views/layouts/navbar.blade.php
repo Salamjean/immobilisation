@@ -11,7 +11,7 @@
     @include('layouts.gestionnaire.navbar')
 @else
     <!-- Navbar Par Défaut - Style Identique Admin -->
-    <header style="background-color: #155E3B;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-2 sm:mx-3 mt-2 sm:mt-3 mb-0 flex items-center flex-shrink-0 z-30">
+    <header style="background-color: #0048FA;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-2 sm:mx-3 mt-2 sm:mt-3 mb-0 flex items-center flex-shrink-0 z-30">
         <div class="w-full px-3 sm:px-5 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <button type="button" id="navbarSidebarToggle" title="Réduire / Agrandir le menu" class="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all">

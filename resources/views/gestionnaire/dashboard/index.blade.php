@@ -19,7 +19,7 @@
         <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-xs flex flex-col justify-between space-y-4">
             <div class="space-y-2">
                 <div class="flex items-center space-x-2 text-xs">
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-lg bg-emerald-50 text-[#155E3B] font-bold border border-emerald-200">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-lg bg-emerald-50 text-[#0048FA] font-bold border border-emerald-200">
                         <i class="fa-solid fa-shield-halved mr-1.5 text-xs"></i> Espace Gestionnaire
                     </span>
                     <span class="text-slate-400">•</span>
@@ -36,7 +36,7 @@
             <!-- Raccourcis Rapides -->
             <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
                 <a href="{{ route('gestionnaire.immobilisations.create') }}"
-                   style="background-color: #155E3B;"
+                   style="background-color: #0048FA;"
                    class="px-3.5 py-2 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center space-x-1.5">
                     <i class="fa-solid fa-plus text-xs"></i>
                     <span>Nouvelle Immobilisation</span>
@@ -131,19 +131,19 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         <!-- Carte 1 : Parc Immobilisations -->
-        <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs hover:border-[#155E3B]/40 transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs hover:border-[#0048FA]/40 transition-all flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <span class="w-2 h-2 rounded-full bg-[#155E3B]"></span>
+                    <span class="w-2 h-2 rounded-full bg-[#0048FA]"></span>
                     <span class="text-xs font-semibold text-slate-600">Parc Immobilisations</span>
                 </div>
-                <div class="w-7 h-7 rounded-lg bg-emerald-50 text-[#155E3B] flex items-center justify-center text-xs">
+                <div class="w-7 h-7 rounded-lg bg-emerald-50 text-[#0048FA] flex items-center justify-center text-xs">
                     <i class="fa-solid fa-boxes-stacked"></i>
                 </div>
             </div>
             <div class="my-3">
                 <div class="text-3xl font-extrabold text-slate-900 tracking-tight">{{ number_format($totalActifs, 0, ',', ' ') }}</div>
-                <div class="text-xs font-mono font-bold text-[#155E3B] mt-0.5">{{ number_format($valeurTotale, 0, ',', ' ') }} <span class="text-[10px] font-normal text-slate-500">FCFA</span></div>
+                <div class="text-xs font-mono font-bold text-[#0048FA] mt-0.5">{{ number_format($valeurTotale, 0, ',', ' ') }} <span class="text-[10px] font-normal text-slate-500">FCFA</span></div>
             </div>
             <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
                 <span>Couverture réseau</span>
@@ -231,7 +231,7 @@
         <div class="lg:col-span-2 bg-white rounded-2xl p-5 border border-slate-200 shadow-xs">
             <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#155E3B] flex items-center justify-center text-sm font-bold">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#0048FA] flex items-center justify-center text-sm font-bold">
                         <i class="fa-solid fa-chart-column"></i>
                     </div>
                     <div>
@@ -276,7 +276,7 @@
         <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
             <div class="p-5 border-b border-slate-100 flex items-center justify-between">
                 <div class="flex items-center space-x-2.5">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#155E3B] flex items-center justify-center text-sm font-bold">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-[#0048FA] flex items-center justify-center text-sm font-bold">
                         <i class="fa-solid fa-cube"></i>
                     </div>
                     <div>
@@ -284,7 +284,7 @@
                         <p class="text-[11px] text-slate-400">Immobilisations récemment acquises ou intégrées</p>
                     </div>
                 </div>
-                <a href="{{ route('gestionnaire.immobilisations.index') }}" class="text-xs font-bold text-[#155E3B] hover:underline">
+                <a href="{{ route('gestionnaire.immobilisations.index') }}" class="text-xs font-bold text-[#0048FA] hover:underline">
                     Tout voir &rarr;
                 </a>
             </div>
@@ -293,15 +293,15 @@
                 @forelse($dernieresImmobilisations as $item)
                 <div class="p-4 flex items-center justify-between hover:bg-slate-50/70 transition-colors">
                     <div class="flex items-center space-x-3 min-w-0">
-                        <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-xs font-bold shadow-xs flex-shrink-0">
+                        <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-xs font-bold shadow-xs flex-shrink-0">
                             <i class="fa-solid {{ $item->categorie?->icone ?? 'fa-cube' }}"></i>
                         </div>
                         <div class="min-w-0">
-                            <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-slate-900 hover:text-[#155E3B] truncate block">
+                            <a href="{{ route('gestionnaire.immobilisations.show', $item->id) }}" class="font-bold text-slate-900 hover:text-[#0048FA] truncate block">
                                 {{ $item->designation }}
                             </a>
                             <div class="text-[11px] text-slate-400 truncate">
-                                <span class="font-mono text-[#155E3B] font-semibold">{{ $item->code_immobilisation }}</span>
+                                <span class="font-mono text-[#0048FA] font-semibold">{{ $item->code_immobilisation }}</span>
                                 • {{ $item->structureBeneficiaire?->nom ?? 'Siège' }}
                             </div>
                         </div>
@@ -332,7 +332,7 @@
                         <p class="text-[11px] text-slate-400">Dernières opérations logistiques et affectations</p>
                     </div>
                 </div>
-                <a href="{{ route('gestionnaire.mouvements.index') }}" class="text-xs font-bold text-[#155E3B] hover:underline">
+                <a href="{{ route('gestionnaire.mouvements.index') }}" class="text-xs font-bold text-[#0048FA] hover:underline">
                     Registre complet &rarr;
                 </a>
             </div>
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 datasets: [{
                     label: 'Valeur (FCFA)',
                     data: progValues,
-                    backgroundColor: '#155E3B',
+                    backgroundColor: '#0048FA',
                     borderRadius: 8,
                     maxBarThickness: 45
                 }]
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 datasets: [{
                     data: catCounts,
                     backgroundColor: [
-                        '#155E3B', '#0ea5e9', '#8b5cf6', '#f59e0b', '#ec4899', '#10b981', '#64748b'
+                        '#0048FA', '#0ea5e9', '#8b5cf6', '#f59e0b', '#ec4899', '#10b981', '#64748b'
                     ],
                     borderWidth: 2,
                     borderColor: '#ffffff'

@@ -21,11 +21,11 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Numéro de fiche, prestataire, panne..."
-                       class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#155E3B] outline-none font-medium text-slate-800">
+                       class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#0048FA] outline-none font-medium text-slate-800">
             </div>
 
             <div class="sm:col-span-3">
-                <select name="statut" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#155E3B] outline-none font-medium text-slate-700">
+                <select name="statut" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#0048FA] outline-none font-medium text-slate-700">
                     <option value="">Tous les statuts</option>
                     <option value="signalee" {{ request('statut') === 'signalee' ? 'selected' : '' }}>Signalée</option>
                     <option value="en_attente" {{ request('statut') === 'en_attente' ? 'selected' : '' }}>En attente</option>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="sm:col-span-4 flex items-center space-x-2">
-                <button type="submit" class="flex-1 py-2.5 px-4 bg-[#155E3B] hover:bg-[#0f442a] text-white rounded-xl font-bold shadow-sm transition-all flex items-center justify-center space-x-1.5">
+                <button type="submit" class="flex-1 py-2.5 px-4 bg-[#0048FA] hover:bg-[#003ad1] text-white rounded-xl font-bold shadow-sm transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-xs"></i>
                     <span>Filtrer</span>
                 </button>
@@ -76,7 +76,7 @@
                 <tbody class="divide-y divide-slate-100">
                     @forelse($maintenances as $maint)
                     <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="py-3.5 px-4 font-mono font-bold text-[#155E3B]">
+                        <td class="py-3.5 px-4 font-mono font-bold text-[#0048FA]">
                             <a href="{{ route('logistique.maintenances.show', $maint->id) }}" class="hover:underline">
                                 {{ $maint->numero_fiche }}
                             </a>

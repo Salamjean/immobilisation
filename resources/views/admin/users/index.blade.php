@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-users-gear"></i>
                 </div>
                 <div>
@@ -40,8 +40,8 @@
 
         <div class="flex items-center space-x-2.5 flex-shrink-0">
             <a href="{{ route('admin.users.create') }}"
-               style="background-color: #155E3B;"
-               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+               style="background-color: #0048FA;"
+               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-user-plus text-xs"></i>
                 <span>Inscrire un utilisateur</span>
             </a>
@@ -60,12 +60,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher nom, email ou téléphone..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Rôle -->
             <div class="sm:col-span-3">
-                <select name="role" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="role" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Rôles</option>
                     @foreach($roles as $codeRole => $libelleRole)
                         <option value="{{ $codeRole }}" {{ request('role') == $codeRole ? 'selected' : '' }}>
@@ -77,7 +77,7 @@
 
             <!-- Filtre Statut -->
             <div class="sm:col-span-2">
-                <select name="actif" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="actif" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous statuts</option>
                     <option value="1" {{ request('actif') === '1' ? 'selected' : '' }}>Actifs</option>
                     <option value="0" {{ request('actif') === '0' ? 'selected' : '' }}>Inactifs</option>
@@ -86,7 +86,7 @@
 
             <!-- Boutons Filtrer & Reset -->
             <div class="sm:col-span-2 flex items-center space-x-2">
-                <button type="submit" style="background-color: #155E3B;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
+                <button type="submit" style="background-color: #0048FA;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
                     Filtrer
                 </button>
                 @if(request()->hasAny(['search', 'role', 'actif']))
@@ -122,7 +122,7 @@
                                         <img src="{{ $user->photo_url }}" alt="{{ $user->nom_complet }}" class="w-9 h-9 rounded-xl object-cover border border-slate-200 shadow-xs flex-shrink-0">
                                     @else
                                         <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs shadow-xs text-white flex-shrink-0"
-                                             style="background-color: {{ $user->role === 'admin' ? '#0f172a' : '#155E3B' }};">
+                                             style="background-color: {{ $user->role === 'admin' ? '#0f172a' : '#0048FA' }};">
                                             {{ substr($user->name, 0, 1) }}{{ substr($user->prenoms ?? $user->name, 0, 1) }}
                                         </div>
                                     @endif
@@ -182,7 +182,7 @@
                                     <!-- Modifier -->
                                     <a href="{{ route('admin.users.edit', $user->id) }}"
                                        title="Modifier l'utilisateur"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-pen text-xs"></i>
                                     </a>
 
@@ -236,7 +236,7 @@
         event.preventDefault();
         const actionText = isCurrentlyActive ? 'désactiver' : 'activer';
         const iconType = isCurrentlyActive ? 'warning' : 'question';
-        const confirmBtnColor = isCurrentlyActive ? '#ef4444' : '#155E3B';
+        const confirmBtnColor = isCurrentlyActive ? '#ef4444' : '#0048FA';
 
         Swal.fire({
             title: `Confirmer l'opération`,

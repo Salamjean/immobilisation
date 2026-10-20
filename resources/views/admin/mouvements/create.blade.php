@@ -34,7 +34,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-arrow-right-arrow-left"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Nature de l'Opération</h2>
@@ -43,13 +43,13 @@
                     <!-- Référence -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Référence Mouvement <span class="text-rose-500">*</span></label>
-                        <input type="text" name="reference_mouvement" value="{{ old('reference_mouvement', $refSuggeree) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <input type="text" name="reference_mouvement" value="{{ old('reference_mouvement', $refSuggeree) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     </div>
 
                     <!-- Type de mouvement -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Type de Mouvement <span class="text-rose-500">*</span></label>
-                        <select name="type_mouvement" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="type_mouvement" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="transfert">Transfert inter-établissements</option>
                             <option value="reaffectation">Réaffectation de service / détenteur</option>
                             <option value="pret">Prêt temporaire</option>
@@ -62,12 +62,12 @@
                     <!-- Date Prévue -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date Prévue d'Exécution <span class="text-rose-500">*</span></label>
-                        <input type="date" name="date_mouvement" value="{{ old('date_mouvement', date('Y-m-d')) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <input type="date" name="date_mouvement" value="{{ old('date_mouvement', date('Y-m-d')) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     </div>
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-clock-rotate-left text-[#155E3B] mr-1"></i> Traçabilité horodatée
+                    <i class="fa-solid fa-clock-rotate-left text-[#0048FA] mr-1"></i> Traçabilité horodatée
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-boxes-stacked"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Actif & Destination</h2>
@@ -84,7 +84,7 @@
                     <!-- Immobilisation -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Immobilisation Concernée <span class="text-rose-500">*</span></label>
-                        <select name="immobilisation_id" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="immobilisation_id" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Sélectionner une immobilisation</option>
                             @foreach($actifs as $a)
                                 <option value="{{ $a->id }}" {{ (old('immobilisation_id') == $a->id || ($actifSelectionne && $actifSelectionne->id == $a->id)) ? 'selected' : '' }}>
@@ -97,7 +97,7 @@
                     <!-- Structure de Destination -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Structure de Destination</label>
-                        <select name="structure_destination_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="structure_destination_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Conserver la structure d'origine</option>
                             @foreach($structures as $st)
                                 <option value="{{ $st->id }}" {{ old('structure_destination_id') == $st->id ? 'selected' : '' }}>
@@ -117,7 +117,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-file-lines"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">3. Justification & Notes</h2>
@@ -126,18 +126,18 @@
                     <!-- Motif -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Motif Administratif <span class="text-rose-500">*</span></label>
-                        <input type="text" name="motif" value="{{ old('motif') }}" required placeholder="Ex: Réaffectation de service selon note de service n°..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <input type="text" name="motif" value="{{ old('motif') }}" required placeholder="Ex: Réaffectation de service selon note de service n°..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     </div>
 
                     <!-- Commentaires -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Commentaires & Instructions Particulières</label>
-                        <textarea name="commentaires" rows="3" placeholder="Précisions sur le transport, l'état ou le procès-verbal..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('commentaires') }}</textarea>
+                        <textarea name="commentaires" rows="3" placeholder="Précisions sur le transport, l'état ou le procès-verbal..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('commentaires') }}</textarea>
                     </div>
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-shield-check text-[#155E3B] mr-1"></i> Enregistrement direct dans la piste d'audit
+                    <i class="fa-solid fa-shield-check text-[#0048FA] mr-1"></i> Enregistrement direct dans la piste d'audit
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
                 Annuler
             </a>
 
-            <button type="submit" style="background-color: #155E3B;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+            <button type="submit" style="background-color: #0048FA;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Enregistrer le mouvement</span>
             </button>

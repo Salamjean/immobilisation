@@ -45,7 +45,7 @@
         .logo-sub {
             font-size: 8px;
             font-weight: 600;
-            color: #155E3B;
+            color: #0048FA;
             text-transform: uppercase;
         }
         .tag-ref {
@@ -134,7 +134,7 @@
 <body>
 
     <div style="position: fixed; top: 15px; right: 15px;" class="no-print">
-        <button onclick="window.print()" style="background: #155E3B; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-family: inherit; box-shadow: 0 4px 10px rgba(18,186,214,0.3);">
+        <button onclick="window.print()" style="background: #0048FA; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-family: inherit; box-shadow: 0 4px 10px rgba(18,186,214,0.3);">
             Imprimer l'étiquette
         </button>
     </div>

@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-layer-group"></i>
                 </div>
                 <div>
@@ -28,8 +28,8 @@
                 </div>
 
                 <div class="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200">
-                    <i class="fa-solid fa-tags text-[#155E3B] text-xs"></i>
-                    <div class="text-xs font-semibold text-[#155E3B]">
+                    <i class="fa-solid fa-tags text-[#0048FA] text-xs"></i>
+                    <div class="text-xs font-semibold text-[#0048FA]">
                         <span class="text-slate-500 font-normal">Sous-catégories :</span> <strong>{{ $stats['total_sous_categories'] ?? 0 }}</strong>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
 
         <div class="flex items-center space-x-2.5 flex-shrink-0">
             <a href="{{ route('gestionnaire.categories.create') }}"
-               style="background-color: #155E3B;"
-               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+               style="background-color: #0048FA;"
+               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-plus text-xs"></i>
                 <span>Ajouter une catégorie</span>
             </a>
@@ -57,11 +57,11 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher par nom, code ou description..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <div class="sm:col-span-2 flex items-center space-x-2">
-                <button type="submit" style="background-color: #155E3B;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
+                <button type="submit" style="background-color: #0048FA;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
                     Filtrer
                 </button>
                 @if(request()->filled('search'))
@@ -93,7 +93,7 @@
                             <!-- Nom & Icône (Aligné à gauche) -->
                             <td class="py-3.5 px-4 text-left">
                                 <div class="flex items-center space-x-3">
-                                    <div style="background-color: #155E3B;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
+                                    <div style="background-color: #0048FA;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
                                         <i class="fa-solid {{ $cat->icone ?? 'fa-cube' }}"></i>
                                     </div>
                                     <div class="min-w-0">
@@ -118,7 +118,7 @@
 
                             <!-- Sous-catégories -->
                             <td class="py-3.5 px-4 text-center">
-                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#155E3B] border border-sky-100">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#0048FA] border border-sky-100">
                                     <i class="fa-solid fa-tags text-[10px] mr-1.5"></i>
                                     {{ $cat->sous_categories_count ?? 0 }}
                                 </span>
@@ -136,7 +136,7 @@
                             <td class="py-3.5 px-4 text-center">
                                 <a href="{{ route('gestionnaire.categories.edit', $cat->id) }}"
                                    title="Modifier la catégorie"
-                                   class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                   class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                     <i class="fa-solid fa-pen text-xs"></i>
                                 </a>
                             </td>

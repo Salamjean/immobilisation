@@ -25,7 +25,7 @@
                     <span class="w-2 h-2 rounded-full bg-amber-500 mr-1.5 animate-pulse"></span> En attente de validation
                 </span>
             @elseif($mouvement->statut_workflow === 'en_transit')
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-[#155E3B] border border-sky-200">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-[#0048FA] border border-sky-200">
                     <i class="fa-solid fa-truck-fast mr-1.5"></i> En transit / Validé
                 </span>
             @elseif($mouvement->statut_workflow === 'receptionne')
@@ -46,7 +46,7 @@
         <!-- Colonne 1 : Bien Concerné -->
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                     <i class="fa-solid fa-boxes-stacked"></i>
                 </div>
                 <h2 class="text-sm font-bold text-slate-900">Immobilisation Rattachée</h2>
@@ -60,7 +60,7 @@
 
                 <div>
                     <span class="text-slate-400 block text-[11px]">Code Unique</span>
-                    <div class="font-mono font-bold text-[#155E3B]">{{ $mouvement->immobilisation?->code_immobilisation }}</div>
+                    <div class="font-mono font-bold text-[#0048FA]">{{ $mouvement->immobilisation?->code_immobilisation }}</div>
                 </div>
 
                 <div>
@@ -78,7 +78,7 @@
         <!-- Colonne 2 : Origine -> Destination -->
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                     <i class="fa-solid fa-map-pin"></i>
                 </div>
                 <h2 class="text-sm font-bold text-slate-900">Parcours & Localisation</h2>
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="p-3 rounded-xl bg-sky-50/60 border border-sky-100">
-                    <span class="text-[#155E3B] text-[10px] font-bold uppercase block">Destination</span>
+                    <span class="text-[#0048FA] text-[10px] font-bold uppercase block">Destination</span>
                     <div class="font-bold text-slate-900 mt-0.5">{{ $mouvement->structureDestination?->nom ?? 'Attribution' }}</div>
                     <div class="text-[11px] text-slate-500">Service : {{ $mouvement->serviceDestination?->nom ?? 'À définir' }}</div>
                 </div>
@@ -103,7 +103,7 @@
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
             <div class="space-y-4">
                 <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-file-signature"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">Motif & Décision</h2>
@@ -131,7 +131,7 @@
                         <form action="{{ route('admin.mouvements.valider', $mouvement->id) }}" method="POST" class="flex-1">
                             @csrf
                             <input type="hidden" name="action" value="valide">
-                            <button type="submit" style="background-color: #155E3B;" class="w-full py-2 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all">
+                            <button type="submit" style="background-color: #0048FA;" class="w-full py-2 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all">
                                 <i class="fa-solid fa-check mr-1"></i> Valider
                             </button>
                         </form>

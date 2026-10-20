@@ -11,13 +11,13 @@
     @include('layouts.gestionnaire.sidebar')
 @else
     <!-- Sidebar Par Défaut - Style Identique Admin -->
-    <aside id="mainSidebar" style="border-color: #155E3B;" class="w-64 bg-white text-slate-700 flex-shrink-0 flex flex-col rounded-2xl border-2 shadow-sm transition-all duration-300 ease-in-out overflow-hidden my-3 ml-3 h-[calc(100vh-1.5rem)] sticky top-3">
+    <aside id="mainSidebar" style="border-color: #0048FA;" class="w-64 bg-white text-slate-700 flex-shrink-0 flex flex-col rounded-2xl border-2 shadow-sm transition-all duration-300 ease-in-out overflow-hidden my-3 ml-3 h-[calc(100vh-1.5rem)] sticky top-3">
         <div class="h-16 px-4 border-b border-slate-100 flex items-center justify-between flex-shrink-0">
             <div class="flex items-center space-x-2.5 overflow-hidden">
                 <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GEMMA" class="h-9 w-auto max-w-[140px] object-contain flex-shrink-0">
             </div>
             <div class="flex items-center space-x-2">
-                <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+                <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #0048FA;">
                     UCP-FM
                 </span>
                 <button type="button" onclick="window.closeMobileSidebar && window.closeMobileSidebar()" class="md:hidden w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center cursor-pointer transition-colors" title="Fermer le menu">

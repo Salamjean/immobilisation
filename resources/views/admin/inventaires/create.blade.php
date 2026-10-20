@@ -48,7 +48,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-barcode"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Définition & Code</h2>
@@ -57,19 +57,19 @@
                     <!-- Code Campagne -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Code Campagne <span class="text-rose-500">*</span></label>
-                        <input type="text" name="code_campagne" value="{{ old('code_campagne', $codeSuggere) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <input type="text" name="code_campagne" value="{{ old('code_campagne', $codeSuggere) }}" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     </div>
 
                     <!-- Intitulé -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Intitulé de la Campagne <span class="text-rose-500">*</span></label>
-                        <input type="text" name="intitule" value="{{ old('intitule') }}" required placeholder="Ex: Inventaire Général Annuel National 2026" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <input type="text" name="intitule" value="{{ old('intitule') }}" required placeholder="Ex: Inventaire Général Annuel National 2026" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     </div>
 
                     <!-- Type de campagne -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Type d'Inventaire <span class="text-rose-500">*</span></label>
-                        <select name="type_campagne" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="type_campagne" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="annuel" {{ old('type_campagne') === 'annuel' ? 'selected' : '' }}>Inventaire Général Annuel</option>
                             <option value="tournant" {{ old('type_campagne') === 'tournant' ? 'selected' : '' }}>Inventaire Tournant Périodique</option>
                             <option value="cible_programme" {{ old('type_campagne') === 'cible_programme' ? 'selected' : '' }}>Inventaire Ciblé par Programme</option>
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-layer-group text-[#155E3B] mr-1"></i> Campagne d'audit physique certifiée
+                    <i class="fa-solid fa-layer-group text-[#0048FA] mr-1"></i> Campagne d'audit physique certifiée
                 </div>
             </div>
 
@@ -88,7 +88,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-calendar-days"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Calendrier & Région</h2>
@@ -98,18 +98,18 @@
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date Début <span class="text-rose-500">*</span></label>
-                            <input type="date" name="date_debut" value="{{ old('date_debut', date('Y-m-d')) }}" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            <input type="date" name="date_debut" value="{{ old('date_debut', date('Y-m-d')) }}" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date Fin <span class="text-rose-500">*</span></label>
-                            <input type="date" name="date_fin" value="{{ old('date_fin', date('Y-m-d', strtotime('+60 days'))) }}" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            <input type="date" name="date_fin" value="{{ old('date_fin', date('Y-m-d', strtotime('+60 days'))) }}" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         </div>
                     </div>
 
                     <!-- Région & Programme -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Région Sanitaire Ciblée</label>
-                        <select name="region_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="region_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Toutes les régions (National)</option>
                             @foreach($regions as $r)
                                 <option value="{{ $r->id }}" {{ old('region_id') == $r->id ? 'selected' : '' }}>{{ $r->nom }}</option>
@@ -119,7 +119,7 @@
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Programme de Santé Ciblé</label>
-                        <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Tous les programmes</option>
                             @foreach($programmes as $p)
                                 <option value="{{ $p->id }}" {{ old('programme_id') == $p->id ? 'selected' : '' }}>{{ $p->code }} - {{ $p->nom }}</option>
@@ -137,7 +137,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-user-shield"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">3. Supervision & Objectifs</h2>
@@ -153,7 +153,7 @@
                                 Auditeur / Consultant / Lecteur
                             </span>
                         </div>
-                        <select name="superviseur_id" id="superviseur_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="superviseur_id" id="superviseur_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Sélectionner un superviseur</option>
                             @foreach($superviseurs as $sup)
                                 <option value="{{ $sup->id }}" {{ old('superviseur_id') == $sup->id ? 'selected' : '' }}>
@@ -177,7 +177,7 @@
                                 id="agents_select"
                                 multiple
                                 required
-                                class="no-search w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all"
+                                class="no-search w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all"
                                 placeholder="Sélectionner les agents d'inventaire...">
                             @foreach($agents as $agent)
                                 <option value="{{ $agent->id }}" {{ (is_array(old('agents')) && in_array($agent->id, old('agents'))) ? 'selected' : '' }}>
@@ -198,12 +198,12 @@
                     <!-- Objectifs -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Objectifs & Instructions</label>
-                        <textarea name="objectifs" rows="3" placeholder="Précisions sur les protocoles de scan et rapprochement..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('objectifs') }}</textarea>
+                        <textarea name="objectifs" rows="3" placeholder="Précisions sur les protocoles de scan et rapprochement..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('objectifs') }}</textarea>
                     </div>
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-shield-halved text-[#155E3B] mr-1"></i> Rapprochement théorique vs physique
+                    <i class="fa-solid fa-shield-halved text-[#0048FA] mr-1"></i> Rapprochement théorique vs physique
                 </div>
             </div>
 
@@ -215,7 +215,7 @@
                 Annuler
             </a>
 
-            <button type="submit" style="background-color: #155E3B;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+            <button type="submit" style="background-color: #0048FA;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Créer la campagne</span>
             </button>

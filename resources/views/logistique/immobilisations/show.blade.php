@@ -15,7 +15,7 @@
     <!-- En-tête Fiche Actif -->
     <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div class="flex items-start space-x-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#155E3B] to-emerald-500 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-emerald-600/20 flex-shrink-0">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#0048FA] to-emerald-500 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-emerald-600/20 flex-shrink-0">
                 <i class="{{ $actif->categorie?->icone ?? 'fa-solid fa-cube' }}"></i>
             </div>
             <div>
@@ -26,7 +26,7 @@
                     <span class="px-2.5 py-0.5 rounded text-[10px] font-bold {{ $actif->etat_badge_class }}">
                         {{ $actif->etat_libelle }}
                     </span>
-                    <span class="px-2.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-[#155E3B] border border-emerald-200">
+                    <span class="px-2.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-[#0048FA] border border-emerald-200">
                         {{ $actif->structureBeneficiaire?->nom ?? 'Site non défini' }}
                     </span>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-x-4 gap-y-1">
                     <span><strong class="text-slate-700">Marque / Modèle:</strong> {{ $actif->marque }} {{ $actif->modele }}</span>
                     <span><strong class="text-slate-700">N° Série:</strong> <span class="font-mono text-slate-800">{{ $actif->numero_serie ?? 'N/A' }}</span></span>
-                    <span><strong class="text-slate-700">Tag / QR:</strong> <span class="font-mono text-[#155E3B] font-bold">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
+                    <span><strong class="text-slate-700">Tag / QR:</strong> <span class="font-mono text-[#0048FA] font-bold">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
             <!-- Données Techniques -->
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center space-x-2">
-                    <i class="fa-solid fa-circle-info text-[#155E3B]"></i>
+                    <i class="fa-solid fa-circle-info text-[#0048FA]"></i>
                     <span>Informations Techniques & Financement</span>
                 </h3>
 
@@ -74,7 +74,7 @@
                     </div>
                     <div>
                         <span class="text-slate-400 block mb-0.5">Programme Rattaché</span>
-                        <div class="font-bold text-[#155E3B]">{{ $actif->programme?->nom ?? 'GC7 / CI' }}</div>
+                        <div class="font-bold text-[#0048FA]">{{ $actif->programme?->nom ?? 'GC7 / CI' }}</div>
                     </div>
                     <div>
                         <span class="text-slate-400 block mb-0.5">Valeur d'Acquisition</span>
@@ -91,7 +91,7 @@
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
                 <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center justify-between">
                     <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-timeline text-[#155E3B]"></i>
+                        <i class="fa-solid fa-timeline text-[#0048FA]"></i>
                         <span>Historique des Mouvements & Transferts ({{ $actif->mouvements->count() }})</span>
                     </span>
                 </h3>
@@ -112,7 +112,7 @@
                                 </div>
                                 <p class="text-slate-600 mt-0.5">
                                     De : <strong class="text-slate-800">{{ $mvt->structureOrigine?->nom ?? 'Origine' }}</strong> 
-                                    &rarr; Vers : <strong class="text-[#155E3B]">{{ $mvt->structureDestination?->nom ?? 'Destination' }}</strong>
+                                    &rarr; Vers : <strong class="text-[#0048FA]">{{ $mvt->structureDestination?->nom ?? 'Destination' }}</strong>
                                 </p>
                             </div>
                         @endforeach
@@ -128,12 +128,12 @@
             <!-- Affectation Actuelle -->
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3 text-xs">
                 <h3 class="font-bold text-slate-900 uppercase tracking-wider pb-2 border-b border-slate-100 flex items-center space-x-2">
-                    <i class="fa-solid fa-location-dot text-[#155E3B]"></i>
+                    <i class="fa-solid fa-location-dot text-[#0048FA]"></i>
                     <span>Affectation Actuelle</span>
                 </h3>
                 <div>
                     <span class="text-slate-400 block text-[11px]">Site / Établissement</span>
-                    <div class="font-bold text-[#155E3B]">{{ $actif->structureBeneficiaire?->nom ?? 'Non assigné' }}</div>
+                    <div class="font-bold text-[#0048FA]">{{ $actif->structureBeneficiaire?->nom ?? 'Non assigné' }}</div>
                 </div>
                 <div>
                     <span class="text-slate-400 block text-[11px]">Emplacement / Bureau</span>
@@ -149,7 +149,7 @@
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3 text-xs">
                 <h3 class="font-bold text-slate-900 uppercase tracking-wider pb-2 border-b border-slate-100 flex items-center justify-between">
                     <span class="flex items-center space-x-2">
-                        <i class="fa-solid fa-map-location-dot text-[#155E3B]"></i>
+                        <i class="fa-solid fa-map-location-dot text-[#0048FA]"></i>
                         <span>Point GPS / SIG</span>
                     </span>
                     @if($actif->latitude && $actif->longitude)

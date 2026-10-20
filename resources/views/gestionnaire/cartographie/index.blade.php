@@ -30,7 +30,7 @@
     <!-- 1. En-tête & Indicateurs SIG -->
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex items-center space-x-3">
-            <div style="background-color: #155E3B;" class="w-11 h-11 rounded-xl text-white flex items-center justify-center text-lg shadow-xs flex-shrink-0">
+            <div style="background-color: #0048FA;" class="w-11 h-11 rounded-xl text-white flex items-center justify-center text-lg shadow-xs flex-shrink-0">
                 <i class="fa-solid fa-map-location-dot"></i>
             </div>
             <div>
@@ -47,9 +47,9 @@
         <!-- Badges KPI en Temps Réel -->
         <div class="flex flex-wrap items-center gap-2">
             <div class="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs">
-                <i class="fa-solid fa-boxes-stacked text-[#155E3B]"></i>
+                <i class="fa-solid fa-boxes-stacked text-[#0048FA]"></i>
                 <span class="text-slate-600">Actifs visibles :</span>
-                <span id="kpi_visible_assets" class="font-extrabold text-[#155E3B] font-mono text-sm">{{ count($mapFeatures) }}</span>
+                <span id="kpi_visible_assets" class="font-extrabold text-[#0048FA] font-mono text-sm">{{ count($mapFeatures) }}</span>
                 <span class="text-slate-400 font-mono text-[10px]">/ {{ count($mapFeatures) }}</span>
             </div>
 
@@ -71,7 +71,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 text-xs">
             <div>
                 <label class="block font-bold text-slate-600 uppercase text-[10px] mb-1">Programme</label>
-                <select id="filter_programme" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none">
+                <select id="filter_programme" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none">
                     <option value="">Tous les programmes</option>
                     @foreach($programmes as $p)
                         <option value="{{ $p->sigle ?? $p->code }}">{{ $p->sigle ?? $p->code }}</option>
@@ -81,7 +81,7 @@
 
             <div>
                 <label class="block font-bold text-slate-600 uppercase text-[10px] mb-1">Région Sanitaire</label>
-                <select id="filter_region" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none">
+                <select id="filter_region" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none">
                     <option value="">Toutes les régions</option>
                     @foreach($regions as $r)
                         <option value="{{ $r->nom }}">{{ $r->nom }}</option>
@@ -91,7 +91,7 @@
 
             <div>
                 <label class="block font-bold text-slate-600 uppercase text-[10px] mb-1">Structure</label>
-                <select id="filter_structure" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none">
+                <select id="filter_structure" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none">
                     <option value="">Tous les sites</option>
                     @foreach($structures as $st)
                         <option value="{{ $st->id }}">{{ $st->nom }}</option>
@@ -101,7 +101,7 @@
 
             <div>
                 <label class="block font-bold text-slate-600 uppercase text-[10px] mb-1">Catégorie</label>
-                <select id="filter_categorie" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none">
+                <select id="filter_categorie" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none">
                     <option value="">Toutes catégories</option>
                     @foreach($categories as $c)
                         <option value="{{ $c->nom }}">{{ $c->nom }}</option>
@@ -111,7 +111,7 @@
 
             <div>
                 <label class="block font-bold text-slate-600 uppercase text-[10px] mb-1">État Matériel</label>
-                <select id="filter_etat" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none">
+                <select id="filter_etat" onchange="applyLiveFilters()" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none">
                     <option value="">Tous les états</option>
                     <option value="bon_etat">Bon état</option>
                     <option value="panne">En panne</option>
@@ -138,7 +138,7 @@
             <div class="absolute top-3 left-3 z-[1000] flex flex-wrap items-center gap-2">
                 <div class="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-200 shadow-md flex items-center space-x-3 text-xs">
                     <label class="inline-flex items-center space-x-1.5 cursor-pointer select-none">
-                        <input type="checkbox" id="toggle_assets" checked onchange="toggleLayer('assets')" class="rounded text-[#155E3B] focus:ring-[#155E3B]">
+                        <input type="checkbox" id="toggle_assets" checked onchange="toggleLayer('assets')" class="rounded text-[#0048FA] focus:ring-[#0048FA]">
                         <span class="font-bold text-slate-700">Immobilisations</span>
                     </label>
                     <span class="text-slate-300">|</span>
@@ -149,7 +149,7 @@
                 </div>
 
                 <button type="button" onclick="fitAllMapBounds()" class="bg-white/95 backdrop-blur-md hover:bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200 shadow-md text-xs font-bold text-slate-700 transition flex items-center space-x-1.5">
-                    <i class="fa-solid fa-expand text-[#155E3B]"></i>
+                    <i class="fa-solid fa-expand text-[#0048FA]"></i>
                     <span>Recadrer</span>
                 </button>
             </div>
@@ -193,7 +193,7 @@
                     <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wide">Actifs Filtrés</h3>
                     <div class="text-[10px] text-slate-400">Cliquez pour situer sur la carte</div>
                 </div>
-                <span id="sidebar_count_badge" class="px-2 py-0.5 rounded-lg text-xs font-extrabold text-[#155E3B] bg-emerald-50 border border-emerald-200 font-mono">
+                <span id="sidebar_count_badge" class="px-2 py-0.5 rounded-lg text-xs font-extrabold text-[#0048FA] bg-emerald-50 border border-emerald-200 font-mono">
                     {{ count($mapFeatures) }}
                 </span>
             </div>
@@ -205,7 +205,7 @@
                        oninput="applyLiveFilters()"
                        onkeyup="applyLiveFilters()"
                        placeholder="Rechercher code, nom, site, détenteur..."
-                       class="w-full pl-8 pr-7 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:ring-2 focus:ring-[#155E3B] focus:bg-white focus:outline-none transition shadow-2xs">
+                       class="w-full pl-8 pr-7 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:ring-2 focus:ring-[#0048FA] focus:bg-white focus:outline-none transition shadow-2xs">
                 <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-slate-400 text-xs"></i>
                 <button type="button" onclick="clearSidebarSearch()" id="btn_clear_sidebar_search" class="hidden absolute right-2 top-2 text-slate-400 hover:text-slate-700 text-xs p-0.5">
                     <i class="fa-solid fa-xmark"></i>
@@ -217,7 +217,7 @@
                 @forelse($mapFeatures as $item)
                 <div id="card_asset_{{ $item['id'] }}"
                      onclick="focusAssetMarker({{ $item['id'] }}, {{ $item['latitude'] }}, {{ $item['longitude'] }})"
-                     class="asset-sidebar-card p-2.5 rounded-xl border border-slate-200 hover:border-[#155E3B] hover:bg-emerald-50/40 cursor-pointer transition-all text-xs bg-slate-50/60"
+                     class="asset-sidebar-card p-2.5 rounded-xl border border-slate-200 hover:border-[#0048FA] hover:bg-emerald-50/40 cursor-pointer transition-all text-xs bg-slate-50/60"
                      data-id="{{ $item['id'] }}"
                      data-code="{{ strtolower($item['code']) }}"
                      data-designation="{{ strtolower($item['designation']) }}"
@@ -231,7 +231,7 @@
                      data-geofence="{{ $item['geofence_alerte'] ? 'true' : 'false' }}">
                     
                     <div class="flex items-center justify-between">
-                        <span class="font-mono font-bold text-[#155E3B]">{{ $item['code'] }}</span>
+                        <span class="font-mono font-bold text-[#0048FA]">{{ $item['code'] }}</span>
                         @if($item['etat'] === 'panne')
                             <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-100 text-amber-800">Panne</span>
                         @elseif($item['etat'] === 'hors_service')
@@ -350,7 +350,7 @@
                 if (!isNaN(lat) && !isNaN(lng) && lat !== 0) {
                     latLngs.push([lat, lng]);
 
-                    let pinColor = '#155E3B';
+                    let pinColor = '#0048FA';
                     if (actif.geofence_alerte || actif.niveau_criticite === 'critique') pinColor = '#dc2626';
                     else if (actif.etat === 'panne') pinColor = '#d97706';
                     else if (actif.etat === 'hors_service') pinColor = '#64748b';
@@ -365,7 +365,7 @@
                     const marker = L.marker([lat, lng], { icon: icon }).addTo(window.lMap);
                     marker.bindPopup(`
                         <div style="font-family:'Plus Jakarta Sans',sans-serif; min-width:220px; font-size:12px; line-height:1.4;">
-                            <div style="font-size:10px; font-weight:bold; color:#155E3B; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</div>
+                            <div style="font-size:10px; font-weight:bold; color:#0048FA; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</div>
                             <div style="font-weight:800; font-size:13px; color:#0f172a; margin-top:1px;">${actif.code}</div>
                             <div style="font-weight:600; color:#334155; margin-bottom:4px;">${actif.designation}</div>
                             <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:4px 6px; font-size:11px; color:#475569;">
@@ -374,7 +374,7 @@
                                 <div><strong>Précision:</strong> ${actif.precision_gps}</div>
                             </div>
                             <div style="margin-top:6px; text-align:right;">
-                                <a href="${actif.url}" target="_blank" style="display:inline-block; padding:3px 8px; background:#155E3B; color:white; border-radius:4px; font-size:10px; font-weight:bold; text-decoration:none;">Voir fiche &rarr;</a>
+                                <a href="${actif.url}" target="_blank" style="display:inline-block; padding:3px 8px; background:#0048FA; color:white; border-radius:4px; font-size:10px; font-weight:bold; text-decoration:none;">Voir fiche &rarr;</a>
                             </div>
                         </div>
                     `, { className: 'custom-popup' });
@@ -473,7 +473,7 @@
                         bounds.extend(pos);
                         hasPts = true;
 
-                        let markerColor = '#155E3B';
+                        let markerColor = '#0048FA';
                         if (actif.geofence_alerte || actif.niveau_criticite === 'critique') markerColor = '#dc2626';
                         else if (actif.etat === 'panne') markerColor = '#d97706';
                         else if (actif.etat === 'hors_service') markerColor = '#64748b';
@@ -498,7 +498,7 @@
                             const content = `
                                 <div style="font-family:'Plus Jakarta Sans',sans-serif; min-width:240px; padding:4px; line-height:1.4;">
                                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                                        <span style="font-size:10px; font-weight:800; color:#155E3B; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</span>
+                                        <span style="font-size:10px; font-weight:800; color:#0048FA; text-transform:uppercase;">${actif.programme} &bull; ${actif.categorie}</span>
                                         <span style="font-size:10px; font-weight:700; color:#0f172a;">${actif.precision_gps}</span>
                                     </div>
                                     <h4 style="margin:0 0 2px 0; font-size:13px; font-weight:800; color:#0f172a;">${actif.code}</h4>
@@ -509,7 +509,7 @@
                                         <div><strong>Valeur:</strong> ${actif.valeur}</div>
                                     </div>
                                     <div style="margin-top:8px; text-align:right;">
-                                        <a href="${actif.url}" target="_blank" style="display:inline-block; padding:4px 10px; background:#155E3B; color:white; border-radius:6px; font-size:11px; font-weight:bold; text-decoration:none;">Fiche Complète &rarr;</a>
+                                        <a href="${actif.url}" target="_blank" style="display:inline-block; padding:4px 10px; background:#0048FA; color:white; border-radius:6px; font-size:11px; font-weight:bold; text-decoration:none;">Fiche Complète &rarr;</a>
                                     </div>
                                 </div>
                             `;
@@ -715,10 +715,10 @@
         }
 
         // Highlight card
-        document.querySelectorAll('.asset-sidebar-card').forEach(c => c.classList.remove('ring-2', 'ring-[#155E3B]', 'bg-emerald-50'));
+        document.querySelectorAll('.asset-sidebar-card').forEach(c => c.classList.remove('ring-2', 'ring-[#0048FA]', 'bg-emerald-50'));
         const activeCard = document.getElementById('card_asset_' + id);
         if (activeCard) {
-            activeCard.classList.add('ring-2', 'ring-[#155E3B]', 'bg-emerald-50');
+            activeCard.classList.add('ring-2', 'ring-[#0048FA]', 'bg-emerald-50');
             activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
     }

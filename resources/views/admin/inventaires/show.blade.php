@@ -9,7 +9,7 @@
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <div class="flex items-center space-x-2">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase font-mono bg-sky-50 text-[#155E3B] border border-sky-200">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase font-mono bg-sky-50 text-[#0048FA] border border-sky-200">
                     {{ $campagne->code_campagne }}
                 </span>
                 <span class="text-xs text-slate-500 font-semibold">
@@ -47,7 +47,7 @@
             <div class="text-2xl font-black text-slate-900 mt-1 font-mono">{{ $tauxProgression }}%</div>
             <div class="text-xs text-slate-500 mt-1">{{ $totalReleves }} relevé(s) / {{ $totalBiensTheoriques }} biens</div>
             <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
-                <div class="bg-[#155E3B] h-1.5 rounded-full" style="width: {{ min($tauxProgression, 100) }}%"></div>
+                <div class="bg-[#0048FA] h-1.5 rounded-full" style="width: {{ min($tauxProgression, 100) }}%"></div>
             </div>
         </div>
 
@@ -86,7 +86,7 @@
     <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
         <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-white">
             <div class="flex items-center space-x-2.5">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-users"></i>
                 </div>
                 <div>
@@ -162,7 +162,7 @@
                                 @endif
                             </td>
                             <td class="py-3 px-4 text-center">
-                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold font-mono {{ $relevesAgentCount > 0 ? 'bg-emerald-50 text-[#155E3B] border border-emerald-200' : 'bg-slate-100 text-slate-500' }}">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold font-mono {{ $relevesAgentCount > 0 ? 'bg-emerald-50 text-[#0048FA] border border-emerald-200' : 'bg-slate-100 text-slate-500' }}">
                                     <i class="fa-solid fa-barcode text-[10px] mr-1.5"></i>
                                     {{ $relevesAgentCount }} relevé(s)
                                 </span>
@@ -191,7 +191,7 @@
     <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
         <div class="p-5 border-b border-slate-100 flex items-center justify-between">
             <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                <i class="fa-solid fa-list-check text-[#155E3B]"></i>
+                <i class="fa-solid fa-list-check text-[#0048FA]"></i>
                 <span>Relevés Terrain & Rapprochement Physique</span>
             </h3>
         </div>

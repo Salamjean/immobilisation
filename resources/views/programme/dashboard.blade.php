@@ -13,17 +13,17 @@
 <div class="space-y-6">
 
     <!-- Bannière Programme & KPIs -->
-    <div class="bg-gradient-to-r from-[#155E3B] to-emerald-800 rounded-2xl p-6 text-white shadow-sm border border-emerald-700/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="bg-gradient-to-r from-[#0048FA] to-blue-900 rounded-2xl p-6 text-white shadow-sm border border-blue-700/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
-            <div class="flex items-center space-x-2 text-emerald-200 text-xs font-bold uppercase tracking-wider">
+            <div class="flex items-center space-x-2 text-blue-200 text-xs font-bold uppercase tracking-wider">
                 <i class="fa-solid fa-notes-medical"></i>
                 <span>Programme National de Santé</span>
             </div>
             <h2 class="text-xl font-black mt-1">{{ $programme?->nom ?? 'Programme Non Défini' }} ({{ $programme?->code ?? 'N/A' }})</h2>
-            <p class="text-emerald-100 text-xs mt-1">Supervision, suivi et traçabilité des équipements et dotations sanitaires.</p>
+            <p class="text-blue-100 text-xs mt-1">Supervision, suivi et traçabilité des équipements et dotations sanitaires.</p>
         </div>
         <div class="flex items-center space-x-3">
-            <a href="{{ route('programme.immobilisations.index') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white text-[#155E3B] hover:bg-emerald-50 text-xs font-bold shadow-sm transition-all">
+            <a href="{{ route('programme.immobilisations.index') }}" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white text-[#0048FA] hover:bg-blue-50 text-xs font-bold shadow-sm transition-all">
                 <i class="fa-solid fa-boxes-packing"></i>
                 <span>Explorer les actifs</span>
             </a>
@@ -37,9 +37,9 @@
             <div>
                 <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Total Actifs Rattachés</div>
                 <div class="text-2xl font-black text-slate-900 mt-1 font-mono">{{ $totalActifs }}</div>
-                <div class="text-xs text-[#155E3B] font-semibold mt-0.5">{{ $programme?->sigle ?? 'GC7' }} Côte d'Ivoire</div>
+                <div class="text-xs text-[#0048FA] font-semibold mt-0.5">{{ $programme?->sigle ?? 'GC7' }} Côte d'Ivoire</div>
             </div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-[#155E3B] flex items-center justify-center text-xl font-bold shadow-xs">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#0048FA] flex items-center justify-center text-xl font-bold shadow-xs">
                 <i class="fa-solid fa-boxes-stacked"></i>
             </div>
         </div>
@@ -86,12 +86,12 @@
         <div class="p-5 border-b border-slate-100 flex items-center justify-between">
             <div>
                 <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                    <i class="fa-solid fa-list-check text-[#155E3B]"></i>
+                    <i class="fa-solid fa-list-check text-[#0048FA]"></i>
                     <span>Équipements & Immobilisations Récentes : {{ $programme?->code }}</span>
                 </h3>
                 <div class="text-xs text-slate-500 mt-0.5">Parc matériel déployé dans les structures sanitaires partenaires</div>
             </div>
-            <a href="{{ route('programme.immobilisations.index') }}" class="px-3.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-[#155E3B] rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5">
+            <a href="{{ route('programme.immobilisations.index') }}" class="px-3.5 py-1.5 bg-blue-50 hover:bg-blue-100 text-[#0048FA] rounded-xl text-xs font-bold transition-all flex items-center space-x-1.5">
                 <span>Voir tout le parc</span>
                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
@@ -113,7 +113,7 @@
                 <tbody class="divide-y divide-slate-100">
                     @forelse($actifs as $a)
                     <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="py-3.5 px-4 font-mono font-bold text-[#155E3B]">{{ $a->code_immobilisation }}</td>
+                        <td class="py-3.5 px-4 font-mono font-bold text-[#0048FA]">{{ $a->code_immobilisation }}</td>
                         <td class="py-3.5 px-4">
                             <div class="font-bold text-slate-900">{{ $a->designation }}</div>
                             <div class="text-[11px] text-slate-400">{{ $a->marque }} {{ $a->modele }}</div>

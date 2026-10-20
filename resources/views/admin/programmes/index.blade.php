@@ -9,15 +9,15 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-diagram-project text-[#155E3B]"></i>
+                <i class="fa-solid fa-diagram-project text-[#0048FA]"></i>
                 <span>Programmes Nationaux & Projets Stratégiques</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Référentiel des programmes de santé, rattachement aux bailleurs et suivi des sous-subventions</p>
         </div>
 
         <a href="{{ route('admin.programmes.create') }}"
-           style="background-color: #155E3B;"
-           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all self-start sm:self-auto">
+           style="background-color: #0048FA;"
+           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all self-start sm:self-auto">
             <i class="fa-solid fa-plus"></i>
             <span>Nouveau Programme</span>
         </a>
@@ -51,7 +51,7 @@
     <!-- Statistiques rapides -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-diagram-project"></i>
             </div>
             <div>
@@ -90,13 +90,13 @@
                            name="search"
                            value="{{ request('search') }}"
                            placeholder="Rechercher nom, code, coordonnateur..."
-                           class="w-full pl-9 pr-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full pl-9 pr-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
 
-                <select name="bailleur_id" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="bailleur_id" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les Bailleurs</option>
                     @foreach($bailleurs as $b)
                         <option value="{{ $b->id }}" {{ request('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -105,7 +105,7 @@
                     @endforeach
                 </select>
 
-                <select name="actif" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="actif" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les Statuts</option>
                     <option value="1" {{ request('actif') === '1' ? 'selected' : '' }}>Actifs uniquement</option>
                     <option value="0" {{ request('actif') === '0' ? 'selected' : '' }}>Inactifs</option>
@@ -141,7 +141,7 @@
                     @forelse($programmes as $p)
                         <tr class="hover:bg-slate-50/70 transition-colors">
                             <td class="py-3.5 px-4 text-center">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-50 text-[#155E3B] border border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-50 text-[#0048FA] border border-emerald-100">
                                     {{ $p->code }}
                                 </span>
                             </td>
@@ -199,7 +199,7 @@
                             <td class="py-3.5 px-4 text-right">
                                 <div class="inline-flex items-center space-x-1">
                                     <a href="{{ route('admin.programmes.edit', $p->id) }}"
-                                       class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 hover:bg-[#155E3B] hover:text-white flex items-center justify-center transition-all"
+                                       class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 hover:bg-[#0048FA] hover:text-white flex items-center justify-center transition-all"
                                        title="Modifier le programme">
                                         <i class="fa-solid fa-pen-to-square text-[11px]"></i>
                                     </a>

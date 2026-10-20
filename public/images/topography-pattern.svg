@@ -11,7 +11,7 @@
             }
             .topo-line-accent {
                 fill: none;
-                stroke: #155e3b;
+                stroke: #0048fa;
                 stroke-width: 1.2;
                 stroke-opacity: 0.06;
                 stroke-linecap: round;

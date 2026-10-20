@@ -8,7 +8,7 @@
     <!-- En-tête du Registre Officiel -->
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex items-center space-x-3">
-            <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+            <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                 <i class="fa-solid fa-file-invoice"></i>
             </div>
             <div>
@@ -49,7 +49,7 @@
                         <tr class="hover:bg-slate-50/70 transition-colors">
                             <td class="py-3 px-3 text-left">
                                 <div class="font-bold text-slate-900">{{ $a->designation }}</div>
-                                <div class="font-mono text-[10px] text-[#155E3B] font-bold">{{ $a->code_immobilisation }}</div>
+                                <div class="font-mono text-[10px] text-[#0048FA] font-bold">{{ $a->code_immobilisation }}</div>
                             </td>
                             <td class="py-3 px-3 text-center text-slate-700">
                                 {{ $a->marque ?? '—' }} {{ $a->modele ? '• '.$a->modele : '' }}

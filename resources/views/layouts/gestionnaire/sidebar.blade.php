@@ -1,12 +1,12 @@
 <!-- Sidebar Gestionnaire de Patrimoine - Style Identique Admin Light Flottant / Détaché & Réductible -->
-<aside id="mainSidebar" style="border-color: #155E3B;" class="w-64 bg-white text-slate-700 flex-shrink-0 flex flex-col rounded-2xl border-2 shadow-sm transition-all duration-300 ease-in-out overflow-hidden my-3 ml-3 h-[calc(100vh-1.5rem)] sticky top-3">
+<aside id="mainSidebar" style="border-color: #0048FA;" class="w-64 bg-white text-slate-700 flex-shrink-0 flex flex-col rounded-2xl border-2 shadow-sm transition-all duration-300 ease-in-out overflow-hidden my-3 ml-3 h-[calc(100vh-1.5rem)] sticky top-3">
     <!-- Header / Brand avec Logo GEMMA -->
     <div class="h-16 px-4 border-b border-slate-100 flex items-center justify-between flex-shrink-0">
         <div class="flex items-center space-x-2.5 overflow-hidden">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GEMMA" class="h-9 w-auto max-w-[140px] object-contain flex-shrink-0">
         </div>
         <div class="flex items-center space-x-2">
-            <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #155E3B;">
+            <span class="sidebar-text-element inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold text-white shadow-2xs" style="background-color: #0048FA;">
                 Gestion
             </span>
             <button type="button" onclick="window.closeMobileSidebar && window.closeMobileSidebar()" class="md:hidden w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center cursor-pointer transition-colors" title="Fermer le menu">
@@ -22,8 +22,8 @@
         <!-- 1. Tableau de bord -->
         <a href="{{ route('gestionnaire.dashboard') }}"
            title="Tableau de bord"
-           style="{{ request()->routeIs('gestionnaire.dashboard') || request()->is('/') ? 'background-color: #155E3B;' : '' }}"
-           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.dashboard') || request()->is('/') ? 'text-white shadow-md shadow-[#155E3B]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+           style="{{ request()->routeIs('gestionnaire.dashboard') || request()->is('/') ? 'background-color: #0048FA;' : '' }}"
+           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.dashboard') || request()->is('/') ? 'text-white shadow-md shadow-[#0048FA]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
             <i class="fa-solid fa-chart-pie w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.dashboard') || request()->is('/') ? 'text-white' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
             <span class="sidebar-text-element ml-3 whitespace-nowrap">Tableau de bord</span>
         </a>
@@ -31,8 +31,8 @@
         <!-- 2. Cartographie SIG & GPS -->
         <a href="{{ route('gestionnaire.cartographie.index') }}"
            title="Cartographie SIG"
-           style="{{ request()->routeIs('gestionnaire.cartographie.*') || request()->routeIs('cartographie.*') ? 'background-color: #155E3B;' : '' }}"
-           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.cartographie.*') || request()->routeIs('cartographie.*') ? 'text-white shadow-md shadow-[#155E3B]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+           style="{{ request()->routeIs('gestionnaire.cartographie.*') || request()->routeIs('cartographie.*') ? 'background-color: #0048FA;' : '' }}"
+           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.cartographie.*') || request()->routeIs('cartographie.*') ? 'text-white shadow-md shadow-[#0048FA]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
             <i class="fa-solid fa-map-location-dot w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.cartographie.*') || request()->routeIs('cartographie.*') ? 'text-white' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
             <span class="sidebar-text-element ml-3 whitespace-nowrap">Cartographie SIG & GPS</span>
         </a>
@@ -44,9 +44,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('immoSubmenu', 'immoMenuChevron')"
                     title="Immobilisations"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-boxes-stacked w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-boxes-stacked w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Immobilisations</span>
                 </div>
                 <i id="immoMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'rotate-180' : '' }}"></i>
@@ -55,14 +55,14 @@
             <!-- Sous-onglets Immobilisations -->
             <div id="immoSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.immobilisations.*') || request()->routeIs('immobilisations.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.immobilisations.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.immobilisations.index') || (request()->routeIs('immobilisations.index') && !request()->routeIs('gestionnaire.immobilisations.create')) ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.immobilisations.index') || (request()->routeIs('immobilisations.index') && !request()->routeIs('gestionnaire.immobilisations.create')) ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.immobilisations.index') || (request()->routeIs('immobilisations.index') && !request()->routeIs('gestionnaire.immobilisations.create')) ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-list-ul text-[11px] {{ request()->routeIs('gestionnaire.immobilisations.index') || (request()->routeIs('immobilisations.index') && !request()->routeIs('gestionnaire.immobilisations.create')) ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Liste des actifs</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.immobilisations.create') }}"
-                   style="{{ request()->routeIs('gestionnaire.immobilisations.create') || request()->routeIs('immobilisations.create') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.immobilisations.create') || request()->routeIs('immobilisations.create') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.immobilisations.create') || request()->routeIs('immobilisations.create') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-plus text-[11px] {{ request()->routeIs('gestionnaire.immobilisations.create') || request()->routeIs('immobilisations.create') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Ajouter un actif</span>
@@ -75,9 +75,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('mouvSubmenu', 'mouvMenuChevron')"
                     title="Mouvements"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-arrow-right-arrow-left w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Mouvements</span>
                 </div>
                 <i id="mouvMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'rotate-180' : '' }}"></i>
@@ -86,14 +86,14 @@
             <!-- Sous-onglets Mouvements -->
             <div id="mouvSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.mouvements.*') || request()->routeIs('mouvements.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.mouvements.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.mouvements.index') || (request()->routeIs('mouvements.index') && !request()->routeIs('gestionnaire.mouvements.create')) ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.mouvements.index') || (request()->routeIs('mouvements.index') && !request()->routeIs('gestionnaire.mouvements.create')) ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.mouvements.index') || (request()->routeIs('mouvements.index') && !request()->routeIs('gestionnaire.mouvements.create')) ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-list-ul text-[11px] {{ request()->routeIs('gestionnaire.mouvements.index') || (request()->routeIs('mouvements.index') && !request()->routeIs('gestionnaire.mouvements.create')) ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Journal des mouvements</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.mouvements.create') }}"
-                   style="{{ request()->routeIs('gestionnaire.mouvements.create') || request()->routeIs('mouvements.create') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.mouvements.create') || request()->routeIs('mouvements.create') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.mouvements.create') || request()->routeIs('mouvements.create') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-plus text-[11px] {{ request()->routeIs('gestionnaire.mouvements.create') || request()->routeIs('mouvements.create') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Nouveau mouvement</span>
@@ -106,9 +106,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('maintSubmenu', 'maintMenuChevron')"
                     title="Maintenance"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-wrench w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-wrench w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Maintenance & SAV</span>
                 </div>
                 <i id="maintMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'rotate-180' : '' }}"></i>
@@ -117,14 +117,14 @@
             <!-- Sous-onglets Maintenance -->
             <div id="maintSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.maintenances.*') || request()->routeIs('maintenances.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.maintenances.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.maintenances.index') || (request()->routeIs('maintenances.index') && !request()->routeIs('gestionnaire.maintenances.create')) ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.maintenances.index') || (request()->routeIs('maintenances.index') && !request()->routeIs('gestionnaire.maintenances.create')) ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.maintenances.index') || (request()->routeIs('maintenances.index') && !request()->routeIs('gestionnaire.maintenances.create')) ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-list-ul text-[11px] {{ request()->routeIs('gestionnaire.maintenances.index') || (request()->routeIs('maintenances.index') && !request()->routeIs('gestionnaire.maintenances.create')) ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Liste interventions</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.maintenances.create') }}"
-                   style="{{ request()->routeIs('gestionnaire.maintenances.create') || request()->routeIs('maintenances.create') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.maintenances.create') || request()->routeIs('maintenances.create') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.maintenances.create') || request()->routeIs('maintenances.create') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-plus text-[11px] {{ request()->routeIs('gestionnaire.maintenances.create') || request()->routeIs('maintenances.create') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Déclarer une panne</span>
@@ -139,9 +139,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('invSubmenu', 'invMenuChevron')"
                     title="Inventaires"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-clipboard-check w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-clipboard-check w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Campagnes Inventaire</span>
                 </div>
                 <i id="invMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'rotate-180' : '' }}"></i>
@@ -150,14 +150,14 @@
             <!-- Sous-onglets Inventaires -->
             <div id="invSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.inventaires.*') || request()->routeIs('inventaires.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.inventaires.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.inventaires.index') || (request()->routeIs('inventaires.index') && !request()->routeIs('gestionnaire.inventaires.create')) ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.inventaires.index') || (request()->routeIs('inventaires.index') && !request()->routeIs('gestionnaire.inventaires.create')) ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.inventaires.index') || (request()->routeIs('inventaires.index') && !request()->routeIs('gestionnaire.inventaires.create')) ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-list-ul text-[11px] {{ request()->routeIs('gestionnaire.inventaires.index') || (request()->routeIs('inventaires.index') && !request()->routeIs('gestionnaire.inventaires.create')) ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Liste campagnes</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.inventaires.create') }}"
-                   style="{{ request()->routeIs('gestionnaire.inventaires.create') || request()->routeIs('inventaires.create') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.inventaires.create') || request()->routeIs('inventaires.create') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.inventaires.create') || request()->routeIs('inventaires.create') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-plus text-[11px] {{ request()->routeIs('gestionnaire.inventaires.create') || request()->routeIs('inventaires.create') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Nouvelle campagne</span>
@@ -182,8 +182,8 @@
         <!-- 8. Structures & Sites Sanitaires (Lien Direct) -->
         <a href="{{ route('gestionnaire.structures.index') }}"
            title="Structures & Sites"
-           style="{{ request()->routeIs('gestionnaire.structures.*') || request()->routeIs('admin.structures.*') ? 'background-color: #155E3B;' : '' }}"
-           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.structures.*') || request()->routeIs('admin.structures.*') ? 'text-white shadow-md shadow-[#155E3B]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+           style="{{ request()->routeIs('gestionnaire.structures.*') || request()->routeIs('admin.structures.*') ? 'background-color: #0048FA;' : '' }}"
+           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.structures.*') || request()->routeIs('admin.structures.*') ? 'text-white shadow-md shadow-[#0048FA]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
             <i class="fa-solid fa-hospital w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.structures.*') || request()->routeIs('admin.structures.*') ? 'text-white' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
             <span class="sidebar-text-element ml-3 whitespace-nowrap">Structures & Sites</span>
         </a>
@@ -193,9 +193,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('progSubmenu', 'progMenuChevron')"
                     title="Programmes & Bailleurs"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-hand-holding-dollar w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-hand-holding-dollar w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Bailleurs & Projets</span>
                 </div>
                 <i id="progMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'rotate-180' : '' }}"></i>
@@ -204,21 +204,21 @@
             <!-- Sous-onglets Programmes & Bailleurs -->
             <div id="progSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('gestionnaire.subventions.*') || request()->routeIs('admin.programmes.*') || request()->routeIs('admin.bailleurs.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.programmes.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('admin.programmes.*') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('admin.programmes.*') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('admin.programmes.*') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-layer-group text-[11px] {{ request()->routeIs('gestionnaire.programmes.*') || request()->routeIs('admin.programmes.*') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Programmes UCP</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.bailleurs.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.bailleurs.*') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.bailleurs.*') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.bailleurs.*') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-building-columns text-[11px] {{ request()->routeIs('gestionnaire.bailleurs.*') || request()->routeIs('admin.bailleurs.*') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Bailleurs de fonds</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.subventions.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.subventions.*') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.subventions.*') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.subventions.*') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-sack-dollar text-[11px] {{ request()->routeIs('gestionnaire.subventions.*') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Subventions & Lignes</span>
@@ -231,9 +231,9 @@
             <button type="button"
                     onclick="gestionnaireToggleMenu('catSubmenu', 'catMenuChevron')"
                     title="Catégories"
-                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'bg-emerald-50/60 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+                    class="w-full group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'bg-blue-50/70 text-slate-900' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                 <div class="flex items-center">
-                    <i class="fa-solid fa-tags w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'text-[#155E3B]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
+                    <i class="fa-solid fa-tags w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'text-[#0048FA]' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
                     <span class="sidebar-text-element ml-3 whitespace-nowrap">Nomenclatures</span>
                 </div>
                 <i id="catMenuChevron" class="sidebar-text-element fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-slate-600 transition-transform duration-200 {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'rotate-180' : '' }}"></i>
@@ -242,14 +242,14 @@
             <!-- Sous-onglets Catégories -->
             <div id="catSubmenu" class="sidebar-text-element {{ request()->routeIs('gestionnaire.categories.*') || request()->routeIs('admin.categories.*') ? 'block' : 'hidden' }} pl-4 pr-1 py-1 space-y-1 border-l-2 border-slate-100 ml-5 my-0.5">
                 <a href="{{ route('gestionnaire.categories.index') }}"
-                   style="{{ request()->routeIs('gestionnaire.categories.index') || request()->routeIs('admin.categories.index') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.categories.index') || request()->routeIs('admin.categories.index') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.categories.index') || request()->routeIs('admin.categories.index') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-list-ul text-[11px] {{ request()->routeIs('gestionnaire.categories.index') || request()->routeIs('admin.categories.index') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Liste des catégories</span>
                 </a>
 
                 <a href="{{ route('gestionnaire.categories.create') }}"
-                   style="{{ request()->routeIs('gestionnaire.categories.create') || request()->routeIs('admin.categories.create') ? 'background-color: #155E3B;' : '' }}"
+                   style="{{ request()->routeIs('gestionnaire.categories.create') || request()->routeIs('admin.categories.create') ? 'background-color: #0048FA;' : '' }}"
                    class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 {{ request()->routeIs('gestionnaire.categories.create') || request()->routeIs('admin.categories.create') ? 'text-white shadow-xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
                     <i class="fa-solid fa-plus text-[11px] {{ request()->routeIs('gestionnaire.categories.create') || request()->routeIs('admin.categories.create') ? 'text-white' : 'text-slate-400' }}"></i>
                     <span>Nouvelle catégorie</span>
@@ -262,8 +262,8 @@
         <!-- 11. Reporting & Registre Officiel -->
         <a href="{{ route('gestionnaire.reporting.index') }}"
            title="Rapports & Registre"
-           style="{{ request()->routeIs('gestionnaire.reporting.*') || request()->routeIs('reporting.*') ? 'background-color: #155E3B;' : '' }}"
-           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.reporting.*') || request()->routeIs('reporting.*') ? 'text-white shadow-md shadow-[#155E3B]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+           style="{{ request()->routeIs('gestionnaire.reporting.*') || request()->routeIs('reporting.*') ? 'background-color: #0048FA;' : '' }}"
+           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.reporting.*') || request()->routeIs('reporting.*') ? 'text-white shadow-md shadow-[#0048FA]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
             <i class="fa-solid fa-file-invoice w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.reporting.*') || request()->routeIs('reporting.*') ? 'text-white' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
             <span class="sidebar-text-element ml-3 whitespace-nowrap">Rapports & Registre</span>
         </a>
@@ -271,8 +271,8 @@
         <!-- 12. Journal d'Audit & Traçabilité -->
         <a href="{{ route('gestionnaire.audit.index') }}"
            title="Journal d'audit"
-           style="{{ request()->routeIs('gestionnaire.audit.*') ? 'background-color: #155E3B;' : '' }}"
-           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.audit.*') ? 'text-white shadow-md shadow-[#155E3B]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
+           style="{{ request()->routeIs('gestionnaire.audit.*') ? 'background-color: #0048FA;' : '' }}"
+           class="group flex items-center px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 {{ request()->routeIs('gestionnaire.audit.*') ? 'text-white shadow-md shadow-[#0048FA]/25' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50' }}">
             <i class="fa-solid fa-clock-rotate-left w-5 text-center flex-shrink-0 {{ request()->routeIs('gestionnaire.audit.*') ? 'text-white' : 'text-slate-400 group-hover:text-slate-700' }}"></i>
             <span class="sidebar-text-element ml-3 whitespace-nowrap">Piste d'Audit & Logs</span>
         </a>
@@ -333,7 +333,7 @@
 
     .custom-sidebar-scrollbar::-webkit-scrollbar-thumb:hover,
     aside nav::-webkit-scrollbar-thumb:hover {
-        background: #155E3B; /* Vert émeraude officiel UCP-FM */
+        background: #0048FA; /* Vert émeraude officiel UCP-FM */
     }
 
     /* Support Firefox */

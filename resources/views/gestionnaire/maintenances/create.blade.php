@@ -13,7 +13,7 @@
             </a>
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                    <i class="fa-solid fa-wrench text-[#155E3B]"></i>
+                    <i class="fa-solid fa-wrench text-[#0048FA]"></i>
                     <span>Déclarer une Panne / Fiche de Maintenance</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Enregistrement d'un incident matériel, demande de SAV ou révision périodique</p>
@@ -45,7 +45,7 @@
         <!-- Section 1 : Identification du Matériel & Référence -->
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-boxes-stacked"></i>
                 </div>
                 <div>
@@ -71,7 +71,7 @@
                            name="numero_fiche"
                            value="{{ old('numero_fiche', $numSuggere) }}"
                            required
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-rose-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-rose-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Type Maintenance -->
@@ -82,7 +82,7 @@
                     <select id="type_maintenance"
                             name="type_maintenance"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="corrective" {{ old('type_maintenance') === 'corrective' ? 'selected' : '' }}>Maintenance Corrective (Dépannage / Panne)</option>
                         <option value="preventive" {{ old('type_maintenance') === 'preventive' ? 'selected' : '' }}>Maintenance Préventive Planifiée</option>
                         <option value="calibration" {{ old('type_maintenance') === 'calibration' ? 'selected' : '' }}>Étalonnage / Calibration Biomédicale</option>
@@ -100,7 +100,7 @@
                            name="date_signalement"
                            value="{{ old('date_signalement', date('Y-m-d')) }}"
                            required
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -112,7 +112,7 @@
                 <select id="immobilisation_id"
                         name="immobilisation_id"
                         required
-                        class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">-- Sélectionner l'actif à dépanner ou réviser --</option>
                     @foreach($actifs as $a)
                         <option value="{{ $a->id }}" {{ (old('immobilisation_id') == $a->id || ($actifSelectionne && $actifSelectionne->id == $a->id)) ? 'selected' : '' }}>
@@ -146,7 +146,7 @@
                            name="prestataire"
                            value="{{ old('prestataire') }}"
                            placeholder="Ex: Copharmed CI, Siemens Healthcare, Équipe Biomédicale Interne..."
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Technicien -->
@@ -159,7 +159,7 @@
                            name="technicien_intervenant"
                            value="{{ old('technicien_intervenant') }}"
                            placeholder="Ex: Ing. Kouassi Jean..."
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -172,7 +172,7 @@
                           name="description_panne"
                           rows="3"
                           placeholder="Décrivez les pannes constatées (bruit anormal, erreur logicielle, coupure d'alimentation, pièce cassée...)"
-                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('description_panne') }}</textarea>
+                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('description_panne') }}</textarea>
             </div>
 
             <!-- Diagnostic Technique -->
@@ -184,7 +184,7 @@
                           name="diagnostic"
                           rows="3"
                           placeholder="Résultat de l'investigation technique, pièces à commander ou actions préconisées..."
-                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('diagnostic') }}</textarea>
+                          class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('diagnostic') }}</textarea>
             </div>
         </div>
 
@@ -212,7 +212,7 @@
                            id="cout_intervention"
                            name="cout_intervention"
                            value="{{ old('cout_intervention', 0) }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <!-- Statut Initial -->
@@ -223,7 +223,7 @@
                     <select id="statut"
                             name="statut"
                             required
-                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="signalee" {{ old('statut', 'signalee') === 'signalee' ? 'selected' : '' }}>Signalée (En attente d'intervention)</option>
                         <option value="en_cours" {{ old('statut') === 'en_cours' ? 'selected' : '' }}>En cours de diagnostic / réparation</option>
                         <option value="terminee" {{ old('statut') === 'terminee' ? 'selected' : '' }}>Terminée / Réparée</option>
@@ -239,7 +239,7 @@
                            id="date_prochaine_maintenance"
                            name="date_prochaine_maintenance"
                            value="{{ old('date_prochaine_maintenance') }}"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
         </div>
@@ -251,8 +251,8 @@
                 Annuler
             </a>
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all flex items-center space-x-2">
+                    style="background-color: #0048FA;"
+                    class="px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all flex items-center space-x-2">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer la fiche SAV</span>
             </button>

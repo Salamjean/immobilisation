@@ -71,7 +71,7 @@
             font-size: 0.75rem !important;
             font-weight: 600 !important;
             border-radius: 0.65rem !important;
-            background-color: #155E3B !important;
+            background-color: #0048FA !important;
         }
     </style>
 </head>
@@ -108,7 +108,7 @@
                         <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <input type="email" name="email" value="{{ old('email') }}" required autofocus placeholder="nom@gmail.com" class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                        <input type="email" name="email" value="{{ old('email') }}" required autofocus placeholder="nom@gmail.com" class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     </div>
                 </div>
 
@@ -119,8 +119,8 @@
                         <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-xs">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <input type="password" id="passwordInput" name="password" required placeholder="••••••••" class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
-                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#155E3B] text-xs transition-colors focus:outline-none cursor-pointer" title="Afficher/Masquer le mot de passe">
+                        <input type="password" id="passwordInput" name="password" required placeholder="••••••••" class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
+                        <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#0048FA] text-xs transition-colors focus:outline-none cursor-pointer" title="Afficher/Masquer le mot de passe">
                             <i id="passwordToggleIcon" class="fa-solid fa-eye"></i>
                         </button>
                     </div>
@@ -129,17 +129,17 @@
                 <!-- Case Se souvenir de moi & Mot de passe oublié sur la même ligne ou adaptée -->
                 <div class="flex flex-wrap items-center justify-between gap-y-2 gap-x-1 pt-0.5">
                     <label class="inline-flex items-center space-x-2 cursor-pointer select-none">
-                        <input type="checkbox" name="remember" class="w-4 h-4 rounded border-slate-300 text-[#155E3B] focus:ring-[#155E3B]">
+                        <input type="checkbox" name="remember" class="w-4 h-4 rounded border-slate-300 text-[#0048FA] focus:ring-[#0048FA]">
                         <span class="text-xs text-slate-600 font-medium">Se souvenir de moi</span>
                     </label>
-                    <a href="javascript:void(0)" onclick="showForgotModal()" class="text-xs text-slate-500 hover:text-[#155E3B] font-medium transition-colors whitespace-nowrap">
+                    <a href="javascript:void(0)" onclick="showForgotModal()" class="text-xs text-slate-500 hover:text-[#0048FA] font-medium transition-colors whitespace-nowrap">
                         Mot de passe oublié ?
                     </a>
                 </div>
 
-                <!-- Bouton Connexion avec couleur #155E3B -->
+                <!-- Bouton Connexion avec couleur #0048FA -->
                 <div class="pt-1.5 sm:pt-2">
-                    <button type="submit" style="background-color: #155E3B;" class="w-full py-2.5 px-4 rounded-xl text-white font-bold text-xs tracking-wide shadow-md shadow-[#155E3B]/25 hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer">
+                    <button type="submit" style="background-color: #0048FA;" class="w-full py-2.5 px-4 rounded-xl text-white font-bold text-xs tracking-wide shadow-md shadow-[#0048FA]/25 hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer">
                         Se connecter
                     </button>
                 </div>
@@ -186,7 +186,7 @@
                 title: 'Assistance',
                 text: 'Veuillez contacter votre administrateur système pour réinitialiser votre mot de passe.',
                 confirmButtonText: 'Compris',
-                confirmButtonColor: '#155E3B'
+                confirmButtonColor: '#0048FA'
             });
         }
 
@@ -210,7 +210,7 @@
                     title: 'Erreur',
                     text: '{{ session('error') }}',
                     confirmButtonText: 'D\'accord',
-                    confirmButtonColor: '#155E3B'
+                    confirmButtonColor: '#0048FA'
                 });
             @endif
 
@@ -220,7 +220,7 @@
                     title: 'Identifiants incorrects',
                     text: '{{ $errors->first() }}',
                     confirmButtonText: 'Réessayer',
-                    confirmButtonColor: '#155E3B'
+                    confirmButtonColor: '#0048FA'
                 });
             @endif
         });

@@ -81,7 +81,7 @@
         @if($maintenance->statut !== 'terminee')
         <!-- Section Clôture de l'Intervention -->
         <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200">
-            <h3 class="text-xs font-bold uppercase text-[#155E3B] tracking-wider mb-3 flex items-center">
+            <h3 class="text-xs font-bold uppercase text-[#0048FA] tracking-wider mb-3 flex items-center">
                 <i class="fa-solid fa-circle-check mr-2"></i> Clôturer l'Intervention & Remettre en Service
             </h3>
             <form action="{{ route('maintenances.cloturer', $maintenance->id) }}" method="POST" class="space-y-4">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-end">
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#155E3B] hover:bg-[#0f442a] text-white font-bold text-xs shadow-md shadow-emerald-900/20 transition-all flex items-center space-x-1.5">
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#0048FA] hover:bg-[#003ad1] text-white font-bold text-xs shadow-md shadow-emerald-900/20 transition-all flex items-center space-x-1.5">
                         <i class="fa-solid fa-check-double"></i>
                         <span>Valider la Réparation & Remettre en Service</span>
                     </button>

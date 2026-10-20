@@ -31,7 +31,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-user"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Identité & Photo</h2>
@@ -41,22 +41,22 @@
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center flex flex-col items-center">
                         <div class="relative group cursor-pointer mb-2.5" onclick="document.getElementById('editPhotoInput').click()">
                             <!-- Cadre photo avec aperçu -->
-                            <div id="editPhotoPreviewContainer" class="w-24 h-24 rounded-2xl bg-white border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden shadow-xs group-hover:border-[#155E3B] transition-all">
+                            <div id="editPhotoPreviewContainer" class="w-24 h-24 rounded-2xl bg-white border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden shadow-xs group-hover:border-[#0048FA] transition-all">
                                 @if($user->photo_url)
                                     <img id="editPhotoPreview" src="{{ $user->photo_url }}" alt="{{ $user->name }}" class="w-full h-full object-cover">
-                                    <div id="editPhotoPlaceholder" class="text-center text-slate-400 group-hover:text-[#155E3B] transition-colors hidden">
+                                    <div id="editPhotoPlaceholder" class="text-center text-slate-400 group-hover:text-[#0048FA] transition-colors hidden">
                                         <i class="fa-solid fa-camera text-2xl"></i>
                                     </div>
                                 @else
                                     <img id="editPhotoPreview" src="" alt="Aperçu Photo" class="w-full h-full object-cover hidden">
-                                    <div id="editPhotoPlaceholder" class="text-center text-slate-400 group-hover:text-[#155E3B] transition-colors">
+                                    <div id="editPhotoPlaceholder" class="text-center text-slate-400 group-hover:text-[#0048FA] transition-colors">
                                         <i class="fa-solid fa-camera text-2xl"></i>
                                         <span class="block text-[10px] font-semibold mt-1">Ajouter photo</span>
                                     </div>
                                 @endif
                             </div>
                             <!-- Badge caméra -->
-                            <div style="background-color: #155E3B;" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full text-white flex items-center justify-center text-xs shadow-sm group-hover:scale-110 transition-transform">
+                            <div style="background-color: #0048FA;" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full text-white flex items-center justify-center text-xs shadow-sm group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-camera"></i>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                accept="image/jpeg,image/png,image/webp"
                                class="hidden"
                                onchange="previewEditProfilePhoto(this)">
-                        <div id="editPhotoFileName" class="text-[11px] font-semibold text-[#155E3B] hidden pt-1 truncate max-w-[200px]"></div>
+                        <div id="editPhotoFileName" class="text-[11px] font-semibold text-[#0048FA] hidden pt-1 truncate max-w-[200px]"></div>
                     </div>
 
                     <!-- Nom de famille -->
@@ -86,7 +86,7 @@
                                    value="{{ old('name', $user->name) }}"
                                    required
                                    placeholder="Ex: KOUASSI"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -104,7 +104,7 @@
                                    value="{{ old('prenoms', $user->prenoms) }}"
                                    required
                                    placeholder="Ex: Jean-Eudes"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -121,7 +121,7 @@
                                    name="telephone"
                                    value="{{ old('telephone', $user->telephone) }}"
                                    placeholder="+225 07 00 00 00 00"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                 <!-- Statut Actif -->
                 <div class="pt-3 border-t border-slate-100">
                     <label class="flex items-center space-x-2.5 cursor-pointer">
-                        <input type="checkbox" name="actif" value="1" {{ old('actif', $user->actif) ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#155E3B] focus:ring-[#155E3B]">
+                        <input type="checkbox" name="actif" value="1" {{ old('actif', $user->actif) ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#0048FA] focus:ring-[#0048FA]">
                         <span class="text-xs font-semibold text-slate-700">Compte actif</span>
                     </label>
                 </div>
@@ -139,7 +139,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-lock"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Sécurité & Connexion</h2>
@@ -158,7 +158,7 @@
                                    name="email"
                                    value="{{ old('email', $user->email) }}"
                                    required
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -174,13 +174,13 @@
                             <input type="password"
                                    name="password"
                                    placeholder="••••••••"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
                     <!-- Info Sécurité -->
                     <div class="p-3.5 rounded-xl bg-sky-50/70 border border-sky-100 text-sky-900 space-y-1">
-                        <div class="text-xs font-bold flex items-center space-x-1.5 text-[#155E3B]">
+                        <div class="text-xs font-bold flex items-center space-x-1.5 text-[#0048FA]">
                             <i class="fa-solid fa-circle-info"></i>
                             <span>Modification sécurisée</span>
                         </div>
@@ -199,7 +199,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">3. Rôle & Rattachement</h2>
@@ -212,7 +212,7 @@
                         </label>
                         <select name="role"
                                 required
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             @foreach($roles as $codeRole => $libelleRole)
                                 <option value="{{ $codeRole }}" {{ old('role', $user->role) == $codeRole ? 'selected' : '' }}>
                                     {{ $libelleRole }}
@@ -224,7 +224,7 @@
                     <!-- Programme -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Programme Santé GC7 <span class="text-slate-400 font-normal">(Optionnel)</span></label>
-                        <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                        <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucun / Tous les programmes --</option>
                             @foreach($programmes as $prog)
                                 <option value="{{ $prog->id }}" {{ old('programme_id', $user->programme_id) == $prog->id ? 'selected' : '' }}>
@@ -237,7 +237,7 @@
                     <!-- Structure Sanitaire -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Structure Bénéficiaire / Hôpital <span class="text-slate-400 font-normal">(Optionnel)</span></label>
-                        <select name="structure_beneficiaire_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                        <select name="structure_beneficiaire_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucune / Siège Central --</option>
                             @foreach($structures as $struct)
                                 <option value="{{ $struct->id }}" {{ old('structure_beneficiaire_id', $user->structure_beneficiaire_id) == $struct->id ? 'selected' : '' }}>
@@ -249,7 +249,7 @@
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-hospital-user text-[#155E3B] mr-1"></i> Périmètre d'habilitation
+                    <i class="fa-solid fa-hospital-user text-[#0048FA] mr-1"></i> Périmètre d'habilitation
                 </div>
             </div>
 
@@ -261,7 +261,7 @@
                 Annuler
             </a>
 
-            <button type="submit" style="background-color: #155E3B;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+            <button type="submit" style="background-color: #0048FA;" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span>Enregistrer les modifications</span>
             </button>

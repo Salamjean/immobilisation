@@ -9,15 +9,15 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-clipboard-check text-[#155E3B]"></i>
+                <i class="fa-solid fa-clipboard-check text-[#0048FA]"></i>
                 <span>Campagnes d'Inventaire Physique & Rapprochement</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Pilotage du recensement des actifs, déploiement des équipes terrain et rapprochement comptable</p>
         </div>
 
         <a href="{{ route('gestionnaire.inventaires.create') }}"
-           style="background-color: #155E3B;"
-           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all self-start sm:self-auto">
+           style="background-color: #0048FA;"
+           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all self-start sm:self-auto">
             <i class="fa-solid fa-plus text-xs"></i>
             <span>Nouvelle Campagne</span>
         </a>
@@ -40,7 +40,7 @@
 
         <!-- Total Campagnes -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-layer-group"></i>
             </div>
             <div>
@@ -165,7 +165,7 @@
                             </td>
                             <td class="py-3.5 px-4 text-right">
                                 <a href="{{ route('gestionnaire.inventaires.show', $c->id) }}"
-                                   style="background-color: #155E3B;"
+                                   style="background-color: #0048FA;"
                                    class="inline-flex items-center px-3 py-1.5 rounded-lg text-white text-xs font-semibold shadow-xs hover:opacity-95 transition-all">
                                     <i class="fa-solid fa-magnifying-glass-chart mr-1.5"></i>
                                     <span>Superviser</span>

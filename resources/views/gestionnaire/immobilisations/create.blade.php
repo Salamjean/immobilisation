@@ -46,12 +46,12 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 relative">
             
             <!-- Step 1 -->
-            <button type="button" onclick="goToStep(1)" id="step-indicator-1" class="step-btn text-left p-3 rounded-xl border-2 border-[#155E3B] bg-cyan-50/50 transition-all flex items-center space-x-3 cursor-pointer">
-                <div id="step-circle-1" class="w-8 h-8 rounded-lg bg-[#155E3B] text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
+            <button type="button" onclick="goToStep(1)" id="step-indicator-1" class="step-btn text-left p-3 rounded-xl border-2 border-[#0048FA] bg-cyan-50/50 transition-all flex items-center space-x-3 cursor-pointer">
+                <div id="step-circle-1" class="w-8 h-8 rounded-lg bg-[#0048FA] text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
                     1
                 </div>
                 <div>
-                    <span class="block text-[10px] font-bold uppercase tracking-wider text-[#155E3B]">Étape 1</span>
+                    <span class="block text-[10px] font-bold uppercase tracking-wider text-[#0048FA]">Étape 1</span>
                     <span class="block text-xs font-bold text-slate-900">Identification</span>
                 </div>
             </button>
@@ -100,7 +100,7 @@
         <div id="step-content-1" class="step-content bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-6">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                         <i class="fa-solid fa-barcode"></i>
                     </div>
                     <div>
@@ -108,7 +108,7 @@
                         <p class="text-xs text-slate-400">Renseignez les références uniques de l'équipement et sa classification</p>
                     </div>
                 </div>
-                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#155E3B] border border-cyan-100">Volet 1/7</span>
+                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#0048FA] border border-cyan-100">Volet 1/7</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -154,7 +154,7 @@
                 <div class="md:col-span-6 grid grid-cols-12 gap-3">
                     <div class="col-span-12 sm:col-span-8">
                         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Bailleur de Fonds</label>
-                        <select name="bailleur_id" id="bailleur_select_step1" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                        <select name="bailleur_id" id="bailleur_select_step1" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="">Sélectionner</option>
                             @foreach($bailleurs as $b)
                                 <option value="{{ $b->id }}" data-code="{{ $b->code }}" {{ old('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -192,7 +192,7 @@
                            value="{{ old('designation') }}"
                            required
                            placeholder="Ex: Analyseur de Biochimie Automatique 400 tests/h"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -202,7 +202,7 @@
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">
                         Catégorie <span class="text-rose-500">*</span>
                     </label>
-                    <select name="categorie_id" id="categorie_select" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="categorie_id" id="categorie_select" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner une catégorie</option>
                         @foreach($categories as $cat)
                             <option value="{{ $cat->id }}" {{ old('categorie_id') == $cat->id ? 'selected' : '' }}>
@@ -214,7 +214,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Sous-Catégorie</label>
-                    <select name="sous_categorie_id" id="sous_categorie_select" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="sous_categorie_id" id="sous_categorie_select" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner une sous-catégorie (optionnel)</option>
                         @foreach($categories as $cat)
                             @foreach($cat->sousCategories as $scat)
@@ -231,15 +231,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Marque</label>
-                    <input type="text" name="marque" value="{{ old('marque') }}" placeholder="Ex: Mindray, Siemens, HP" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="marque" value="{{ old('marque') }}" placeholder="Ex: Mindray, Siemens, HP" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Modèle</label>
-                    <input type="text" name="modele" value="{{ old('modele') }}" placeholder="Ex: BS-240, Dimension EXL" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="modele" value="{{ old('modele') }}" placeholder="Ex: BS-240, Dimension EXL" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Numéro de Série Fabricant</label>
-                    <input type="text" name="numero_serie" value="{{ old('numero_serie') }}" placeholder="Ex: SN-884920482" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="numero_serie" value="{{ old('numero_serie') }}" placeholder="Ex: SN-884920482" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
         </div>
@@ -248,7 +248,7 @@
         <div id="step-content-2" class="step-content bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-6 hidden">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
                     <div>
@@ -256,7 +256,7 @@
                         <p class="text-xs text-slate-400">Détails financiers, sources de financement bailleurs et références d'achat</p>
                     </div>
                 </div>
-                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#155E3B] border border-cyan-100">Volet 2/7</span>
+                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#0048FA] border border-cyan-100">Volet 2/7</span>
             </div>
 
             <!-- Valeur & Devise -->
@@ -273,11 +273,11 @@
                            step="1"
                            required
                            placeholder="Ex: 15000000"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Devise <span class="text-rose-500">*</span></label>
-                    <select name="devise" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="devise" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="FCFA" {{ old('devise', 'FCFA') == 'FCFA' ? 'selected' : '' }}>FCFA (XOF)</option>
                         <option value="EUR" {{ old('devise') == 'EUR' ? 'selected' : '' }}>EUR (€)</option>
                         <option value="USD" {{ old('devise') == 'USD' ? 'selected' : '' }}>USD ($)</option>
@@ -289,7 +289,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Subvention</label>
-                    <select name="subvention_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="subvention_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner une subvention</option>
                         @foreach($subventions as $sub)
                             <option value="{{ $sub->id }}" {{ old('subvention_id') == $sub->id ? 'selected' : '' }}>
@@ -301,7 +301,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Programme de Rattachement</label>
-                    <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="programme_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner un programme</option>
                         @foreach($programmes as $p)
                             <option value="{{ $p->id }}" {{ old('programme_id') == $p->id ? 'selected' : '' }}>
@@ -316,15 +316,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Fournisseur</label>
-                    <input type="text" name="fournisseur" value="{{ old('fournisseur') }}" placeholder="Ex: MedEquip SARL" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="fournisseur" value="{{ old('fournisseur') }}" placeholder="Ex: MedEquip SARL" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Marché / Contrat</label>
-                    <input type="text" name="reference_marche" value="{{ old('reference_marche') }}" placeholder="Ex: DAO-2024-082" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="reference_marche" value="{{ old('reference_marche') }}" placeholder="Ex: DAO-2024-082" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Bon de Commande (PO)</label>
-                    <input type="text" name="bon_commande" value="{{ old('bon_commande') }}" placeholder="Ex: BC-2024-114" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="bon_commande" value="{{ old('bon_commande') }}" placeholder="Ex: BC-2024-114" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -332,15 +332,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date d'Acquisition</label>
-                    <input type="date" name="date_acquisition" value="{{ old('date_acquisition') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="date" name="date_acquisition" value="{{ old('date_acquisition') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date de Réception</label>
-                    <input type="date" name="date_reception" value="{{ old('date_reception') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="date" name="date_reception" value="{{ old('date_reception') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date de Mise en Service</label>
-                    <input type="date" name="date_mise_en_service" value="{{ old('date_mise_en_service') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="date" name="date_mise_en_service" value="{{ old('date_mise_en_service') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
         </div>
@@ -349,7 +349,7 @@
         <div id="step-content-3" class="step-content bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-6 hidden">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                         <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <div>
@@ -357,7 +357,7 @@
                         <p class="text-xs text-slate-400">Structure sanitaire, service, responsable détenteur et coordonnées GPS précises</p>
                     </div>
                 </div>
-                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#155E3B] border border-cyan-100">Volets 3 & 4/7</span>
+                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#0048FA] border border-cyan-100">Volets 3 & 4/7</span>
             </div>
 
             <!-- Structure Bénéficiaire -->
@@ -365,7 +365,7 @@
                 <label class="block text-xs font-semibold text-slate-700 mb-1.5">
                     Structure Bénéficiaire / Établissement <span class="text-rose-500">*</span>
                 </label>
-                <select name="structure_beneficiaire_id" id="structure_select" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="structure_beneficiaire_id" id="structure_select" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Sélectionner une structure</option>
                     @foreach($structures as $st)
                         <option value="{{ $st->id }}"
@@ -384,7 +384,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Service</label>
-                    <select name="service_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="service_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner un service</option>
                         @foreach($services as $srv)
                             <option value="{{ $srv->id }}" {{ old('service_id') == $srv->id ? 'selected' : '' }}>
@@ -396,7 +396,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Site / Emplacement Détaillé</label>
-                    <input type="text" name="emplacement_detaille" value="{{ old('emplacement_detaille') }}" placeholder="Ex: Bâtiment A, Salle Radiologie 1" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="emplacement_detaille" value="{{ old('emplacement_detaille') }}" placeholder="Ex: Bâtiment A, Salle Radiologie 1" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -404,7 +404,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Utilisateur / Détenteur</label>
-                    <select name="detenteur_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="detenteur_id" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="">Sélectionner un détenteur</option>
                         @foreach($detenteurs as $det)
                             <option value="{{ $det->id }}" {{ old('detenteur_id') == $det->id ? 'selected' : '' }}>
@@ -416,7 +416,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date d'Affectation</label>
-                    <input type="date" name="date_affectation" value="{{ old('date_affectation') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="date" name="date_affectation" value="{{ old('date_affectation') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -424,7 +424,7 @@
             <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3.5">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-2 border-b border-slate-200/80">
                     <div class="flex items-center space-x-2">
-                        <span class="w-6 h-6 rounded-lg bg-[#155E3B]/10 text-[#155E3B] flex items-center justify-center text-xs">
+                        <span class="w-6 h-6 rounded-lg bg-[#0048FA]/10 text-[#0048FA] flex items-center justify-center text-xs">
                             <i class="fa-solid fa-map-location-dot"></i>
                         </span>
                         <div>
@@ -433,7 +433,7 @@
                         </div>
                     </div>
                     <button type="button" onclick="captureCurrentGPS()" class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 text-xs font-bold shadow-2xs transition-all flex items-center space-x-1.5 self-start sm:self-auto flex-shrink-0">
-                        <i class="fa-solid fa-location-crosshairs text-[#155E3B]"></i>
+                        <i class="fa-solid fa-location-crosshairs text-[#0048FA]"></i>
                         <span>Ma position actuelle</span>
                     </button>
                 </div>
@@ -448,9 +448,9 @@
                             <input type="text"
                                    id="google_places_search"
                                    placeholder="Rechercher une adresse, un établissement sanitaire, une ville sur Google Maps..."
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-l-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-white border border-slate-200 rounded-l-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                         </div>
-                        <button type="button" id="btn_search_gmap" class="px-4 py-2.5 bg-[#155E3B] text-white rounded-r-xl text-xs font-bold hover:opacity-95 transition-all flex items-center space-x-1.5">
+                        <button type="button" id="btn_search_gmap" class="px-4 py-2.5 bg-[#0048FA] text-white rounded-r-xl text-xs font-bold hover:opacity-95 transition-all flex items-center space-x-1.5">
                             <i class="fa-solid fa-location-dot"></i>
                             <span>Rechercher</span>
                         </button>
@@ -461,7 +461,7 @@
                 <div class="relative rounded-xl overflow-hidden border border-slate-200 shadow-inner">
                     <div id="google_map_picker" style="height: 280px; width: 100%;" class="bg-slate-100"></div>
                     <div class="absolute top-2 right-2 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-slate-200 text-[10px] font-semibold text-slate-600 shadow-xs flex items-center space-x-1 pointer-events-none">
-                        <i class="fa-solid fa-hand-pointer text-[#155E3B]"></i>
+                        <i class="fa-solid fa-hand-pointer text-[#0048FA]"></i>
                         <span>Cliquez sur la carte ou glissez le repère</span>
                     </div>
                 </div>
@@ -469,13 +469,13 @@
                 <!-- Info-bulle / Nom exact du lieu détecté -->
                 <div id="gmap_detected_box" class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl bg-white border border-slate-200 text-xs">
                     <div class="flex items-start space-x-2 min-w-0">
-                        <i class="fa-solid fa-location-dot text-[#155E3B] mt-0.5 flex-shrink-0"></i>
+                        <i class="fa-solid fa-location-dot text-[#0048FA] mt-0.5 flex-shrink-0"></i>
                         <div class="min-w-0">
                             <span class="text-[10px] text-slate-400 block uppercase font-bold">Lieu exact détecté sur Google Maps</span>
                             <span id="detected_location_name" class="font-semibold text-slate-800 truncate block">Aucun lieu sélectionné (par défaut : Côte d'Ivoire)</span>
                         </div>
                     </div>
-                    <button type="button" id="btn_apply_location_name" class="px-3 py-1 bg-emerald-50 hover:bg-emerald-100 text-[#155E3B] border border-emerald-200 rounded-lg text-[11px] font-bold transition-all flex items-center space-x-1 self-start sm:self-auto flex-shrink-0" title="Copier ce nom dans l'emplacement détaillé">
+                    <button type="button" id="btn_apply_location_name" class="px-3 py-1 bg-emerald-50 hover:bg-emerald-100 text-[#0048FA] border border-emerald-200 rounded-lg text-[11px] font-bold transition-all flex items-center space-x-1 self-start sm:self-auto flex-shrink-0" title="Copier ce nom dans l'emplacement détaillé">
                         <i class="fa-solid fa-check-double"></i>
                         <span>Utiliser comme emplacement</span>
                     </button>
@@ -518,7 +518,7 @@
         <div id="step-content-4" class="step-content bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-6 hidden">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                         <i class="fa-solid fa-heart-pulse"></i>
                     </div>
                     <div>
@@ -526,7 +526,7 @@
                         <p class="text-xs text-slate-400">9 statuts normés, analyse de risque, photos et observations</p>
                     </div>
                 </div>
-                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#155E3B] border border-cyan-100">Volets 5, 6 & 7/7</span>
+                <span class="text-xs font-bold font-mono px-3 py-1 rounded-full bg-cyan-50 text-[#0048FA] border border-cyan-100">Volets 5, 6 & 7/7</span>
             </div>
 
             <!-- État & Statut Opérationnel -->
@@ -535,7 +535,7 @@
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">
                         État Physique & Opérationnel <span class="text-rose-500">*</span>
                     </label>
-                    <select name="etat" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="etat" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="bon_etat" {{ old('etat', 'bon_etat') == 'bon_etat' ? 'selected' : '' }}>🟢 Bon état (En service)</option>
                         <option value="panne" {{ old('etat') == 'panne' ? 'selected' : '' }}>🟡 Panne (À réparer)</option>
                         <option value="hors_service" {{ old('etat') == 'hors_service' ? 'selected' : '' }}>🔴 Hors service (Arrêt complet)</option>
@@ -550,7 +550,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Statut Opérationnel</label>
-                    <select name="statut_operationnel" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="statut_operationnel" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="en_service" {{ old('statut_operationnel', 'en_service') == 'en_service' ? 'selected' : '' }}>Actif / En exploitation</option>
                         <option value="en_stock" {{ old('statut_operationnel') == 'en_stock' ? 'selected' : '' }}>En réserve / Stock</option>
                         <option value="en_transit" {{ old('statut_operationnel') == 'en_transit' ? 'selected' : '' }}>En déplacement</option>
@@ -565,7 +565,7 @@
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">
                         Niveau de Criticité <span class="text-rose-500">*</span>
                     </label>
-                    <select name="niveau_criticite" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <select name="niveau_criticite" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                         <option value="faible" {{ old('niveau_criticite') == 'faible' ? 'selected' : '' }}>🟢 Faible (Impact minime)</option>
                         <option value="modere" {{ old('niveau_criticite', 'modere') == 'modere' ? 'selected' : '' }}>🟡 Modéré (Impact moyen)</option>
                         <option value="eleve" {{ old('niveau_criticite') == 'eleve' ? 'selected' : '' }}>🟠 Élevé (Équipement important)</option>
@@ -575,25 +575,25 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Score de Risque (0 à 100)</label>
-                    <input type="number" min="0" max="100" name="score_risque" value="{{ old('score_risque', '50') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="number" min="0" max="100" name="score_risque" value="{{ old('score_risque', '50') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
             <!-- Justification du Risque -->
             <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1.5">Justification du Classement & Risque</label>
-                <textarea name="justification_risque" rows="2" placeholder="Expliquez les motifs du niveau de risque et de criticité..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('justification_risque') }}</textarea>
+                <textarea name="justification_risque" rows="2" placeholder="Expliquez les motifs du niveau de risque et de criticité..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('justification_risque') }}</textarea>
             </div>
 
             <!-- Garantie & Prestataire -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Date de Fin de Garantie</label>
-                    <input type="date" name="date_fin_garantie" value="{{ old('date_fin_garantie') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="date" name="date_fin_garantie" value="{{ old('date_fin_garantie') }}" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Prestataire / Fournisseur SAV Garantie</label>
-                    <input type="text" name="fournisseur_garantie" value="{{ old('fournisseur_garantie') }}" placeholder="Ex: SAV Siemens CI" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                    <input type="text" name="fournisseur_garantie" value="{{ old('fournisseur_garantie') }}" placeholder="Ex: SAV Siemens CI" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
@@ -601,11 +601,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Photo de l'Actif</label>
-                    <div class="flex justify-center px-4 pt-4 pb-4 border-2 border-slate-300 border-dashed rounded-xl hover:border-[#155E3B] transition-all bg-slate-50">
+                    <div class="flex justify-center px-4 pt-4 pb-4 border-2 border-slate-300 border-dashed rounded-xl hover:border-[#0048FA] transition-all bg-slate-50">
                         <div class="space-y-1 text-center">
                             <i class="fa-solid fa-camera text-xl text-slate-400"></i>
                             <div class="text-xs text-slate-600">
-                                <label for="photo_input" class="cursor-pointer font-bold text-[#155E3B] hover:underline">
+                                <label for="photo_input" class="cursor-pointer font-bold text-[#0048FA] hover:underline">
                                     <span>Sélectionner une photo</span>
                                     <input id="photo_input" name="photo_principale" type="file" accept="image/*" class="sr-only">
                                 </label>
@@ -617,7 +617,7 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1.5">Observations Générales</label>
-                    <textarea name="observations" rows="3" placeholder="Notes additionnelles ou accessoires..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('observations') }}</textarea>
+                    <textarea name="observations" rows="3" placeholder="Notes additionnelles ou accessoires..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('observations') }}</textarea>
                 </div>
             </div>
         </div>
@@ -642,16 +642,16 @@
                 <button type="button"
                         id="btn-next"
                         onclick="nextStep()"
-                        style="background-color: #155E3B;"
-                        class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                        style="background-color: #0048FA;"
+                        class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                     <span>Étape suivante</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
                 <button type="submit"
                         id="btn-submit"
-                        style="background-color: #155E3B;"
-                        class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all hidden">
+                        style="background-color: #0048FA;"
+                        class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all hidden">
                     <i class="fa-solid fa-check"></i>
                     <span>Enregistrer l'immobilisation</span>
                 </button>
@@ -683,20 +683,20 @@
             if (indicator && circle) {
                 if (i === currentStep) {
                     indicator.classList.remove('border-slate-200', 'bg-slate-50/50');
-                    indicator.classList.add('border-[#155E3B]', 'bg-cyan-50/50');
+                    indicator.classList.add('border-[#0048FA]', 'bg-cyan-50/50');
                     circle.classList.remove('bg-slate-200', 'text-slate-600', 'bg-emerald-500');
-                    circle.classList.add('bg-[#155E3B]', 'text-white');
+                    circle.classList.add('bg-[#0048FA]', 'text-white');
                     circle.textContent = i;
                 } else if (i < currentStep) {
-                    indicator.classList.remove('border-[#155E3B]', 'bg-cyan-50/50');
+                    indicator.classList.remove('border-[#0048FA]', 'bg-cyan-50/50');
                     indicator.classList.add('border-emerald-300', 'bg-emerald-50/30');
-                    circle.classList.remove('bg-[#155E3B]', 'bg-slate-200', 'text-slate-600');
+                    circle.classList.remove('bg-[#0048FA]', 'bg-slate-200', 'text-slate-600');
                     circle.classList.add('bg-emerald-500', 'text-white');
                     circle.textContent = '✓';
                 } else {
-                    indicator.classList.remove('border-[#155E3B]', 'bg-cyan-50/50', 'border-emerald-300', 'bg-emerald-50/30');
+                    indicator.classList.remove('border-[#0048FA]', 'bg-cyan-50/50', 'border-emerald-300', 'bg-emerald-50/30');
                     indicator.classList.add('border-slate-200', 'bg-slate-50/50');
-                    circle.classList.remove('bg-[#155E3B]', 'bg-emerald-500', 'text-white');
+                    circle.classList.remove('bg-[#0048FA]', 'bg-emerald-500', 'text-white');
                     circle.classList.add('bg-slate-200', 'text-slate-600');
                     circle.textContent = i;
                 }
@@ -1062,8 +1062,8 @@
         document.getElementById('btn_apply_location_name')?.addEventListener('click', function() {
             if (window.lastDetectedAddress && emplacementInput) {
                 emplacementInput.value = window.lastDetectedAddress;
-                emplacementInput.classList.add('ring-2', 'ring-[#155E3B]');
-                setTimeout(() => emplacementInput.classList.remove('ring-2', 'ring-[#155E3B]'), 500);
+                emplacementInput.classList.add('ring-2', 'ring-[#0048FA]');
+                setTimeout(() => emplacementInput.classList.remove('ring-2', 'ring-[#0048FA]'), 500);
             }
         });
 

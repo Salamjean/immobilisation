@@ -9,7 +9,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-diagram-project text-[#155E3B]"></i>
+                <i class="fa-solid fa-diagram-project text-[#0048FA]"></i>
                 <span>Programmes Nationaux & Projets Stratégiques</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Consultation des programmes de santé et suivi des immobilisations associées</p>
@@ -48,7 +48,7 @@
     <!-- Statistiques rapides -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-diagram-project"></i>
             </div>
             <div>
@@ -90,12 +90,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher nom, code, coordonnateur..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Bailleur (3 cols) -->
             <div class="sm:col-span-3">
-                <select name="bailleur_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="bailleur_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Bailleurs</option>
                     @foreach($bailleurs as $b)
                         <option value="{{ $b->id }}" {{ request('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -107,7 +107,7 @@
 
             <!-- Filtre Statut (2 cols) -->
             <div class="sm:col-span-2">
-                <select name="actif" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="actif" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Statuts</option>
                     <option value="1" {{ request('actif') === '1' ? 'selected' : '' }}>Actifs</option>
                     <option value="0" {{ request('actif') === '0' ? 'selected' : '' }}>Inactifs</option>
@@ -117,7 +117,7 @@
             <!-- Boutons d'Action (2 cols) -->
             <div class="sm:col-span-2 flex items-center space-x-2">
                 <button type="submit"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-[11px]"></i>
                     <span>Filtrer</span>
@@ -154,7 +154,7 @@
                     @forelse($programmes as $p)
                         <tr class="hover:bg-slate-50/70 transition-colors">
                             <td class="py-3.5 px-4 text-center">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-50 text-[#155E3B] border border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-50 text-[#0048FA] border border-emerald-100">
                                     {{ $p->code }}
                                 </span>
                             </td>
@@ -207,7 +207,7 @@
                                 <a href="{{ route('gestionnaire.immobilisations.index', ['programme_id' => $p->id]) }}"
                                    class="inline-flex items-center px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 text-xs font-semibold transition-all"
                                    title="Voir les biens de ce programme">
-                                    <i class="fa-solid fa-boxes-stacked mr-1 text-[#155E3B]"></i>
+                                    <i class="fa-solid fa-boxes-stacked mr-1 text-[#0048FA]"></i>
                                     <span>Actifs liés</span>
                                 </a>
                             </td>

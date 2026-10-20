@@ -19,16 +19,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#155E3B',
-                            700: '#0f442a',
-                            800: '#064e3b',
-                            900: '#022c22',
+                            50: '#eff4ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#0048FA',
+                            700: '#003ad1',
+                            800: '#002eb3',
+                            900: '#002080',
                         }
                     },
                     fontFamily: {
@@ -88,7 +88,7 @@
         <!-- Carte Principale Campagne -->
         <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-3">
             <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <span class="text-xs font-bold text-[#155E3B] uppercase tracking-wider">
+                <span class="text-xs font-bold text-[#0048FA] uppercase tracking-wider">
                     {{ $campagne->programme->sigle ?? $campagne->programme->code ?? 'Global' }}
                     @if($campagne->region) &bull; {{ $campagne->region->nom }} @endif
                 </span>
@@ -98,7 +98,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs">
                 <div class="bg-slate-50 p-2.5 rounded-xl">
                     <span class="text-[10px] text-slate-400 block font-semibold">Total Relevés</span>
-                    <span class="font-extrabold text-[#155E3B] text-base font-mono">{{ $totalReleves }}</span>
+                    <span class="font-extrabold text-[#0048FA] text-base font-mono">{{ $totalReleves }}</span>
                 </div>
 
                 <div class="bg-slate-50 p-2.5 rounded-xl">
@@ -114,8 +114,8 @@
 
             <!-- Bouton Lancer le Scan Direct -->
             <a href="{{ route('agent.mobile.index') }}?campagne_id={{ $campagne->id }}"
-               style="background-color: #155E3B;"
-               class="w-full py-2.5 rounded-xl text-white text-xs font-bold text-center shadow-md shadow-[#155E3B]/20 hover:opacity-95 transition flex items-center justify-center space-x-2">
+               style="background-color: #0048FA;"
+               class="w-full py-2.5 rounded-xl text-white text-xs font-bold text-center shadow-md shadow-[#0048FA]/20 hover:opacity-95 transition flex items-center justify-center space-x-2">
                 <i class="fa-solid fa-qrcode"></i>
                 <span>Ouvrir le Scanner pour cette Campagne</span>
             </a>
@@ -124,7 +124,7 @@
         <!-- Section Équipes Assignées -->
         <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-3">
             <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
-                <i class="fa-solid fa-users text-[#155E3B]"></i>
+                <i class="fa-solid fa-users text-[#0048FA]"></i>
                 <span>Équipes & Agents de Terrain ({{ $campagne->equipes->count() }})</span>
             </h3>
 
@@ -151,7 +151,7 @@
         <!-- Derniers Relevés Réalisés -->
         <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs space-y-3">
             <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
-                <i class="fa-solid fa-list-check text-[#155E3B]"></i>
+                <i class="fa-solid fa-list-check text-[#0048FA]"></i>
                 <span>Derniers Scans Effectués ({{ min(10, $campagne->releves->count()) }})</span>
             </h3>
 
@@ -159,7 +159,7 @@
                 @forelse($campagne->releves->take(10) as $rel)
                 <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between text-xs">
                     <div>
-                        <div class="font-mono font-bold text-[#155E3B]">{{ $rel->code_immobilisation ?? $rel->code_scanne }}</div>
+                        <div class="font-mono font-bold text-[#0048FA]">{{ $rel->code_immobilisation ?? $rel->code_scanne }}</div>
                         <div class="text-[11px] text-slate-600 truncate max-w-[200px]">{{ $rel->designation ?? $rel->immobilisation?->designation }}</div>
                     </div>
                     <span class="px-2 py-0.5 rounded-full text-[9px] font-bold {{ $rel->statut_rapprochement === 'conforme' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800' }}">
@@ -176,19 +176,19 @@
 
     <!-- 3. Bottom Navigation Bar Mobile & Tablette Pleine Largeur -->
     <nav class="bg-white/95 backdrop-blur-md border-t border-slate-200/90 fixed bottom-0 left-0 right-0 p-2 z-30 flex items-center justify-around text-[10px] sm:text-xs font-bold text-slate-500 shadow-xl w-full">
-        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.mobile.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-qrcode text-base sm:text-lg mb-0.5"></i>
             <span>Scanner</span>
         </a>
-        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <a href="{{ route('agent.cartographie.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-map-location-dot text-base sm:text-lg mb-0.5"></i>
             <span>Carte SIG</span>
         </a>
-        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#155E3B]">
+        <a href="{{ route('agent.campagnes.index') }}" class="flex flex-col items-center py-1 px-4 sm:px-6 text-[#0048FA]">
             <i class="fa-solid fa-clipboard-check text-base sm:text-lg mb-0.5"></i>
             <span>Campagnes</span>
         </a>
-        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#155E3B] transition-colors">
+        <button type="button" onclick="recupererDonneesHorsLigne()" class="flex flex-col items-center py-1 px-4 sm:px-6 text-slate-500 hover:text-[#0048FA] transition-colors">
             <i class="fa-solid fa-cloud-arrow-down text-base sm:text-lg mb-0.5"></i>
             <span>Pack Offline</span>
         </button>

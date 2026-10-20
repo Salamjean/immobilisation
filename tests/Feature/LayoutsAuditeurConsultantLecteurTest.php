@@ -21,12 +21,12 @@ class LayoutsAuditeurConsultantLecteurTest extends TestCase
         $response = $this->actingAs($auditeur)->get(route('auditeur.dashboard'));
 
         $response->assertStatus(200);
-        // Doit avoir la sidebar détachable moderne et la navbar #155E3B
+        // Doit avoir la sidebar détachable moderne et la navbar #0048FA
         $response->assertSee('id="mainSidebar"', false);
         $response->assertSee('navbarSidebarToggle', false);
         $response->assertSee('navbarUserDropdownBtn', false);
-        $response->assertSee('border-color: #155E3B;', false);
-        $response->assertSee('background-color: #155E3B;', false);
+        $response->assertSee('border-color: #0048FA;', false);
+        $response->assertSee('background-color: #0048FA;', false);
         $response->assertSee('Audit', false);
         $response->assertSee('Journal d\'Audit Intègre', false);
     }
@@ -45,8 +45,8 @@ class LayoutsAuditeurConsultantLecteurTest extends TestCase
         $response->assertSee('id="mainSidebar"', false);
         $response->assertSee('navbarSidebarToggle', false);
         $response->assertSee('navbarUserDropdownBtn', false);
-        $response->assertSee('border-color: #155E3B;', false);
-        $response->assertSee('background-color: #155E3B;', false);
+        $response->assertSee('border-color: #0048FA;', false);
+        $response->assertSee('background-color: #0048FA;', false);
         $response->assertSee('Consultant', false);
         $response->assertSee('Synthèse & Indicateurs', false);
     }
@@ -65,8 +65,8 @@ class LayoutsAuditeurConsultantLecteurTest extends TestCase
         $response->assertSee('id="mainSidebar"', false);
         $response->assertSee('navbarSidebarToggle', false);
         $response->assertSee('navbarUserDropdownBtn', false);
-        $response->assertSee('border-color: #155E3B;', false);
-        $response->assertSee('background-color: #155E3B;', false);
+        $response->assertSee('border-color: #0048FA;', false);
+        $response->assertSee('background-color: #0048FA;', false);
         $response->assertSee('Lecteur', false);
         $response->assertSee('Mode Consultation Seule', false);
     }

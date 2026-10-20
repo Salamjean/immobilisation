@@ -11,14 +11,14 @@
             @if($actif->photo_principale)
                 <img src="{{ $actif->photo_principale }}" alt="{{ $actif->designation }}" class="w-16 h-16 rounded-2xl object-cover border border-slate-200 shadow-xs flex-shrink-0">
             @else
-                <div style="background-color: #155E3B;" class="w-16 h-16 rounded-2xl text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-[#155E3B]/25 flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-16 h-16 rounded-2xl text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-[#0048FA]/25 flex-shrink-0">
                     <i class="fa-solid {{ $actif->categorie?->icone ?? 'fa-cube' }}"></i>
                 </div>
             @endif
 
             <div class="space-y-1">
                 <div class="flex flex-wrap items-center gap-2">
-                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold font-mono bg-sky-50 text-[#155E3B] border border-sky-200">
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold font-mono bg-sky-50 text-[#0048FA] border border-sky-200">
                         {{ $actif->code_immobilisation }}
                     </span>
                     <span class="px-2.5 py-0.5 rounded-full text-xs font-bold {{ $actif->etat === 'bon_etat' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : ($actif->etat === 'panne' ? 'bg-amber-50 text-amber-700 border border-amber-200' : 'bg-rose-50 text-rose-700 border border-rose-200') }}">
@@ -38,7 +38,7 @@
                     <span><strong class="text-slate-700">Catégorie :</strong> {{ $actif->categorie?->nom ?? 'N/A' }} {{ $actif->sousCategorie ? '('.$actif->sousCategorie->nom.')' : '' }}</span>
                     <span><strong class="text-slate-700">Marque :</strong> {{ $actif->marque ?? 'N/A' }} {{ $actif->modele ? '- '.$actif->modele : '' }}</span>
                     <span><strong class="text-slate-700">N° Série :</strong> <span class="font-mono text-slate-800">{{ $actif->numero_serie ?? 'N/A' }}</span></span>
-                    <span><strong class="text-slate-700">Tag QR :</strong> <span class="font-mono font-bold text-[#155E3B]">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
+                    <span><strong class="text-slate-700">Tag QR :</strong> <span class="font-mono font-bold text-[#0048FA]">{{ $actif->reference_etiquette ?? 'N/A' }}</span></span>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <span>Transférer</span>
             </a>
 
-            <a href="{{ route('admin.immobilisations.edit', $actif->id) }}" style="background-color: #155E3B;" class="px-4 py-2.5 rounded-xl text-white text-xs font-bold transition-all flex items-center space-x-1.5 shadow-md shadow-[#155E3B]/25 hover:opacity-95">
+            <a href="{{ route('admin.immobilisations.edit', $actif->id) }}" style="background-color: #0048FA;" class="px-4 py-2.5 rounded-xl text-white text-xs font-bold transition-all flex items-center space-x-1.5 shadow-md shadow-[#0048FA]/25 hover:opacity-95">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <span>Modifier</span>
             </a>
@@ -69,7 +69,7 @@
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-barcode"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">1. Identification</h2>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="flex justify-between py-1 border-b border-slate-50">
                     <span class="text-slate-400">Réf. Étiquette / QR</span>
-                    <span class="font-mono font-bold text-[#155E3B]">{{ $actif->reference_etiquette ?? '—' }}</span>
+                    <span class="font-mono font-bold text-[#0048FA]">{{ $actif->reference_etiquette ?? '—' }}</span>
                 </div>
                 <div class="flex justify-between py-1 border-b border-slate-50">
                     <span class="text-slate-400">Catégorie</span>
@@ -113,7 +113,7 @@
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">2. Acquisition & Valeur</h2>
@@ -158,7 +158,7 @@
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">3. Affectation & Géographie</h2>
@@ -190,7 +190,7 @@
                 <div class="flex items-center justify-between py-1">
                     <span class="text-slate-400">Coordonnées GPS</span>
                     @if($actif->latitude && $actif->longitude)
-                        <a href="https://www.google.com/maps?q={{ $actif->latitude }},{{ $actif->longitude }}" target="_blank" class="font-mono text-xs text-[#155E3B] hover:underline font-bold flex items-center">
+                        <a href="https://www.google.com/maps?q={{ $actif->latitude }},{{ $actif->longitude }}" target="_blank" class="font-mono text-xs text-[#0048FA] hover:underline font-bold flex items-center">
                             <span>{{ number_format($actif->latitude, 6) }}, {{ number_format($actif->longitude, 6) }}</span>
                             <i class="fa-solid fa-location-arrow text-[10px] ml-1.5"></i>
                         </a>
@@ -210,7 +210,7 @@
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">4. État & Risque</h2>
@@ -256,7 +256,7 @@
         <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-4">
             <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center space-x-2.5">
-                    <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                    <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                         <i class="fa-solid fa-paperclip"></i>
                     </div>
                     <h2 class="text-sm font-bold text-slate-900">5. Documents & Pièces Justificatives</h2>
@@ -267,7 +267,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div class="p-3 rounded-xl border border-slate-200 flex items-center justify-between">
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-lg bg-sky-50 text-[#155E3B] flex items-center justify-center text-sm">
+                        <div class="w-8 h-8 rounded-lg bg-sky-50 text-[#0048FA] flex items-center justify-center text-sm">
                             <i class="fa-solid fa-file-contract"></i>
                         </div>
                         <div>
@@ -327,7 +327,7 @@
     <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
         <div class="p-5 border-b border-slate-100 flex items-center justify-between">
             <h3 class="text-sm font-bold text-slate-900 flex items-center space-x-2">
-                <i class="fa-solid fa-timeline text-[#155E3B]"></i>
+                <i class="fa-solid fa-timeline text-[#0048FA]"></i>
                 <span>Historique des Mouvements & Transferts</span>
             </h3>
         </div>
@@ -347,7 +347,7 @@
                     @forelse($actif->mouvements as $m)
                         <tr class="hover:bg-slate-50/70 transition-colors">
                             <td class="py-3 px-4 text-left font-mono font-bold text-slate-900">{{ $m->reference_mouvement }}</td>
-                            <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 rounded bg-sky-50 text-[#155E3B] font-semibold">{{ $m->type_mouvement }}</span></td>
+                            <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 rounded bg-sky-50 text-[#0048FA] font-semibold">{{ $m->type_mouvement }}</span></td>
                             <td class="py-3 px-4 text-center">{{ $m->structureOrigine?->nom ?? 'Siège' }}</td>
                             <td class="py-3 px-4 text-center">{{ $m->structureDestination?->nom ?? '—' }}</td>
                             <td class="py-3 px-4 text-center font-mono">{{ $m->date_mouvement ? \Carbon\Carbon::parse($m->date_mouvement)->format('d/m/Y') : '—' }}</td>

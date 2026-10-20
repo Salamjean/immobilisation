@@ -9,15 +9,15 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-arrow-right-arrow-left text-[#155E3B]"></i>
+                <i class="fa-solid fa-arrow-right-arrow-left text-[#0048FA]"></i>
                 <span>Mouvements, Transferts & Affectations</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Journal des transferts inter-établissements, bordereaux de décharge et circuit de validation</p>
         </div>
 
         <a href="{{ route('gestionnaire.mouvements.create') }}"
-           style="background-color: #155E3B;"
-           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all self-start sm:self-auto">
+           style="background-color: #0048FA;"
+           class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all self-start sm:self-auto">
             <i class="fa-solid fa-plus text-xs"></i>
             <span>Nouveau Transfert / Mouvement</span>
         </a>
@@ -66,7 +66,7 @@
 
         <!-- Total Mouvements -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-arrows-split-up-and-left"></i>
             </div>
             <div>
@@ -101,12 +101,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher par référence, désignation, code..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Statut Workflow (3 cols) -->
             <div class="sm:col-span-3">
-                <select name="statut_workflow" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="statut_workflow" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Statuts Workflow</option>
                     <option value="soumis" {{ request('statut_workflow') === 'soumis' ? 'selected' : '' }}>En attente de validation</option>
                     <option value="en_transit" {{ request('statut_workflow') === 'en_transit' ? 'selected' : '' }}>En transit (Expédié)</option>
@@ -117,7 +117,7 @@
 
             <!-- Filtre Type (3 cols) -->
             <div class="sm:col-span-3">
-                <select name="type_mouvement" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="type_mouvement" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Types</option>
                     <option value="transfert" {{ request('type_mouvement') === 'transfert' ? 'selected' : '' }}>Transfert inter-établissements</option>
                     <option value="reaffectation" {{ request('type_mouvement') === 'reaffectation' ? 'selected' : '' }}>Réaffectation interne</option>
@@ -130,7 +130,7 @@
             <!-- Boutons Filtrer / Reset (2 cols) -->
             <div class="sm:col-span-2 flex items-center space-x-2">
                 <button type="submit"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-[11px]"></i>
                     <span>Filtrer</span>
@@ -190,8 +190,8 @@
                                     <span>{{ $m->structureOrigine?->nom ?? 'Entrepôt / Stock Central' }}</span>
                                 </div>
                                 <div class="font-bold text-slate-800 flex items-center space-x-1.5 mt-0.5">
-                                    <i class="fa-solid fa-arrow-right text-[10px] text-[#155E3B]"></i>
-                                    <span class="text-[#155E3B]">{{ $m->structureDestination?->nom ?? 'Attribution en cours' }}</span>
+                                    <i class="fa-solid fa-arrow-right text-[10px] text-[#0048FA]"></i>
+                                    <span class="text-[#0048FA]">{{ $m->structureDestination?->nom ?? 'Attribution en cours' }}</span>
                                 </div>
                             </td>
                             <td class="py-3.5 px-4 font-mono text-slate-600">
@@ -227,7 +227,7 @@
                             <td class="py-3.5 px-4 text-right">
                                 <a href="{{ route('gestionnaire.mouvements.show', $m->id) }}"
                                    class="inline-flex items-center px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 text-xs font-semibold transition-all">
-                                    <i class="fa-solid fa-file-invoice text-[#155E3B] mr-1.5"></i>
+                                    <i class="fa-solid fa-file-invoice text-[#0048FA] mr-1.5"></i>
                                     <span>Gérer Décharge</span>
                                 </a>
                             </td>

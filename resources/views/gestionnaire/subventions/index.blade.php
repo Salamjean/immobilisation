@@ -9,7 +9,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div>
             <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                <i class="fa-solid fa-sack-dollar text-[#155E3B]"></i>
+                <i class="fa-solid fa-sack-dollar text-[#0048FA]"></i>
                 <span>Subventions & Lignes de Financement</span>
             </h1>
             <p class="text-xs text-slate-500 mt-0.5">Consultation des accords de financement et affectation des actifs patrimoniaux</p>
@@ -48,7 +48,7 @@
     <!-- Statistiques rapides -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center space-x-4">
-            <div style="background-color: #155E3B;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
+            <div style="background-color: #0048FA;" class="w-12 h-12 rounded-xl text-white flex items-center justify-center text-lg font-bold shadow-xs">
                 <i class="fa-solid fa-sack-dollar"></i>
             </div>
             <div>
@@ -100,12 +100,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Rechercher intitulé, code subvention..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre Programme (3 cols) -->
             <div class="sm:col-span-3">
-                <select name="programme_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="programme_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous les Programmes</option>
                     @foreach($programmes as $prg)
                         <option value="{{ $prg->id }}" {{ request('programme_id') == $prg->id ? 'selected' : '' }}>
@@ -117,7 +117,7 @@
 
             <!-- Filtre Bailleur (2 cols) -->
             <div class="sm:col-span-2">
-                <select name="bailleur_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="bailleur_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Tous Bailleurs</option>
                     @foreach($bailleurs as $b)
                         <option value="{{ $b->id }}" {{ request('bailleur_id') == $b->id ? 'selected' : '' }}>
@@ -129,7 +129,7 @@
 
             <!-- Filtre Statut (1 col) -->
             <div class="sm:col-span-1">
-                <select name="statut" class="w-full px-2.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                <select name="statut" class="w-full px-2.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                     <option value="">Statut</option>
                     @foreach($statuts as $stKey => $stVal)
                         <option value="{{ $stKey }}" {{ request('statut') === $stKey ? 'selected' : '' }}>{{ $stVal }}</option>
@@ -140,7 +140,7 @@
             <!-- Boutons Filtrer / Reset (2 cols) -->
             <div class="sm:col-span-2 flex items-center space-x-2">
                 <button type="submit"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="flex-1 py-2.5 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-[11px]"></i>
                     <span>Filtrer</span>
@@ -246,7 +246,7 @@
                                 <a href="{{ route('gestionnaire.immobilisations.index', ['subvention_id' => $sub->id]) }}"
                                    class="inline-flex items-center px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 text-xs font-semibold transition-all"
                                    title="Voir les biens de cette subvention">
-                                    <i class="fa-solid fa-boxes-stacked mr-1 text-[#155E3B]"></i>
+                                    <i class="fa-solid fa-boxes-stacked mr-1 text-[#0048FA]"></i>
                                     <span>Actifs liés</span>
                                 </a>
                             </td>

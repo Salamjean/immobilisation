@@ -19,16 +19,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            300: '#6ee7b7',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#155E3B',
-                            700: '#0f442a',
-                            800: '#064e3b',
-                            900: '#022c22',
+                            50: '#eff4ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#0048FA',
+                            700: '#003ad1',
+                            800: '#002eb3',
+                            900: '#002080',
                         }
                     }
                 }
@@ -110,7 +110,7 @@
             }
         }
 
-        /* TomSelect Theme Customization - Vert #155E3B */
+        /* TomSelect Theme Customization - Vert #0048FA */
         .ts-wrapper { width: 100% !important; }
         .ts-control {
             border-radius: 0.75rem !important;
@@ -128,7 +128,7 @@
         }
         .ts-control.focus {
             background-color: #ffffff !important;
-            border-color: #155E3B !important;
+            border-color: #0048FA !important;
             box-shadow: 0 0 0 2px rgba(21, 94, 59, 0.2) !important;
         }
         .ts-dropdown {
@@ -148,7 +148,7 @@
             cursor: pointer !important;
         }
         .ts-dropdown .active {
-            background-color: #155E3B !important;
+            background-color: #0048FA !important;
             color: #ffffff !important;
         }
         .ts-dropdown .selected {
@@ -326,11 +326,11 @@
             @endif
 
             @if(session('error'))
-                Swal.fire({ icon: 'error', title: 'Erreur', text: @json(session('error')), confirmButtonColor: '#155E3B' });
+                Swal.fire({ icon: 'error', title: 'Erreur', text: @json(session('error')), confirmButtonColor: '#0048FA' });
             @endif
 
             @if($errors->any())
-                Swal.fire({ icon: 'error', title: 'Erreur de validation', text: @json($errors->first()), confirmButtonColor: '#155E3B' });
+                Swal.fire({ icon: 'error', title: 'Erreur de validation', text: @json($errors->first()), confirmButtonColor: '#0048FA' });
             @endif
         });
     </script>

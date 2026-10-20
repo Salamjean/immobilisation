@@ -13,7 +13,7 @@
             </a>
             <div>
                 <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center space-x-2">
-                    <i class="fa-solid fa-tags text-[#155E3B]"></i>
+                    <i class="fa-solid fa-tags text-[#0048FA]"></i>
                     <span>Créer une nouvelle catégorie d'immobilisation</span>
                 </h1>
                 <p class="text-xs text-slate-500 mt-0.5">Classification comptable, durée d'amortissement et sous-catégories dynamiques</p>
@@ -49,7 +49,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Identité & Code</h2>
@@ -71,7 +71,7 @@
                                    required
                                    autofocus
                                    placeholder="Ex: Matériel Médical & Biomédical"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                         <span class="text-[10px] text-slate-400 mt-1 block">Le code unique ci-dessous est généré automatiquement</span>
                     </div>
@@ -108,7 +108,7 @@
                             Icône d'affichage
                         </label>
                         <select name="icone"
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                             <option value="fa-hospital" {{ old('icone') == 'fa-hospital' ? 'selected' : '' }}>Hôpital / Médical (fa-hospital)</option>
                             <option value="fa-laptop" {{ old('icone') == 'fa-laptop' ? 'selected' : '' }}>Informatique & IT (fa-laptop)</option>
                             <option value="fa-truck-medical" {{ old('icone') == 'fa-truck-medical' ? 'selected' : '' }}>Véhicules & Ambulances (fa-truck-medical)</option>
@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-shapes text-[#155E3B] mr-1"></i> Structure officielle des immobilisations
+                    <i class="fa-solid fa-shapes text-[#0048FA] mr-1"></i> Structure officielle des immobilisations
                 </div>
             </div>
 
@@ -130,7 +130,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-clock-rotate-left"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Paramètres Comptables</h2>
@@ -152,7 +152,7 @@
                                    max="600"
                                    required
                                    placeholder="Ex: 60 (5 ans)"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                         <p class="text-[10px] text-slate-400 mt-1">Exemples : Informatique = 36 mois (3 ans), Médical = 60 mois (5 ans), Bâtiment = 240 mois (20 ans).</p>
                     </div>
@@ -163,12 +163,12 @@
                         <textarea name="description"
                                   rows="3"
                                   placeholder="Notes et précisions sur cette catégorie..."
-                                  class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">{{ old('description') }}</textarea>
+                                  class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">{{ old('description') }}</textarea>
                     </div>
                 </div>
 
                 <div class="text-[11px] text-slate-400 italic pt-2">
-                    <i class="fa-solid fa-calculator text-[#155E3B] mr-1"></i> Calcul automatique des amortissements
+                    <i class="fa-solid fa-calculator text-[#0048FA] mr-1"></i> Calcul automatique des amortissements
                 </div>
             </div>
 
@@ -177,7 +177,7 @@
                 <div class="space-y-4">
                     <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                         <div class="flex items-center space-x-2.5">
-                            <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                            <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                                 <i class="fa-solid fa-tags"></i>
                             </div>
                             <h2 class="text-sm font-bold text-slate-900">3. Sous-Catégories</h2>
@@ -185,7 +185,7 @@
                         <!-- Bouton + -->
                         <button type="button"
                                 id="btn_add_sous_cat"
-                                style="background-color: #155E3B;"
+                                style="background-color: #0048FA;"
                                 class="inline-flex items-center space-x-1 px-2.5 py-1 rounded-lg text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all">
                             <i class="fa-solid fa-plus text-[10px]"></i>
                             <span>Ajouter</span>
@@ -204,7 +204,7 @@
                                                name="sous_categories[]"
                                                value="{{ $scVal }}"
                                                placeholder="Sous-catégorie (Ex: Échographes)"
-                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                               class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                                     </div>
                                     <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                                         <i class="fa-solid fa-trash text-[11px]"></i>
@@ -217,7 +217,7 @@
                                     <input type="text"
                                            name="sous_categories[]"
                                            placeholder="Sous-catégorie 1 (Ex: Échographes)"
-                                           class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                                           class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                                 </div>
                                 <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                                     <i class="fa-solid fa-trash text-[11px]"></i>
@@ -243,8 +243,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Enregistrer la catégorie</span>
             </button>
@@ -258,7 +258,7 @@
                 <input type="text"
                        name="sous_categories[]"
                        placeholder="Sous-catégorie..."
-                       class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                       class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
             </div>
             <button type="button" onclick="removeSousCat(this)" class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white flex items-center justify-center text-xs transition-all flex-shrink-0" title="Supprimer">
                 <i class="fa-solid fa-trash text-[11px]"></i>

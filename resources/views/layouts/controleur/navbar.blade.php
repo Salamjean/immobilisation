@@ -1,5 +1,5 @@
 <!-- Navbar Contrôleur Interne -->
-<header style="background-color: #155E3B;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-3 mt-3 mb-0 flex items-center flex-shrink-0 z-30">
+<header style="background-color: #0048FA;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-3 mt-3 mb-0 flex items-center flex-shrink-0 z-30">
     <div class="w-full px-5 flex items-center justify-between">
         <!-- Gauche: Bouton Toggle Sidebar -->
         <div class="flex items-center space-x-3">
@@ -21,7 +21,7 @@
                     @if(auth()->user()?->photo_url)
                         <img src="{{ auth()->user()->photo_url }}" alt="{{ auth()->user()->nom_complet }}" class="w-8 h-8 rounded-lg object-cover flex-shrink-0 shadow-xs border border-slate-200">
                     @else
-                        <div style="background-color: #155E3B;" class="w-8 h-8 rounded-lg text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-8 h-8 rounded-lg text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
                             {{ substr(auth()->user()->name ?? 'C', 0, 1) }}{{ substr(auth()->user()->prenoms ?? 'O', 0, 1) }}
                         </div>
                     @endif

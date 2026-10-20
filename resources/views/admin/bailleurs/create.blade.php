@@ -43,7 +43,7 @@
 
         <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                <div style="background-color: #155E3B;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
+                <div style="background-color: #0048FA;" class="w-8 h-8 rounded-xl text-white flex items-center justify-center text-sm shadow-xs">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
                 </div>
                 <div>
@@ -65,7 +65,7 @@
                            required
                            autofocus
                            placeholder="Ex: Le Fonds Mondial de lutte contre le Sida, la Tuberculose et le Paludisme"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <span class="text-[10px] text-slate-400 mt-1 block">Saisissez le nom complet pour générer automatiquement le code unique ci-contre</span>
                 </div>
 
@@ -100,7 +100,7 @@
             <!-- Description -->
             <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1.5">Description & Objet du Financement</label>
-                <textarea name="description" rows="3" placeholder="Informations complémentaires, programmes couverts..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">{{ old('description') }}</textarea>
+                <textarea name="description" rows="3" placeholder="Informations complémentaires, programmes couverts..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">{{ old('description') }}</textarea>
             </div>
 
             <!-- Contacts -->
@@ -111,7 +111,7 @@
                            name="contact_nom"
                            value="{{ old('contact_nom') }}"
                            placeholder="Ex: Dr. Jean Dupont"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
 
                 <div>
@@ -120,13 +120,13 @@
                            name="contact_email"
                            value="{{ old('contact_email') }}"
                            placeholder="Ex: pointfocal@bailleur.org"
-                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#155E3B] transition-all">
+                           class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:ring-2 focus:ring-[#0048FA] transition-all">
                 </div>
             </div>
 
             <!-- Statut Actif -->
             <div class="flex items-center space-x-3 pt-2">
-                <input type="checkbox" name="actif" id="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded text-[#155E3B] focus:ring-[#155E3B] border-slate-300">
+                <input type="checkbox" name="actif" id="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded text-[#0048FA] focus:ring-[#0048FA] border-slate-300">
                 <label for="actif" class="text-xs font-semibold text-slate-700">Actif (disponible immédiatement pour les affectations et saisies)</label>
             </div>
         </div>
@@ -139,8 +139,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Enregistrer le Bailleur</span>
             </button>

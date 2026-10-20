@@ -1,5 +1,5 @@
-<!-- Navbar Administrateur - Minimaliste Couleur #155E3B avec Bordure Blanche -->
-<header style="background-color: #155E3B;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-2 sm:mx-3 mt-2 sm:mt-3 mb-0 flex items-center flex-shrink-0 z-30">
+<!-- Navbar Administrateur - Minimaliste Couleur #0048FA avec Bordure Blanche -->
+<header style="background-color: #0048FA;" class="h-16 text-white rounded-2xl shadow-md border-2 border-white mx-2 sm:mx-3 mt-2 sm:mt-3 mb-0 flex items-center flex-shrink-0 z-30">
     <div class="w-full px-3 sm:px-5 flex items-center justify-between">
         <!-- Gauche: Bouton Toggle Sidebar -->
         <div class="flex items-center">
@@ -17,7 +17,7 @@
                     @if(auth()->user()?->photo_url)
                         <img src="{{ auth()->user()->photo_url }}" alt="{{ auth()->user()->nom_complet }}" class="w-8 h-8 rounded-lg object-cover flex-shrink-0 shadow-xs border border-slate-200">
                     @else
-                        <div style="background-color: #155E3B;" class="w-8 h-8 rounded-lg text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-8 h-8 rounded-lg text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-xs">
                             {{ substr(auth()->user()->name ?? 'A', 0, 1) }}{{ substr(auth()->user()->prenoms ?? 'D', 0, 1) }}
                         </div>
                     @endif

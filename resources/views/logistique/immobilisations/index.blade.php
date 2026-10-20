@@ -21,11 +21,11 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Code, désignation, n° série, tag..."
-                       class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#155E3B] outline-none font-medium text-slate-800">
+                       class="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#0048FA] outline-none font-medium text-slate-800">
             </div>
 
             <div class="sm:col-span-3">
-                <select name="structure_id" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#155E3B] outline-none font-medium text-slate-700">
+                <select name="structure_id" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#0048FA] outline-none font-medium text-slate-700">
                     <option value="">Toutes les structures</option>
                     @foreach($structures as $st)
                     <option value="{{ $st->id }}" {{ request('structure_id') == $st->id ? 'selected' : '' }}>{{ $st->nom }}</option>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="sm:col-span-3">
-                <select name="etat" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#155E3B] outline-none font-medium text-slate-700">
+                <select name="etat" class="w-full py-2.5 px-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-[#0048FA] outline-none font-medium text-slate-700">
                     <option value="">Tous les états</option>
                     <option value="bon_etat" {{ request('etat') === 'bon_etat' ? 'selected' : '' }}>Bon état</option>
                     <option value="en_maintenance" {{ request('etat') === 'en_maintenance' ? 'selected' : '' }}>En maintenance</option>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="sm:col-span-2 flex items-center space-x-2">
-                <button type="submit" class="w-full py-2.5 px-4 bg-[#155E3B] hover:bg-[#0f442a] text-white rounded-xl font-bold shadow-sm transition-all flex items-center justify-center space-x-1.5">
+                <button type="submit" class="w-full py-2.5 px-4 bg-[#0048FA] hover:bg-[#003ad1] text-white rounded-xl font-bold shadow-sm transition-all flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-xs"></i>
                     <span>Filtrer</span>
                 </button>
@@ -56,7 +56,7 @@
     <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div class="p-4 border-b border-slate-100 flex items-center justify-between">
             <div class="text-xs font-bold text-slate-800 flex items-center space-x-2">
-                <i class="fa-solid fa-boxes-stacked text-[#155E3B]"></i>
+                <i class="fa-solid fa-boxes-stacked text-[#0048FA]"></i>
                 <span>Parc et État du Matériel</span>
             </div>
             <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600">
@@ -80,7 +80,7 @@
                 <tbody class="divide-y divide-slate-100">
                     @forelse($immobilisations as $a)
                     <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="py-3.5 px-4 font-mono font-bold text-[#155E3B]">
+                        <td class="py-3.5 px-4 font-mono font-bold text-[#0048FA]">
                             {{ $a->code_immobilisation }}
                         </td>
                         <td class="py-3.5 px-4">

@@ -34,7 +34,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-user"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">1. Identité & Photo</h2>
@@ -44,15 +44,15 @@
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center flex flex-col items-center">
                         <div class="relative group cursor-pointer mb-2.5" onclick="document.getElementById('photoInput').click()">
                             <!-- Cadre photo rond/arrondi avec aperçu -->
-                            <div id="photoPreviewContainer" class="w-24 h-24 rounded-2xl bg-white border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden shadow-xs group-hover:border-[#155E3B] transition-all">
+                            <div id="photoPreviewContainer" class="w-24 h-24 rounded-2xl bg-white border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden shadow-xs group-hover:border-[#0048FA] transition-all">
                                 <img id="photoPreview" src="" alt="Aperçu Photo" class="w-full h-full object-cover hidden">
-                                <div id="photoPlaceholder" class="text-center text-slate-400 group-hover:text-[#155E3B] transition-colors">
+                                <div id="photoPlaceholder" class="text-center text-slate-400 group-hover:text-[#0048FA] transition-colors">
                                     <i class="fa-solid fa-camera text-2xl"></i>
                                     <span class="block text-[10px] font-semibold mt-1">Ajouter photo</span>
                                 </div>
                             </div>
                             <!-- Badge caméra -->
-                            <div style="background-color: #155E3B;" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full text-white flex items-center justify-center text-xs shadow-sm group-hover:scale-110 transition-transform">
+                            <div style="background-color: #0048FA;" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full text-white flex items-center justify-center text-xs shadow-sm group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                accept="image/jpeg,image/png,image/webp"
                                class="hidden"
                                onchange="previewProfilePhoto(this)">
-                        <div id="photoFileName" class="text-[11px] font-semibold text-[#155E3B] hidden pt-1 truncate max-w-[200px]"></div>
+                        <div id="photoFileName" class="text-[11px] font-semibold text-[#0048FA] hidden pt-1 truncate max-w-[200px]"></div>
                     </div>
 
                     <!-- Nom de famille -->
@@ -82,7 +82,7 @@
                                    value="{{ old('name') }}"
                                    required
                                    placeholder="Ex: KOUASSI"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@
                                    value="{{ old('prenoms') }}"
                                    required
                                    placeholder="Ex: Jean-Eudes"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
                                    name="telephone"
                                    value="{{ old('telephone') }}"
                                    placeholder="+225 07 00 00 00 00"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                 <!-- Activation Immédiate -->
                 <div class="pt-3 border-t border-slate-100">
                     <label class="flex items-center space-x-2.5 cursor-pointer">
-                        <input type="checkbox" name="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#155E3B] focus:ring-[#155E3B]">
+                        <input type="checkbox" name="actif" value="1" {{ old('actif', '1') == '1' ? 'checked' : '' }} class="w-4 h-4 rounded border-slate-300 text-[#0048FA] focus:ring-[#0048FA]">
                         <span class="text-xs font-semibold text-slate-700">Activer le compte immédiatement</span>
                     </label>
                 </div>
@@ -135,7 +135,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-lock"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">2. Sécurité & Connexion</h2>
@@ -155,7 +155,7 @@
                                    value="{{ old('email') }}"
                                    required
                                    placeholder="utilisateur@gmail.com"
-                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                   class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                         </div>
                     </div>
 
@@ -173,8 +173,8 @@
                                    name="password"
                                    required
                                    placeholder="Minimum 6 caractères"
-                                   class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
-                            <button type="button" onclick="togglePasswordVisibility('newPasswordInput', 'newPasswordToggleIcon')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#155E3B] text-xs transition-colors focus:outline-none" title="Afficher/Masquer le mot de passe">
+                                   class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
+                            <button type="button" onclick="togglePasswordVisibility('newPasswordInput', 'newPasswordToggleIcon')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#0048FA] text-xs transition-colors focus:outline-none" title="Afficher/Masquer le mot de passe">
                                 <i id="newPasswordToggleIcon" class="fa-solid fa-eye"></i>
                             </button>
                         </div>
@@ -194,8 +194,8 @@
                                    name="password_confirmation"
                                    required
                                    placeholder="Répétez le mot de passe"
-                                   class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
-                            <button type="button" onclick="togglePasswordVisibility('confirmPasswordInput', 'confirmPasswordToggleIcon')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#155E3B] text-xs transition-colors focus:outline-none" title="Afficher/Masquer le mot de passe">
+                                   class="w-full pl-9 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
+                            <button type="button" onclick="togglePasswordVisibility('confirmPasswordInput', 'confirmPasswordToggleIcon')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-[#0048FA] text-xs transition-colors focus:outline-none" title="Afficher/Masquer le mot de passe">
                                 <i id="confirmPasswordToggleIcon" class="fa-solid fa-eye"></i>
                             </button>
                         </div>
@@ -203,7 +203,7 @@
 
                     <!-- Note d'aide Sécurité -->
                     <div class="p-3 rounded-xl bg-sky-50/70 border border-sky-100 text-sky-900 space-y-1">
-                        <div class="text-xs font-bold flex items-center space-x-1.5 text-[#155E3B]">
+                        <div class="text-xs font-bold flex items-center space-x-1.5 text-[#0048FA]">
                             <i class="fa-solid fa-circle-info"></i>
                             <span>Recommandations</span>
                         </div>
@@ -222,7 +222,7 @@
             <div class="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-6 flex flex-col justify-between space-y-4">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2.5 pb-3 border-b border-slate-100">
-                        <div style="background-color: #155E3B;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
+                        <div style="background-color: #0048FA;" class="w-7 h-7 rounded-lg text-white flex items-center justify-center text-xs shadow-xs">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h2 class="text-sm font-bold text-slate-900">3. Rôle & Rattachement</h2>
@@ -235,7 +235,7 @@
                         </label>
                         <select name="role"
                                 required
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="" disabled selected>-- Choisissez un rôle --</option>
                             @foreach($roles as $codeRole => $libelleRole)
                                 <option value="{{ $codeRole }}" {{ old('role') == $codeRole ? 'selected' : '' }}>
@@ -251,7 +251,7 @@
                             Programme Santé GC7 <span class="text-slate-400 font-normal">(Optionnel)</span>
                         </label>
                         <select name="programme_id"
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucun / Tous programmes --</option>
                             @foreach($programmes as $prog)
                                 <option value="{{ $prog->id }}" {{ old('programme_id') == $prog->id ? 'selected' : '' }}>
@@ -267,7 +267,7 @@
                             Structure Bénéficiaire / Hôpital <span class="text-slate-400 font-normal">(Optionnel)</span>
                         </label>
                         <select name="structure_beneficiaire_id"
-                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
                             <option value="">-- Aucune / Siège Central --</option>
                             @foreach($structures as $struct)
                                 <option value="{{ $struct->id }}" {{ old('structure_beneficiaire_id') == $struct->id ? 'selected' : '' }}>
@@ -279,7 +279,7 @@
                 </div>
 
                 <div class="text-[11px] text-slate-400 pt-2">
-                    <i class="fa-solid fa-hospital-user text-[#155E3B] mr-1"></i> Définit le périmètre d'accès aux immobilisations
+                    <i class="fa-solid fa-hospital-user text-[#0048FA] mr-1"></i> Définit le périmètre d'accès aux immobilisations
                 </div>
             </div>
 
@@ -293,8 +293,8 @@
             </a>
 
             <button type="submit"
-                    style="background-color: #155E3B;"
-                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+                    style="background-color: #0048FA;"
+                    class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-check"></i>
                 <span>Enregistrer & Inscrire l'utilisateur</span>
             </button>

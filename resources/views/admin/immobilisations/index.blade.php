@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-boxes-stacked"></i>
                 </div>
                 <div>
@@ -44,8 +44,8 @@
             </a>
 
             <a href="{{ route('admin.immobilisations.create') }}"
-               style="background-color: #155E3B;"
-               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+               style="background-color: #0048FA;"
+               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-plus text-xs"></i>
                 <span>Ajouter une immobilisation</span>
             </a>
@@ -64,12 +64,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Code, désignation, série, marque..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Catégorie -->
             <div>
-                <select name="categorie_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="categorie_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Toutes les catégories</option>
                     @foreach($categories as $cat)
                         <option value="{{ $cat->id }}" {{ request('categorie_id') == $cat->id ? 'selected' : '' }}>
@@ -81,7 +81,7 @@
 
             <!-- Structure -->
             <div>
-                <select name="structure_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="structure_id" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Toutes les structures</option>
                     @foreach($structures as $st)
                         <option value="{{ $st->id }}" {{ request('structure_id') == $st->id ? 'selected' : '' }}>
@@ -93,7 +93,7 @@
 
             <!-- État -->
             <div>
-                <select name="etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="etat" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les états</option>
                     <option value="bon_etat" {{ request('etat') == 'bon_etat' ? 'selected' : '' }}>Bon état</option>
                     <option value="panne" {{ request('etat') == 'panne' ? 'selected' : '' }}>En panne</option>
@@ -104,7 +104,7 @@
 
             <!-- Boutons Filtrer & Reset -->
             <div class="flex items-center space-x-2">
-                <button type="submit" style="background-color: #155E3B;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
+                <button type="submit" style="background-color: #0048FA;" class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center">
                     Filtrer
                 </button>
                 @if(request()->hasAny(['search', 'categorie_id', 'structure_id', 'etat']))
@@ -137,7 +137,7 @@
                             <!-- Désignation & Marque (Aligné à gauche) -->
                             <td class="py-3.5 px-4 text-left">
                                 <div class="flex items-center space-x-3">
-                                    <div style="background-color: #155E3B;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
+                                    <div style="background-color: #0048FA;" class="w-9 h-9 rounded-xl text-white flex items-center justify-center font-bold text-xs shadow-xs flex-shrink-0">
                                         <i class="fa-solid {{ $item->categorie?->icone ?? 'fa-cube' }}"></i>
                                     </div>
                                     <div class="min-w-0">
@@ -157,7 +157,7 @@
 
                             <!-- Catégorie -->
                             <td class="py-3.5 px-4 text-center">
-                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#155E3B] border border-sky-100">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#0048FA] border border-sky-100">
                                     {{ $item->categorie?->nom ?? 'Non classé' }}
                                 </span>
                             </td>
@@ -202,14 +202,14 @@
                                     <!-- Fiche -->
                                     <a href="{{ route('admin.immobilisations.show', $item->id) }}"
                                        title="Consulter la fiche"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-eye text-xs"></i>
                                     </a>
 
                                     <!-- Modifier -->
                                     <a href="{{ route('admin.immobilisations.edit', $item->id) }}"
                                        title="Modifier"
-                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                       class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                         <i class="fa-solid fa-pen text-xs"></i>
                                     </a>
 

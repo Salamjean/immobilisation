@@ -9,7 +9,7 @@
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div style="background-color: #155E3B;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
+                <div style="background-color: #0048FA;" class="w-10 h-10 rounded-xl text-white flex items-center justify-center text-base shadow-xs flex-shrink-0">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
                 <div>
@@ -38,8 +38,8 @@
 
         <div class="flex items-center space-x-2.5 flex-shrink-0">
             <a href="{{ route('admin.mouvements.create') }}"
-               style="background-color: #155E3B;"
-               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#155E3B]/25 hover:opacity-95 transition-all">
+               style="background-color: #0048FA;"
+               class="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl text-white text-xs font-bold shadow-md shadow-[#0048FA]/25 hover:opacity-95 transition-all">
                 <i class="fa-solid fa-plus text-xs"></i>
                 <span>Nouveau mouvement</span>
             </a>
@@ -58,12 +58,12 @@
                        name="search"
                        value="{{ request('search') }}"
                        placeholder="Nom du bien, code, référence..."
-                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] focus:border-[#155E3B] transition-all">
+                       class="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] focus:border-[#0048FA] transition-all">
             </div>
 
             <!-- Filtre par Statut -->
             <div>
-                <select name="statut_workflow" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                <select name="statut_workflow" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
                     <option value="">Tous les statuts</option>
                     <option value="soumis" {{ request('statut_workflow') === 'soumis' ? 'selected' : '' }}>En attente</option>
                     <option value="en_transit" {{ request('statut_workflow') === 'en_transit' ? 'selected' : '' }}>En transit</option>
@@ -79,7 +79,7 @@
                        value="{{ request('date_debut') }}"
                        title="Date début (Du)"
                        placeholder="Date début"
-                       class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                       class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
             </div>
 
             <!-- Date Fin -->
@@ -89,13 +89,13 @@
                        value="{{ request('date_fin') }}"
                        title="Date fin (Au)"
                        placeholder="Date fin"
-                       class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#155E3B] transition-all">
+                       class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0048FA] transition-all">
             </div>
 
             <!-- Boutons Filtrer & Réinitialiser -->
             <div class="flex items-center space-x-2">
                 <button type="submit"
-                        style="background-color: #155E3B;"
+                        style="background-color: #0048FA;"
                         class="flex-1 py-2.5 px-3 rounded-xl text-white text-xs font-bold shadow-xs hover:opacity-95 transition-all text-center flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-filter text-xs"></i>
                     <span>Filtrer</span>
@@ -136,13 +136,13 @@
                             </td>
 
                             <!-- Référence -->
-                            <td class="py-3.5 px-4 text-center font-mono font-bold text-[#155E3B]">
+                            <td class="py-3.5 px-4 text-center font-mono font-bold text-[#0048FA]">
                                 {{ $m->reference_mouvement }}
                             </td>
 
                             <!-- Type -->
                             <td class="py-3.5 px-4 text-center">
-                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#155E3B] border border-sky-100">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 text-[#0048FA] border border-sky-100">
                                     {{ $m->type_libelle }}
                                 </span>
                             </td>
@@ -168,7 +168,7 @@
                                         En attente
                                     </span>
                                 @elseif($m->statut_workflow === 'en_transit' || $m->statut_workflow === 'valide')
-                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-50 text-[#155E3B] border border-sky-200">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-50 text-[#0048FA] border border-sky-200">
                                         En transit
                                     </span>
                                 @elseif($m->statut_workflow === 'receptionne' || $m->statut_workflow === 'cloture')
@@ -186,7 +186,7 @@
                             <td class="py-3.5 px-4 text-center">
                                 <a href="{{ route('admin.mouvements.show', $m->id) }}"
                                    title="Consulter le bordereau"
-                                   class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#155E3B] text-slate-600 hover:text-white transition-colors">
+                                   class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#0048FA] text-slate-600 hover:text-white transition-colors">
                                     <i class="fa-solid fa-eye text-xs"></i>
                                 </a>
                             </td>
